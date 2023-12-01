@@ -1,0 +1,12 @@
+section#fourPart {
+    position: absolute;
+    top: 100vh;
+    left: 0%;
+    height: 0em;
+    padding: 2.5%;
+    width: 95%;
+    background: linear-gradient(145deg, #232323, #1e1e1e);
+    overflow: hidden;
+    visibility: hidden;
+    opacity: 0;
+}

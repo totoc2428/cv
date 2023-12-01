@@ -1,0 +1,145 @@
+@keyframes thirdPart-secondPart-to-thirdPart-animation {
+    0% {
+        top: 100vh;
+        height: 0rem;
+        visibility: visible;
+        overflow: visible;
+        opacity: 0;
+    }
+
+    100% {
+        top: 0rem;
+        height: 200vh;
+        visibility: visible;
+        overflow: visible;
+        opacity: 1;
+    }
+}
+
+@keyframes thirdPart-thirdPart-to-secondPart-animation {
+    0% {
+        top: 0rem;
+        height: 200vh;
+        visibility: visible;
+        overflow: visible;
+        opacity: 1;
+    }
+
+    100% {
+        top: 100vh;
+        height: 0rem;
+        visibility: visible;
+        overflow: visible;
+        opacity: 0;
+    }
+}
+
+@keyframes thirdPart-thirdPart-to-FourPart-animation {}
+
+section#thirdPart {
+    position: absolute;
+    top: 100vh;
+    left: 0%;
+    height: 0em;
+    padding: 2.5%;
+    width: 95%;
+    background: linear-gradient(145deg, #232323, #1e1e1e);
+    overflow: hidden;
+    visibility: hidden;
+    opacity: 0;
+}
+
+
+section#thirdPart button {
+    color: white;
+    font-size: 200%;
+    border-radius: 0.5rem;
+    margin: 1%;
+    margin-left: 50%;
+    padding: 1%;
+    display: center;
+    outline: none;
+    border: none;
+    background: linear-gradient(145deg, #232323, #1e1e1e);
+    box-shadow: 2px 2px 6px #232323,
+        -0px -0px 0px #1e1e1e;
+    display: inline-block;
+    cursor: pointer;
+}
+
+section#thirdPart.showAnimation {
+    animation: thirdPart-secondPart-to-thirdPart-animation 1s forwards 0.5s;
+    display: block;
+}
+
+section#thirdPart {
+    color: white;
+}
+
+section#thirdPart h4 {
+    font-size: 350%;
+}
+
+
+
+section#thirdPart section.elements {
+    font-size: 150%;
+    margin: 1%;
+    padding: 2.5%;
+    border-radius: 2rem;
+    background: linear-gradient(145deg, #232323, #1e1e1e);
+    box-shadow: 10rem 10rem 10rem #1e1e1e,
+        -10rem -10rem 10rem #282828;
+}
+
+section#thirdPart section.elements h5 {
+    font-size: 175%;
+}
+
+section#thirdPart section.elements div.element {
+    margin: 2.5%;
+    display: flex;
+    flex-direction: row;
+}
+
+section#thirdPart section.elements div.element div.content {
+    min-width: 50%;
+    font-size: 125%;
+}
+
+section#thirdPart section.elements div.element div.content h6 {
+    margin: 0%;
+    font-size: 125%;
+}
+
+section#thirdPart section.elements div.element div.content ul {
+    margin-bottom: 10%;
+}
+
+section#thirdPart section.elements div.element div.mediaZone img {
+    border-radius: 2rem;
+    max-width: 100%;
+
+}
+
+section#thirdPart section.elements div.element div.mediaZone #img1 {
+    position: relative;
+    max-width: 75%;
+    max-height: 50%;
+
+}
+
+section#thirdPart section.elements div.element div.mediaZone #img2 {
+    position: relative;
+    top: -20%;
+    left: 25%;
+    max-width: 75%;
+
+}
+
+section#thirdPart section.elements div.element div.mediaZone #img3 {
+    position: relative;
+    top: -25%;
+    max-width: 75%;
+
+}

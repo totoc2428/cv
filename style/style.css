@@ -1,0 +1,30 @@
+/*animation*/
+@keyframes c-animation-first-big-circle {
+    0% {
+        margin: 50%;
+        height: 0%;
+        width: 0%;
+    }
+
+    100% {
+        margin: 0%;
+        height: 100%;
+        width: 100%;
+    }
+
+
+}
+
+/*font*/
+@font-face {
+    font-family: roboto;
+    src: url("./Roboto-Regular.ttf");
+}
+
+body {
+    font-family: roboto;
+    background: white;
+    padding: 0%;
+    height: 100%;
+    width: 99%;
+}
