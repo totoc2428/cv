@@ -117,29 +117,23 @@ section#thirdPart section.elements div.element div.content ul {
 }
 
 section#thirdPart section.elements div.element div.mediaZone img {
+    position: relative;
     border-radius: 2rem;
     max-width: 100%;
-
 }
 
 section#thirdPart section.elements div.element div.mediaZone #img1 {
-    position: relative;
     max-width: 75%;
     max-height: 50%;
-
 }
 
 section#thirdPart section.elements div.element div.mediaZone #img2 {
-    position: relative;
     top: -20%;
     left: 25%;
     max-width: 75%;
-
 }
 
 section#thirdPart section.elements div.element div.mediaZone #img3 {
-    position: relative;
     top: -25%;
     max-width: 75%;
-
 }
