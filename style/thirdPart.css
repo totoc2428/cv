@@ -19,10 +19,15 @@
 @keyframes thirdPart-thirdPart-to-secondPart-animation {
     0% {
         top: 0rem;
-        height: 200vh;
-        visibility: visible;
+        height: 0vh;
+        visibility: hidden;
         overflow: visible;
         opacity: 1;
+    }
+
+    1% {
+        height: 200vh;
+        visibility: visible;
     }
 
     100% {
@@ -34,7 +39,9 @@
     }
 }
 
-@keyframes thirdPart-thirdPart-to-FourPart-animation {}
+@keyframes fourPart-thirdPart-to-FourPart-animation {
+    0% {}
+}
 
 section#thirdPart {
     position: absolute;
@@ -69,6 +76,16 @@ section#thirdPart button {
 
 section#thirdPart.showAnimation {
     animation: thirdPart-secondPart-to-thirdPart-animation 1s forwards 0.5s;
+    display: block;
+}
+
+section#thirdPart.showAnimation.goBack {
+    animation: thirdPart-secondPart-to-thirdPart-animation 1s forwards reverse 0.5s;
+    display: block;
+}
+
+section#thirdPart.hideAnimation {
+    animation: thirdPart-secondPart-to-thirdPart-animation 1s forwards reverse.5s;
     display: block;
 }
 

@@ -1,7 +1,12 @@
 window.onload = function () {
+    window.scrollTo({
+        top: 0,
+        left: 0
+    });
     part1ToPart2();
     part2toPart1();
     part2ToPart3()
+    part3ToPart2()
 }
 
 function part1ToPart2() {
@@ -53,4 +58,20 @@ function part2ToPart3() {
         });
     }
     //nextButton.click();
+}
+
+function part3ToPart2() {
+    var goBack = document.getElementById("thirdPartGoBack");
+    var part2 = document.getElementById("secondPart");
+    var part3 = document.getElementById("thirdPart");
+
+    goBack.onclick = function () {
+        part2.classList.remove("hideAnimation");
+        part3.classList.remove("showAnimation");
+        window.requestAnimationFrame(function (time) {
+            part2.classList.add("hideAnimation", "goBack");
+            part3.classList.add("showAnimation", "goBack");
+        });
+
+    }
 }

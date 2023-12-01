@@ -71,7 +71,7 @@
 }
 
 #secondPart.hideAnimation.goBack {
-    animation: secondPart-secondPart-to-thirdPart-animation 1s forwards reverse;
+    animation: secondPart-secondPart-to-thirdPart-animation 1s forwards reverse 0.5s;
     animation-play-state: running;
 }
 

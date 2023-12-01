@@ -53,33 +53,39 @@
 
 @keyframes firstPart-firstPpart-to-secondPart-animation {
     0% {
-        height: 45rem;
+        height: 100vh;
         transform: translateY(0rem);
+        opacity: 1;
+    }
+
+    10% {
+        opacity: 0;
     }
 
     50% {
-        height: 45rem;
-        transform: translateY(15rem);
+        height: 100vh;
+        transform: translateY(20vh);
     }
 
     100% {
-        height: 0rem;
-        transform: translateY(-20rem);
+        height: 0vh;
+        transform: translateY(-100vh);
+        opacity: 1;
     }
 }
 
 #firstPart.hideAnimation {
     height: 45rem;
     overflow: hidden;
-    animation: firstPart-firstPpart-to-secondPart-animation 1s forwards;
     animation-play-state: running;
+    animation: firstPart-firstPpart-to-secondPart-animation 1s forwards;
 }
 
 #firstPart.showAnimation {
     height: 0rem;
     overflow: hidden;
-    animation: firstPart-firstPpart-to-secondPart-animation 1s reverse forwards 0.5s;
     animation-play-state: running;
+    animation: firstPart-firstPpart-to-secondPart-animation 1s reverse forwards 0.5s;
 }
 
 header {
@@ -242,7 +248,7 @@ header section.card div.network button:hover {
 button.next {
     position: relative;
     top: 10rem;
-    left: 47.75rem;
+    left: 50ch;
     font-family: roboto;
     font-size: 200%;
     padding: 1.5%;
@@ -253,6 +259,7 @@ button.next {
     box-shadow: 2em 2em 6em #d9d9d9,
         -2em -2em 6em #ffffff;
     cursor: pointer;
+    opacity: 0;
     transform: translateY(15rem);
     animation: enter-animate-move 1s forwards 1.5s;
 }
