@@ -248,7 +248,7 @@ header section.card div.network button:hover {
 button.next {
     position: relative;
     top: 10rem;
-    left: 50ch;
+    left: 50%;
     font-family: roboto;
     font-size: 200%;
     padding: 1.5%;

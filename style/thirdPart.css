@@ -39,8 +39,29 @@
     }
 }
 
-@keyframes fourPart-thirdPart-to-FourPart-animation {
-    0% {}
+@keyframes thirdPart-thirdPart-to-fourPart-animation {
+    0% {
+        top: 0vh;
+        height: 200vh;
+        visibility: visible;
+        overflow: visible;
+        opacity: 1;
+    }
+
+    50% {
+        top: 20vh;
+    }
+
+    99% {
+        top: -100vh;
+    }
+
+    100% {
+        top: -100vh;
+        visibility: visible;
+        overflow: visible;
+        opacity: 0;
+    }
 }
 
 section#thirdPart {
@@ -55,7 +76,6 @@ section#thirdPart {
     visibility: hidden;
     opacity: 0;
 }
-
 
 section#thirdPart button {
     color: white;
@@ -80,12 +100,18 @@ section#thirdPart.showAnimation {
 }
 
 section#thirdPart.showAnimation.goBack {
-    animation: thirdPart-secondPart-to-thirdPart-animation 1s forwards reverse 0.5s;
+    animation: thirdPart-secondPart-to-thirdPart-animation 1s forwards reverse;
     display: block;
 }
 
+
 section#thirdPart.hideAnimation {
-    animation: thirdPart-secondPart-to-thirdPart-animation 1s forwards reverse.5s;
+    animation: thirdPart-thirdPart-to-fourPart-animation 1s forwards;
+    display: block;
+}
+
+section#thirdPart.hideAnimation.goBack {
+    animation: fourPart-thirdPart-to-FourPart-animation 1s forwards 5s reverse;
     display: block;
 }
 

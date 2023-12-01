@@ -5,8 +5,10 @@ window.onload = function () {
     });
     part1ToPart2();
     part2toPart1();
-    part2ToPart3()
-    part3ToPart2()
+    part2ToPart3();
+    part3ToPart2();
+    part3ToPart4();
+
 }
 
 function part1ToPart2() {
@@ -73,5 +75,20 @@ function part3ToPart2() {
             part3.classList.add("showAnimation", "goBack");
         });
 
+    }
+}
+
+function part3ToPart4() {
+    var nextButton = document.getElementById("thirdPartNextButton");
+    var part3 = document.getElementById("thirdPart");
+    var part4 = document.getElementById("fourPart");
+
+    nextButton.onclick = function () {
+        part3.classList.remove("showAnimation");
+        part4.classList.remove("hideAnimation");
+        window.requestAnimationFrame(function (time) {
+            part3.classList.add("hideAnimation");
+            part4.classList.add("showAnimation");
+        });
     }
 }

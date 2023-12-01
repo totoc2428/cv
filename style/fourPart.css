@@ -1,3 +1,32 @@
+@keyframes fourPart-thirdPart-to-FourPart-animation {
+    0% {
+        top: 100vh;
+        visibility: hidden;
+        opacity: 1;
+        height: 100vh;
+
+    }
+
+    1% {
+        visibility: visible;
+        opacity: 1;
+        height: 100vh;
+    }
+
+    100% {
+        top: 0vh;
+        visibility: visible;
+        opacity: 1;
+        height: 100vh;
+        overflow: hidden;
+    }
+}
+
+@font-face {
+    font-family: blueScreen;
+    src: url("./BlueScreen.ttf");
+}
+
 section#fourPart {
     position: absolute;
     top: 100vh;
@@ -5,8 +34,16 @@ section#fourPart {
     height: 0em;
     padding: 2.5%;
     width: 95%;
-    background: linear-gradient(145deg, #232323, #1e1e1e);
+    background: black;
     overflow: hidden;
     visibility: hidden;
     opacity: 0;
+    font-family: blueScreen;
+    color: white;
+
+}
+
+section#fourPart.showAnimation {
+    animation: fourPart-thirdPart-to-FourPart-animation 1s forwards 0.5s;
+    animation-play-state: running;
 }
