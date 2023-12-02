@@ -263,3 +263,37 @@ button.next {
     transform: translateY(15rem);
     animation: enter-animate-move 1s forwards 1.5s;
 }
+
+
+section#firstPart div.byPassMenu {
+    position: relative;
+    top: 7.5rem;
+    left: 0%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 1%;
+    padding: 1%;
+    width: 25%;
+    opacity: 0;
+    animation: enter-animate-move 1s forwards 1.5s;
+
+}
+
+section#firstPart div.byPassMenu button {
+    margin: 1%;
+    padding: 1%;
+    display: block;
+    border-radius: 0.25rem;
+    outline: none;
+    border: none;
+    font-family: roboto;
+    font-size: 105%;
+    background: linear-gradient(145deg, #ffffff, #e6e6e6, #009bffed, #0083e6ed);
+    background-size: 300%;
+}
+
+section#firstPart div.byPassMenu button:hover {
+    animation: button-background-animation 0.5s forwards;
+    cursor: pointer;
+}

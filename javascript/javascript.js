@@ -9,8 +9,13 @@ window.onload = function () {
     part3ToPart4();
 
 
+    skiptoPartTwo();
+    skiptoPartTree();
+    skiptoPartFour();
+
     goToLinkdin();
     takeContact();
+
 
 }
 
@@ -21,8 +26,31 @@ function initScroll() {
     });
 }
 
+function skiptoPartTwo() {
+    document.getElementById("goToPartTwo").onclick = function () {
+        document.getElementById("firstPartNextButton").click();
+    }
+}
+
+function skiptoPartTree() {
+    document.getElementById("goToPartTree").onclick = function () {
+        document.getElementById("firstPartNextButton").click();
+        document.getElementById("secondPartNextButton").click();
+    }
+}
+
+function skiptoPartFour() {
+    document.getElementById("goToPartFour").onclick = function () {
+        document.getElementById("firstPartNextButton").click();
+        document.getElementById("secondPartNextButton").click();
+        document.getElementById("thirdPartNextButton").click();
+
+    }
+}
+
+
 function part1ToPart2() {
-    var nextButton = document.getElementById("firstPartNexButton");
+    var nextButton = document.getElementById("firstPartNextButton");
     var part1 = document.getElementById("firstPart");
     var part2 = document.getElementById("secondPart");
 
