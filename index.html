@@ -12,7 +12,7 @@
     <script src="javascript/javascript.js"></script>
 </head>
 
-<body>
+<body id="body">
     <section id="firstPart">
         <header>
             <h1>Charles Coudé</h1>
@@ -30,15 +30,19 @@
                 <div class="data">
                     <img src="./ressources/profil.jpeg">
                     <div>
-                        <h3>Projet :</h3>
-                        <p>Stage de deuxième année. <br> Projet d'alternance pour la troisième année.</p>
+                        <h3>Présentation :</h3>
+                        <p>Dévellopeur informatique en formation. Actuellement en deuxième année de BUT
+                            informatique.<br>Recherche de stage du 15 avril à Juin 2024. <br> Projet d'alternance pour
+                            la
+                            troisième année.
+                        </p>
                     </div>
                 </div>
                 <div class="network">
                     <h3>Contact :</h3>
-                    <button>Obtenir le CV</button>
-                    <button>LinkedIn : @CharlesCoudé</button>
-                    <button>Prendre Contact</button>
+                    <button id="goToCV">Obtenir le CV</button>
+                    <button id="goToLinkdin">LinkedIn : @CharlesCoudé</button>
+                    <button id="takeContact">Prendre Contact</button>
                 </div>
             </section>
         </header>
@@ -240,13 +244,15 @@
         <button id="thirdPartNextButton">↓</button>
     </section>
     <section id="fourPart">
-        <h4>[Projet Personnel]</h4>
-        <button id="fourPartGoBack">↑</button>
+        <div class="titleZone">
+            <h4>[Projet Personnel]</h4>
+            <button id="fourPartGoBack">↑</button>
+        </div>
         <section class="elements">
             <img src="./ressources/project/deltalogo.png">
             <h5>Delta</h5>
             <h6>Pour tous, par tous.</h6>
-            <button>Allez sur la page de projet.</button>
+            <button id="gotoProjectPage">Allez sur la page de projet.</button>
         </section>
     </section>
 </body>

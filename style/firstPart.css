@@ -128,7 +128,7 @@ header section.card div.data {
     font-size: 125%;
     display: flex;
     justify-content: left;
-    max-width: 35%;
+    max-width: 40%;
     margin: 1%;
     border-radius: 1.5rem;
     background: linear-gradient(145deg, #ffffff, #e6e6e6);

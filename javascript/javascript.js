@@ -1,14 +1,24 @@
 window.onload = function () {
-    window.scrollTo({
-        top: 0,
-        left: 0
-    });
+
+    initScroll();
+
     part1ToPart2();
     part2toPart1();
     part2ToPart3();
     part3ToPart2();
     part3ToPart4();
 
+
+    goToLinkdin();
+    takeContact();
+
+}
+
+function initScroll() {
+    window.scrollTo({
+        top: 0,
+        left: 0
+    });
 }
 
 function part1ToPart2() {
@@ -89,6 +99,30 @@ function part3ToPart4() {
         window.requestAnimationFrame(function (time) {
             part3.classList.add("hideAnimation");
             part4.classList.add("showAnimation");
+            document.getElementById("body").style.overflow = "hidden";
+            initScroll();
         });
+    }
+}
+
+function goToCV() {
+
+}
+
+function goToLinkdin() {
+    var button = document.getElementById("goToLinkdin");
+    button.onclick = function () {
+        window.location.href = "https://www.linkedin.com/in/charles-coud%C3%A9-a4a076284/"
+    }
+}
+
+function takeContact() {
+    var button = document.getElementById("takeContact");
+    button.onclick = function () {
+        navigator.clipboard.writeText("charles.coude.pro@gmail.com");
+        button.innerHTML = "✉️📋Addresse mail copié ! "
+        setTimeout(function () {
+            button.innerHTML = "Prendre Contact"
+        }, 2000);
     }
 }

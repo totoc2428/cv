@@ -29,6 +29,7 @@
 
 section#fourPart {
     position: absolute;
+    padding: 2.5vh;
     top: 100vh;
     left: 0%;
     height: 0em;
@@ -40,10 +41,68 @@ section#fourPart {
     opacity: 0;
     font-family: blueScreen;
     color: white;
+    text-align: center;
 
 }
 
 section#fourPart.showAnimation {
     animation: fourPart-thirdPart-to-FourPart-animation 1s forwards 0.5s;
     animation-play-state: running;
+}
+
+section#fourPart div.titleZone {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+    font-size: 125%;
+    max-height: 5vh;
+    margin-bottom: 2.5vh;
+}
+
+section#fourPart div.titleZone button {
+    outline: none;
+    border: none;
+    background: none;
+    color: white;
+    font-weight: bold;
+    text-shadow: white 1rem;
+    cursor: pointer;
+}
+
+#section#fourPart img {
+    margin: 2rem;
+    min-height: 50%;
+}
+
+section#fourPart h5,
+h6 {
+    font-size: 160%;
+    margin: 1%;
+}
+
+section#fourPart button#gotoProjectPage {
+    margin-top: 15vh;
+    outline: none;
+    border: none;
+    background: black;
+    color: white;
+    font-size: 125%;
+    font-family: blueScreen;
+    font-weight: bold;
+    text-shadow: white 1rem;
+    cursor: pointer;
+    border-left: 0rem double #ffffff;
+    border-bottom: 0rem groove #ffffff;
+    transition-property: all;
+    transition-duration: 1s;
+}
+
+section#fourPart button#gotoProjectPage:hover {
+    transition-property: all;
+    transition-duration: 1s;
+    font-size: 150%;
+    background: black;
+    border-left: 0.125rem double #ffffff;
+    border-bottom: 0.125rem groove #ffffff;
 }
