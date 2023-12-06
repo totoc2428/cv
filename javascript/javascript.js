@@ -35,6 +35,7 @@ function setiFIsMobileDevice() {
     console.log(isMobile);
     if (isMobile == true) {
         document.getElementById("body").removeChild(document.getElementById("computerPart"));
+        document.getElementById("mobilePart").classList.add("show");
         mobilNextPart();
     }
     else {
