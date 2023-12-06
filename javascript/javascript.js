@@ -170,14 +170,14 @@ function part3ToPart4() {
 function goToCV() {
     var button = document.getElementById("goToCV");
     button.onclick = function () {
-        window.location.href = "https://drive.google.com/file/d/1bBfqdGNat7DXiHFI7GWanhb0AA7OF2Ix/view?usp=sharing"
+        window.location.href = "./ressources/cv/CV_2023-12-05_Charles_Coudé.pdf";
     }
 }
 
 function goToLinkdin() {
     var button = document.getElementById("goToLinkdin");
     button.onclick = function () {
-        window.location.href = "https://www.linkedin.com/in/charles-coud%C3%A9-a4a076284/"
+        window.location.href = "https://www.linkedin.com/in/charles-coud%C3%A9-a4a076284/";
     }
 }
 
