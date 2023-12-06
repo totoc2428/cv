@@ -74,6 +74,7 @@ section#mobilePart div div {
     margin: 0rem;
     height: 100%;
     width: 100%;
+    overflow: hidden;
     background: linear-gradient(145deg, #ffffff9d, #e6e6e69d);
     box-shadow: 2em 2em 6em #d9d9d9,
         -2em -2em 6em #ffffff;
