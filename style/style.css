@@ -25,8 +25,8 @@ body {
     font-family: roboto;
     background: white;
     padding: 0%;
-    height: 100%;
-    width: 99%;
+    height: 100vh;
+    width: 100ch;
 }
 
 /*section#mobilePart {
@@ -66,30 +66,94 @@ section#mobilePart div div {
         -2em -2em 6em #ffffff;
 }*/
 
+@keyframes mobilePart1-mobilePart1-to-mobilePart2 {
+    0% {
+        transform: translateY(0vh);
+        visibility: visible;
+        display: block;
+    }
+
+    25% {
+        transform: translateY(20vh);
+        visibility: visible;
+        display: block;
+    }
+
+    99% {
+        transform: translateY(-110vh);
+        visibility: visible;
+        display: block;
+    }
+
+    100% {
+        transform: translateY(-110vh);
+        visibility: hidden;
+        display: none;
+    }
+}
+
+@keyframes mobilePart2-mobilePart1-to-mobilePart2 {
+    0% {
+        transform: translateY(110vh);
+        visibility: hidden;
+        display: none;
+    }
+
+    1% {
+        transform: translateY(110vh);
+        visibility: visible;
+        display: block;
+    }
+
+    100% {
+        transform: translateY(0vh);
+        visibility: visible;
+        display: block;
+    }
+}
+
 #mobilePart {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    margin: 0rem;
+    height: 100vh;
+    width: 100%;
+}
+
+#mobPart1 {
+    position: absolute;
+    top: 0%;
+    left: 0%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 0rem;
-    margin: 0rem;
-    height: 100%;
-    width: 100%;
-    overflow: hidden;
+    padding: 2.5rem;
+    overflow-x: hidden;
     background: linear-gradient(145deg, #ffffff9d, #e6e6e69d);
-    box-shadow: 2em 2em 6em #d9d9d9,
-        -2em -2em 6em #ffffff;
 }
 
-#mobilePart>div {
+#mobPart1.hide {
+    animation: mobilePart1-mobilePart1-to-mobilePart2 0.75s forwards;
+    display: none;
+}
+
+
+#mobPart1>div {
     display: flex;
+    width: 100%;
+    margin: 0rem;
+    padding: 0rem;
     flex-direction: column;
     align-items: center;
 }
 
 /* Style de l'image */
-#mobilePart img {
-    max-width: 50ch;
-    transform: translateX(20ch);
+#mobPart1 img {
+    width: 50ch;
+    margin-top: 2.5rem;
+    margin-left: 0ch;
+
     /* Ajustez la taille de l'image selon vos besoins */
     border-radius: 2.5rem;
     /* Pour une forme de cercle */
@@ -97,32 +161,31 @@ section#mobilePart div div {
 }
 
 /* Style des titres */
-#mobilePart h1,
-#mobilePart h2 {
+#mobPart1 h1,
+#mobPart1 h2 {
     margin: 1rem 0;
     font-family: 'Arial', sans-serif;
     color: #333;
-    font-size: 305%;
+    font-size: 405%;
     text-align: center;
     /* Texte noir */
 }
 
 /* Style de la barre de navigation */
-#mobilePart nav {
+#mobPart1 nav {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     margin-top: 10rem;
     padding: 5rem;
     padding-top: 0rem;
-    width: 100%;
 }
 
 /* Style des boutons de la barre de navigation */
-#mobilePart button {
+#mobPart1 button {
     margin: 1rem 0;
     padding: 1rem;
-    font-size: 305%;
+    font-size: 400%;
     border-radius: 1rem;
     background: linear-gradient(145deg, #ffffff9d, #e6e6e69d);
     box-shadow: 2em 2em 6em #d9d9d9,
@@ -134,7 +197,7 @@ section#mobilePart div div {
 }
 
 /* Style du paragraphe */
-#mobilePart p {
+#mobPart1 p {
     text-align: center;
     margin-top: 2rem;
     color: #333;
@@ -142,5 +205,50 @@ section#mobilePart div div {
 }
 
 #mobPart2 {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    padding: 2.5rem;
+    overflow-x: hidden;
+    background: linear-gradient(145deg, #ffffff9d, #c8e4f99d);
+    transform: translateX(-110vh);
+    visibility: hidden;
+    font-size: 200%;
+    color: #333;
     display: none;
+
+}
+
+#mobPart2 a {
+    color: #333;
+    text-decoration: none;
+    font-size: 125%;
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    background: linear-gradient(145deg, #ffffff9d, #e6e6e69d);
+}
+
+#mobPart2 div {
+    border-radius: 1rem;
+    background: linear-gradient(145deg, #ffffff9d, #e6e6e69d);
+    margin: 1rem;
+    padding: 2.5rem;
+}
+
+#mobPart2 div div {
+    display: flex;
+    justify-content: space-around;
+}
+
+#mobPart2 h3 {
+    color: #0083e6;
+}
+
+#mobPart2.show {
+    animation: mobilePart2-mobilePart1-to-mobilePart2 0.75s forwards 0.5s;
+    display: block;
 }

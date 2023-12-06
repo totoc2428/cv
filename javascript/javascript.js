@@ -6,16 +6,6 @@ window.onload = function () {
     goToLinkdin();
     takeContact();
 
-    part1ToPart2();
-    part2toPart1();
-    part2ToPart3();
-    part3ToPart2();
-    part3ToPart4();
-
-
-    skiptoPartTwo();
-    skiptoPartTree();
-    skiptoPartFour();
 
 
 
@@ -30,7 +20,7 @@ function isMobileDevice() {
         || navigator.userAgent.match(/iPod/i)
         || navigator.userAgent.match(/BlackBerry/i)
         || navigator.userAgent.match(/Windows Phone/i)
-        //|| navigator.userAgent.match(/Windows/i)//to do suprimer
+        || navigator.userAgent.match(/Windows/i)//to do suprimer
     ) {
         return true;
     }
@@ -44,20 +34,39 @@ function setiFIsMobileDevice() {
     const isMobile = isMobileDevice();
     console.log(isMobile);
     if (isMobile == true) {
-        document.getElementById("body").removeChild(document.getElementById("computerPart"))
-
+        document.getElementById("body").removeChild(document.getElementById("computerPart"));
+        mobilNextPart();
     }
     else {
         document.getElementById("body").removeChild(document.getElementById("mobilePart"));
+
+        part1ToPart2();
+        part2toPart1();
+        part2ToPart3();
+        part3ToPart2();
+        part3ToPart4();
+
+
+        skiptoPartTwo();
+        skiptoPartTree();
+        skiptoPartFour();
     }
 
 }
 
+
+function mobilNextPart() {
+    var button = document.getElementById("nextMobilebutton");
+    button.onclick = function () {
+        console.log("execution de mobilNextPart");
+        document.getElementById("mobPart1").classList.add("hide");
+        document.getElementById("mobPart2").classList.add("show");
+
+    }
+}
+
 function initScroll() {
-    window.scrollTo({
-        top: 0,
-        left: 0
-    });
+    window.scrollTo({ top: 0.0, left: 0.0 });
 }
 
 function skiptoPartTwo() {
