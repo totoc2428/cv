@@ -1,6 +1,10 @@
 window.onload = function () {
-
+    setiFIsMobileDevice();
     initScroll();
+
+    goToCV();
+    goToLinkdin();
+    takeContact();
 
     part1ToPart2();
     part2toPart1();
@@ -13,9 +17,39 @@ window.onload = function () {
     skiptoPartTree();
     skiptoPartFour();
 
-    goToLinkdin();
-    takeContact();
 
+
+
+}
+
+function isMobileDevice() {
+    if (navigator.userAgent.match(/iPhone/i)
+        || navigator.userAgent.match(/webOS/i)
+        || navigator.userAgent.match(/Android/i)
+        || navigator.userAgent.match(/iPad/i)
+        || navigator.userAgent.match(/iPod/i)
+        || navigator.userAgent.match(/BlackBerry/i)
+        || navigator.userAgent.match(/Windows Phone/i)
+        //|| navigator.userAgent.match(/Windows/i)//to do suprimer
+    ) {
+        return true;
+    }
+    else {
+        return false;
+    }
+}
+
+
+function setiFIsMobileDevice() {
+    const isMobile = isMobileDevice();
+    console.log(isMobile);
+    if (isMobile == true) {
+        document.getElementById("body").removeChild(document.getElementById("computerPart"))
+
+    }
+    else {
+        document.getElementById("body").removeChild(document.getElementById("mobilePart"));
+    }
 
 }
 
@@ -134,7 +168,10 @@ function part3ToPart4() {
 }
 
 function goToCV() {
-
+    var button = document.getElementById("goToCV");
+    button.onclick = function () {
+        window.location.href = "https://drive.google.com/file/d/1bBfqdGNat7DXiHFI7GWanhb0AA7OF2Ix/view?usp=sharing"
+    }
 }
 
 function goToLinkdin() {

@@ -28,3 +28,118 @@ body {
     height: 100%;
     width: 99%;
 }
+
+/*section#mobilePart {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+section#mobilePart div {
+    border-radius: 1rem;
+    background: linear-gradient(145deg, #ffffff, #e6e6e6);
+    background: red;
+    box-shadow: 2em 2em 6em #d9d9d9,
+        -2em -2em 6em #ffffff;
+    margin: 1%;
+    padding: 5%;
+    width: 95%;
+    overflow: hidden;
+    display: block;
+}
+
+section#mobilePart div img {
+    position: absolute;
+    top: 0%;
+    max-width: 75%;
+    margin: 0%;
+    border-radius: 2.5em;
+}
+
+section#mobilePart div div {
+    border-radius: 1rem;
+    background: linear-gradient(145deg, #ffffff9d, #e6e6e69d);
+    box-shadow: 2em 2em 6em #d9d9d9,
+        -2em -2em 6em #ffffff;
+}*/
+
+#mobilePart {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0rem;
+    margin: 0rem;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(145deg, #ffffff9d, #e6e6e69d);
+    box-shadow: 2em 2em 6em #d9d9d9,
+        -2em -2em 6em #ffffff;
+}
+
+#mobilePart>div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Style de l'image */
+#mobilePart img {
+    max-width: 50ch;
+    transform: translateX(20ch);
+    /* Ajustez la taille de l'image selon vos besoins */
+    border-radius: 2.5rem;
+    /* Pour une forme de cercle */
+    margin-bottom: 1rem;
+}
+
+/* Style des titres */
+#mobilePart h1,
+#mobilePart h2 {
+    margin: 1rem 0;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    font-size: 305%;
+    text-align: center;
+    /* Texte noir */
+}
+
+/* Style de la barre de navigation */
+#mobilePart nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-top: 10rem;
+    padding: 5rem;
+    padding-top: 0rem;
+    width: 100%;
+}
+
+/* Style des boutons de la barre de navigation */
+#mobilePart button {
+    margin: 1rem 0;
+    padding: 1rem;
+    font-size: 305%;
+    border-radius: 1rem;
+    background: linear-gradient(145deg, #ffffff9d, #e6e6e69d);
+    box-shadow: 2em 2em 6em #d9d9d9,
+        -2em -2em 6em #ffffff;
+    color: #333;
+    cursor: pointer;
+    outline: none;
+    border: none;
+}
+
+/* Style du paragraphe */
+#mobilePart p {
+    text-align: center;
+    margin-top: 2rem;
+    color: #333;
+    /* Texte noir */
+}
+
+#mobPart2 {
+    display: none;
+}

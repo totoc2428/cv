@@ -70,9 +70,9 @@ section#fourPart div.titleZone button {
     cursor: pointer;
 }
 
-#section#fourPart img {
-    margin: 2rem;
-    min-height: 50%;
+section#fourPart img {
+    margin: 0rem;
+    max-height: 50vh;
 }
 
 section#fourPart h5,
@@ -82,18 +82,18 @@ h6 {
 }
 
 section#fourPart button#gotoProjectPage {
-    margin-top: 15vh;
+    margin-top: 5vh;
     outline: none;
     border: none;
     background: black;
-    color: white;
+    color: #232323;
     font-size: 125%;
     font-family: blueScreen;
     font-weight: bold;
-    text-shadow: white 1rem;
+    text-shadow: #232323 1rem;
     cursor: pointer;
-    border-left: 0rem double #ffffff;
-    border-bottom: 0rem groove #ffffff;
+    border-left: 0rem double #232323;
+    border-bottom: 0rem groove #232323;
     transition-property: all;
     transition-duration: 1s;
 }
@@ -103,6 +103,7 @@ section#fourPart button#gotoProjectPage:hover {
     transition-duration: 1s;
     font-size: 150%;
     background: black;
-    border-left: 0.125rem double #ffffff;
-    border-bottom: 0.125rem groove #ffffff;
+    color: #414141;
+    border-left: 0.125rem double #414141;
+    border-bottom: 0.125rem groove #414141;
 }
