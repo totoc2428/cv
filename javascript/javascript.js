@@ -180,7 +180,7 @@ function part3ToPart4() {
 function goToCV() {
     var button = document.getElementById("goToCV");
     button.onclick = function () {
-        window.location.href = "./ressources/cv/CV_2023-12-05_Charles_Coudé.pdf";
+        window.location.href = "./ressources/cv/charlescoudécv.pdf";
     }
 }
 
