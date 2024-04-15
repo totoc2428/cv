@@ -49,9 +49,21 @@ section.career > header {
   overflow: hidden;
 }
 
+body.mobile section.career > header {
+  flex-direction: column-reverse;
+  justify-content: center;
+}
+
 section.career > header > h1 {
   font-size: 200%;
   margin-bottom: 1rem;
+}
+
+body.mobile section.career > header > h1 {
+  width: 100vw;
+  height: auto;
+  text-align: left;
+  margin: 1rem;
 }
 
 section.career > header > button {
@@ -60,6 +72,13 @@ section.career > header > button {
   font-size: 110%;
   margin-right: 3rem;
   border-radius: 0.5rem;
+}
+
+body.mobile section.career > header > button {
+  font-size: 150%;
+  padding: 1.5rem;
+  width: 10vw;
+  margin-left: 85vw;
 }
 
 section.career > div {
@@ -91,7 +110,13 @@ section.career > div > section.container {
   );
 }
 
+body.mobile section.career > div > section.container {
+  flex-direction: column;
+  justify-content: center;
+}
+
 section.career > div > section.container > ul {
+  margin-top: 2rem;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -99,6 +124,13 @@ section.career > div > section.container > ul {
 
   list-style-type: none;
   padding: 0;
+}
+
+body.mobile section.career > div > section.container > ul {
+  flex-direction: row;
+  width: 100%;
+  max-width: 100%;
+  height: 4rem;
 }
 
 section.career > div > section.container > ul > li {
@@ -143,6 +175,34 @@ section.career > div > section.container > ul > div.line {
   transition: all 0.5s;
 }
 
+body.mobile section.career > div > section.container > ul > div.line {
+  margin: 0%;
+  margin-top: 3%;
+  margin-left: 0%;
+  margin-right: 0%;
+  height: 5%;
+  width: 2.5vw;
+  box-shadow: inset 1rem 3rem var(--color_bk_shadow1_focus),
+    -1rem -1rem 3rem var(--color_bk_shadow2_focus) inset;
+  background: linear-gradient(
+    145deg,
+    var(--color_bk_gradient1),
+    var(--color_bk_gradient2)
+  );
+}
+
+body.mobile section.career > div > section.container > ul > div.line.focus {
+  margin: 0%;
+  margin-top: 3%;
+  margin-left: 0%;
+  margin-right: 0%;
+
+  height: 5%;
+  width: 20vw;
+  box-shadow: inset 1rem 3rem var(--color_bk_shadow1_focus),
+    -1rem -1rem 3rem var(--color_bk_shadow2_focus) inset;
+}
+
 section.career > div > section.container > ul > div.line.focus {
   height: 50vh;
   transition: all 0.5s;
@@ -169,11 +229,26 @@ section.career > div > section.container > div.content > div {
   overflow: hidden;
 }
 
+body.mobile section.career > div > section.container > div.content > div {
+  width: 0%;
+  flex-direction: column;
+  justify-content: center;
+  transition: all 0.5s;
+  overflow: hidden;
+}
+
 section.career > div > section.container > div.content > div.focus {
   height: 100%;
   opacity: 1;
   transition: all 0.5s;
   overflow: default;
+}
+
+body.mobile section.career > div > section.container > div.content > div.focus {
+  height: auto;
+  width: 100%;
+  opacity: 1;
+  transition: all 0.5s;
 }
 
 section.career > div > section.container > div.content > div > article {
@@ -182,15 +257,43 @@ section.career > div > section.container > div.content > div > article {
   overflow: hidden;
 }
 
+body.mobile
+  section.career
+  > div
+  > section.container
+  > div.content
+  > div
+  > article {
+  margin-top: 0%;
+  width: 100%;
+}
+
 section.career > div > section.container > div.content > div > article > h5 {
   font-size: 150%;
   margin-bottom: 2rem;
 }
+
+body.mobile
+  section.career
+  > div
+  > section.container
+  > div.content
+  > div
+  > article
+  > h5 {
+  margin-bottom: 0rem;
+  margin-top: 0rem;
+}
+
 section.career > div > section.container > div.content > div > div {
   width: 40vw;
   height: 100%;
   overflow: hidden;
   padding: 2.5rem;
+}
+
+body.mobile section.career > div > section.container > div.content > div > div {
+  display: none;
 }
 
 section.career > div > section.container > div.content > div > div > img {
