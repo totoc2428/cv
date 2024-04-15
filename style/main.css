@@ -76,6 +76,16 @@ button {
   transition: all 0.5s;
 }
 
+body .mobile {
+  display: none;
+  visibility: hidden;
+}
+
+body.mobile .mobile {
+  display: block;
+  visibility: visible;
+}
+
 button:hover,
 button:focus {
   transition: all 0.5s;
@@ -110,7 +120,7 @@ body {
 
 /*/ ///////////////NEXT*/
 section > div.next {
-  margin-top: 9rem;
+  margin-top: 2rem;
   margin-bottom: 1rem;
   display: flex;
   justify-content: center;
@@ -119,7 +129,15 @@ section > div.next {
   height: 3rem;
 }
 
+section.home > div.next {
+  margin-top: 9rem;
+}
+
 section > div.next > button {
   font-size: 125%;
   border-radius: 0.5rem;
+}
+
+body.mobile section > div.next > button {
+  font-size: 250%;
 }
