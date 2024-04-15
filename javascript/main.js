@@ -45,6 +45,7 @@ function initHome() {
       showASection(home);
       root.classList.remove("dark");
       root.classList.remove("blue");
+      root.classList.remove("purple");
     });
   });
 
@@ -59,6 +60,7 @@ function initCareer() {
       event.preventDefault();
       showASection(career);
       root.classList.add("dark");
+      root.classList.remove("purple");
       root.classList.remove("blue");
     });
   });
@@ -130,6 +132,8 @@ function initTechnology() {
 
       showASection(technology);
       root.classList.remove("dark");
+      root.classList.remove("purple");
+
       root.classList.add("blue");
     });
   });
