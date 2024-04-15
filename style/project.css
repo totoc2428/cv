@@ -1,0 +1,99 @@
+section.project {
+  height: 0vh;
+  width: 100vw;
+  transition: all 0.5s;
+  background: black;
+  margin-bottom: 100%;
+  overflow: hidden;
+
+  font-family: var(--delta_font_family);
+}
+
+section.project.show {
+  margin-bottom: 0%;
+  height: 100vh;
+  width: 100vw;
+  transition: all 0.5s;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+section.project.hide {
+  height: 0rem;
+  margin-bottom: 100%;
+  transition: all 0.5s;
+}
+
+section.project.none {
+  margin-top: 100%;
+  transition: all 0.5s;
+  display: none;
+}
+
+section.project > header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 105%;
+  height: 5vh;
+  width: 100vw;
+}
+
+section.project > header > button {
+  margin: 1rem;
+  margin-right: 3rem;
+  background: black;
+  border-bottom: 0rem white solid;
+  transition: all 0.5s;
+}
+
+section.project > header > button:focus,
+section.project > header > button:hover {
+  font-size: 126%;
+  border-bottom: 0.125rem white solid;
+  transition: all 0.5s;
+}
+
+section.project > section.container {
+  height: 95vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+section.project > section.container > img {
+  margin-left: 32.5vw;
+  width: 35vw;
+  margin-bottom: 1rem;
+}
+
+section.project > section.container > h2,
+section.project > section.container > h3 {
+  font-size: 200%;
+  width: 100vw;
+  margin: 0rem;
+  text-align: center;
+}
+
+section.project > section.container > button {
+  margin-left: 40vw;
+  margin-right: 40vw;
+  margin-top: 2.5rem;
+  font-size: 110%;
+  padding: 1rem;
+  background: black;
+  border-bottom: 0rem white solid;
+  border-left: 0rem white solid;
+  transition: all 0.5s;
+  box-shadow: none;
+}
+
+section.project > section.container > button:hover,
+section.project > section.container > button:focus {
+  background: black;
+  font-size: 111%;
+  border-bottom: 0.125rem white solid;
+  border-left: 0.125rem white solid;
+  transition: all 0.5s;
+  box-shadow: none;
+}

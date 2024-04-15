@@ -4,6 +4,7 @@ const home = document.querySelector("section.home");
 const career = document.querySelector("section.career");
 const technology = document.querySelector("section.technology");
 const achievement = document.querySelector("section.achievement");
+const project = document.querySelector("section.project");
 
 function init() {
   if (isMobileDevice()) {
@@ -16,6 +17,7 @@ function init() {
   initCareer();
   initTechnology();
   initAchivement();
+  initProject();
 }
 
 function isMobileDevice() {
@@ -148,6 +150,20 @@ function initAchivement() {
       root.classList.remove("dark");
       root.classList.remove("blue");
       root.classList.add("purple");
+    });
+  });
+}
+
+function initProject() {
+  document.querySelectorAll("button.project").forEach((element) => {
+    element.addEventListener("click", (event) => {
+      event.preventDefault();
+
+      showASection(project);
+
+      root.classList.add("dark");
+      root.classList.remove("blue");
+      root.classList.remove("purple");
     });
   });
 }
