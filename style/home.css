@@ -1,0 +1,111 @@
+/*////////////////////HOME*/
+
+/*/ ///////////DEFAULT*/
+section.home {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  width: 100%;
+  height: 0rem;
+  margin-bottom: 0rem;
+  margin-top: 100%;
+  overflow: hidden;
+  background: linear-gradient(
+    145deg,
+    var(--color_bk_gradient1),
+    var(--color_bk_gradient2)
+  );
+  transition: all 0.5s;
+}
+
+section.home.show {
+  display: flex;
+  height: 100%;
+  margin-top: 0%;
+  margin-bottom: 0%;
+  transition: all 0.5s;
+}
+
+section.home.hide {
+  height: 0rem;
+  margin-bottom: 100%;
+  transition: all 0.5s;
+}
+
+section.home.none {
+  transition: all 0.5s;
+  margin-bottom: 0%;
+  display: none;
+}
+
+/*/ ///////////////HEADER*/
+section.home > header {
+  margin: 1rem;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  background: linear-gradient(
+    145deg,
+    var(--color_bk_gradient1),
+    var(--color_bk_gradient2)
+  );
+  border-radius: 0.5rem;
+}
+
+/*/ /////////////ID*/
+
+section.home > header > div.id {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  min-width: 50%;
+  max-width: 70%;
+}
+
+section.home > header > div.id > img {
+  border-radius: 1rem;
+  height: 24rem;
+  margin: 1rem;
+}
+
+section.home > header > div.id > div {
+  margin: 1rem;
+  font-size: 130%;
+}
+
+section.home > header > div.id > div > h1 {
+  font-size: 200%;
+  margin-bottom: 0.5rem;
+}
+
+section.home > header > div.id > div > h2 {
+  margin-top: 0.5rem;
+}
+
+/*/ /////////////CONTACT*/
+section.home > header > div.contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+section.home > header > div.contact > button {
+  font-size: 125%;
+  margin: 1rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+/*/ ///////////////NAV*/
+section.home > nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+}
+
+section.home > nav > button {
+  font-size: 110%;
+  margin: 0.5rem;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+}
