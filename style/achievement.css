@@ -65,16 +65,47 @@ section.achievement > section.container > div {
   flex-direction: space-around;
   max-height: 120vh;
   overflow: hidden;
+  background: linear-gradient(
+    145deg,
+    var(--color_bk_gradient1),
+    var(--color_bk_gradient2)
+  );
+  border-radius: 0.5rem;
+  margin: 1rem;
+  padding: 1rem;
+  font-size: 150%;
 }
 
 section.achievement > section.container > div > article {
   width: 60%;
+  padding: 1rem;
 }
 
 section.achievement > section.container > div > div {
+  padding: 1rem;
+  padding-top: 2.5rem;
   width: 40vw;
 }
 
 section.achievement > section.container > div > div > img {
-  height: 20%;
+  height: 35%;
+  border-radius: 0.5rem;
+  position: relative;
+  top: 0%;
+  left: 0%;
+}
+
+section.achievement > section.container > div > div > img.img1 {
+  top: 0%;
+  left: 0%;
+}
+
+section.achievement > section.container > div > div > img.img2 {
+  top: -15%;
+  left: 10%;
+}
+
+section.achievement > section.container > div > div > img.img3 {
+  top: -30%;
+  left: -15%;
 }
