@@ -182,6 +182,7 @@ body.mobile section.home > nav.show > button {
 body.mobile section.home > button.mobile.menu {
   font-size: 350%;
   width: 5vw;
+  padding: 0.25rem;
   margin-left: 3vw;
   margin-bottom: 3vh;
 }
