@@ -30,6 +30,27 @@ function initHome() {
     home.classList.add("show");
   }, 500);
 
+  const homeNav = home.querySelector("nav");
+  home
+    .querySelector("button.mobile.menu")
+    .addEventListener("click", (event) => {
+      event.preventDefault();
+      homeNav.classList.remove("mobile_none");
+      setTimeout(() => {
+        homeNav.classList.add("show");
+      }, 500);
+    });
+
+  home
+    .querySelector("nav>button.mobile.close")
+    .addEventListener("click", (event) => {
+      event.preventDefault();
+
+      homeNav.classList.remove("show");
+      setTimeout(() => {
+        homeNav.classList.add("mobile_none");
+      }, 1000);
+    });
   document.querySelectorAll("button.home").forEach((element) => {
     element.addEventListener("click", (event) => {
       event.preventDefault();
