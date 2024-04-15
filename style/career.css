@@ -113,6 +113,7 @@ section.career > div > section.container {
 body.mobile section.career > div > section.container {
   flex-direction: column;
   justify-content: center;
+  font-size: 200%;
 }
 
 section.career > div > section.container > ul {
