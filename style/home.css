@@ -180,9 +180,13 @@ body.mobile section.home > nav.show > button {
 }
 
 body.mobile section.home > button.mobile.menu {
+  position: fixed;
+  bottom: 1vh;
+  left: 2.5vw;
   font-size: 350%;
-  width: 5vw;
-  padding: 0.25rem;
+  width: auto;
+  border-radius: 0.5rem;
+  padding: 1rem;
   margin-left: 3vw;
   margin-bottom: 3vh;
 }
