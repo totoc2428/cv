@@ -46,6 +46,11 @@ section.project > header > button {
   transition: all 0.5s;
 }
 
+body.mobile section.project > header > button {
+  padding: 1rem;
+  height: auto;
+  font-size: 200%;
+}
 section.project > header > button:focus,
 section.project > header > button:hover {
   font-size: 126%;
@@ -61,10 +66,19 @@ section.project > section.container {
   justify-content: center;
 }
 
+body.mobile section.project > section.container {
+  font-size: 200%;
+}
+
 section.project > section.container > img {
   margin-left: 32.5vw;
   width: 35vw;
   margin-bottom: 1rem;
+}
+
+body.mobile section.project > section.container > img {
+  margin-left: 10vw;
+  width: 80vw;
 }
 
 section.project > section.container > h2,
@@ -86,6 +100,13 @@ section.project > section.container > button {
   border-left: 0rem white solid;
   transition: all 0.5s;
   box-shadow: none;
+  font-family: var(--delta_font_family);
+}
+
+body.mobile section.project > section.container > button {
+  width: 60vw;
+  margin-right: auto;
+  margin-left: 20vw;
 }
 
 section.project > section.container > button:hover,
