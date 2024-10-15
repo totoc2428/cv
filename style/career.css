@@ -124,7 +124,7 @@ section.career > div > section.container > ul {
   max-width: 12.5%;
 
   list-style-type: none;
-  padding: 0;
+  padding: 0rem;
 }
 
 body.mobile section.career > div > section.container > ul {
@@ -149,13 +149,31 @@ section.career > div > section.container > ul > li {
   font-size: 75%;
 }
 
+section.career > div > section.container > ul li.focusable {
+  animation: infinite 1s ease-in-out alternate-reverse focusable-li-animation;
+}
+
 section.career > div > section.container > ul > li.focus {
   font-size: 100%;
+  animation: none;
+  color: orange;
+}
+
+@keyframes focusable-li-animation {
+  0% {
+    color: white;
+    transform: scale(1);
+  }
+  100% {
+    color: orange;
+    transform: scale(1.25);
+  }
 }
 
 section.career > div > section.container > ul > li.focusable:hover,
 section.career > div > section.container > ul > li.focusable:focus {
   transition: all 0.5s;
+  animation: none;
   box-shadow: 1rem 1rem 3rem var(--color_bk_shadow1),
     -1rem -1rem 3rem var(--color_bk_shadow2);
   font-size: 95%;
@@ -380,6 +398,82 @@ section.career
   top: 2.5%;
   left: -55%;
   height: 25%;
+}
+
+/*////////////////////////////////////////////EXP///////////////////////////////*/
+
+/*lbdd*/
+section.career
+  > div
+  > section.container
+  > div.content
+  > div.lbdd
+  > div
+  > img.img1 {
+  top: 0%;
+  left: 0%;
+  height: 40%;
+}
+
+section.career
+  > div
+  > section.container
+  > div.content
+  > div.lbdd
+  > div
+  > img.img2 {
+  left: 7.5rem;
+  top: -5rem;
+  height: 40%;
+}
+
+section.career
+  > div
+  > section.container
+  > div.content
+  > div.lbdd
+  > div
+  > img.img3 {
+  left: 0rem;
+  top: -15rem;
+  height: 40%;
+}
+
+/*stage-but2*/
+section.career
+  > div
+  > section.container
+  > div.content
+  > div.stage-but2
+  > div
+  > img.img1 {
+  top: 0%;
+  left: 0%;
+  height: 40%;
+}
+
+section.career
+  > div
+  > section.container
+  > div.content
+  > div.stage-but2
+  > div
+  > img.img2 {
+  left: 7.5rem;
+  top: -5rem;
+  height: 40%;
+}
+
+section.career
+  > div
+  > section.container
+  > div.content
+  > div.stage-but2
+  > div
+  > img.img3 {
+  left: 0rem;
+  top: -15rem;
+  height: 40%;
 }
 
 /*CTOC*/
