@@ -1,1 +1,3 @@
-save.html
+node_modules/
+.vscode/
+dist/
