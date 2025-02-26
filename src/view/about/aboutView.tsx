@@ -2,6 +2,9 @@ import React from "react";
 import { About } from "../../types/about";
 import { getTranslation, Language } from "../../languages/dic";
 
+import profileImage from "../../../public/images/about/profil.jpg";
+import "../../../public/style/view/about.css";
+
 interface AboutViewState {
   about: About | null;
   language: Language;
@@ -31,18 +34,31 @@ export class AboutView extends React.Component<{}, AboutViewState> {
     }
 
     return (
-      <section className="about">
-        <header>
-          <h1>{getTranslation("about.title", language)}</h1>
+      <section className="about-container">
+        <header className="about-header">
+          <h4>{getTranslation("header.note")}</h4>
+          <h1>{getTranslation("header.title.about", language)}</h1>
+
+          <a
+            className="button"
+            href="https://drive.google.com/file/d/1bBfqdGNat7DXiHFI7GWanhb0AA7OF2Ix/view?usp=sharing"
+          >
+            {getTranslation("header.cv")}
+          </a>
         </header>
-        <main>
-          <h2>
-            {about.firstName} {about.name}
-          </h2>
-          <p>
-            {about.introduction[language === "fr" ? "fr_value" : "en_value"]}
-          </p>
-          <p>{about.about[language === "fr" ? "fr_value" : "en_value"]}</p>
+        <main className="about-section">
+          <div className="about-title">
+            <img src={profileImage} alt="about" className="profile-image" />
+            <h2>
+              {about.firstName} {about.name}
+            </h2>
+          </div>
+          <div className="about-content">
+            <p>
+              {about.introduction[language === "fr" ? "fr_value" : "en_value"]}
+            </p>
+            <p>{about.about[language === "fr" ? "fr_value" : "en_value"]}</p>
+          </div>
         </main>
       </section>
     );

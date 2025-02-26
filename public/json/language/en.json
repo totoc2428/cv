@@ -1,14 +1,12 @@
 {
-  "about": {
-    "title": "About",
-    "contact": "Contact",
-    "language": "Language",
-    "theme": "Theme"
-  },
-  "navigation": {
-    "about": "About",
-    "experience": "Experience",
-    "projects": "Projects",
-    "contact": "Contact"
+  "header": {
+    "note": "Charles Coudé's Page.",
+    "title": {
+      "about": "About",
+      "contact": "Contact",
+      "projects": "Projects",
+      "work": "Work"
+    },
+    "cv": "Get Resume"
   }
 }

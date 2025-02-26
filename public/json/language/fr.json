@@ -1,14 +1,12 @@
 {
-  "about": {
-    "title": "À propos",
-    "contact": "Contact",
-    "language": "Langue",
-    "theme": "Thème"
-  },
-  "navigation": {
-    "about": "À propos",
-    "experience": "Expérience",
-    "projects": "Projets",
-    "contact": "Contact"
+  "header": {
+    "note": "Porte-folio de Charles Coudé.",
+    "title": {
+      "about": "À propos",
+      "contact": "Contact",
+      "projects": "Projets",
+      "work": "Réalisations"
+    },
+    "cv": "Obtenir le CV"
   }
 }

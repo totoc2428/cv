@@ -1,0 +1,39 @@
+.about-container {
+  display: grid;
+  gap: 2rem;
+  padding: 1rem;
+}
+
+.profile-image {
+  margin: auto !important;
+  width: 100px;
+  height: auto;
+  border-radius: 1.5rem;
+  box-shadow: 3px 3px 6px var(--shadow-dark), -3px -3px 6px var(--shadow-light);
+}
+
+.about-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  font-size: 175%;
+}
+
+.about-title * {
+  margin: 1rem;
+}
+
+.about-content {
+  line-height: 1.6;
+  font-size: 125%;
+}
+
+.about-section {
+  margin-bottom: 2rem;
+  padding: 2rem;
+  border-radius: 15px;
+  background: var(--primary-bg);
+  box-shadow: inset 3px 3px 6px var(--shadow-dark),
+    inset -3px -3px 6px var(--shadow-light);
+}
