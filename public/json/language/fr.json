@@ -1,0 +1,14 @@
+{
+  "about": {
+    "title": "À propos",
+    "contact": "Contact",
+    "language": "Langue",
+    "theme": "Thème"
+  },
+  "navigation": {
+    "about": "À propos",
+    "experience": "Expérience",
+    "projects": "Projets",
+    "contact": "Contact"
+  }
+}
