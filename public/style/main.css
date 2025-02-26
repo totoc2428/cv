@@ -45,7 +45,10 @@ main {
     -5px -5px 10px var(--shadow-light);
 }
 
-a.button {
+.button {
+  outline: none;
+  border: none;
+  cursor: pointer;
   text-decoration: none;
   text-underline-offset: none;
   text-underline-position: auto;
@@ -56,4 +59,20 @@ a.button {
   margin: 0.5rem;
   background: var(--shadow-dark);
   border-radius: 0.25rem;
+  transform: scale(1.1) brightness(1.1);
+  transition: all 0.3s ease;
+  transform: scale(1);
+  filter: brightness(1);
+}
+
+.button:hover {
+  transform: scale(1.1);
+  filter: brightness(1.1);
+  transition: all 0.3s ease;
+}
+
+.button:active {
+  transform: scale(0.9);
+  filter: brightness(0.9);
+  transition: all 0.3s ease;
 }
