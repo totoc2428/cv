@@ -1,0 +1,32 @@
+[
+  {
+    "id": "school",
+    "en_value": "School",
+    "fr_value": "École"
+  },
+  {
+    "id": "internship",
+    "en_value": "Internship",
+    "fr_value": "Stage"
+  },
+  {
+    "id": "school-project",
+    "en_value": "School project",
+    "fr_value": "Projet scolaire"
+  },
+  {
+    "id": "freelance",
+    "en_value": "Freelance",
+    "fr_value": "Indépandats"
+  },
+  {
+    "id": "work-project",
+    "en_value": "Work project",
+    "fr_value": "Projet de travail"
+  },
+  {
+    "id": "personal-project",
+    "en_value": "Personal project",
+    "fr_value": "Projet personnel"
+  }
+]

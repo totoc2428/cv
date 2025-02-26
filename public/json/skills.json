@@ -1,0 +1,169 @@
+[
+  {
+    "id": "web",
+    "link": "https://developer.mozilla.org/en-US/docs/Web",
+    "en_value": "Web",
+    "fr_value": "Web",
+    "description": {
+      "en_value": "Web developpement, HTML, CSS, and JavaScript.",
+      "fr_value": "Développement web, HTML, CSS et JavaScript."
+    }
+  },
+  {
+    "id": "WordPress",
+    "link": "https://wordpress.org/",
+    "en_value": "WordPress",
+    "fr_value": "WordPress",
+    "description": {
+      "en_value": "WordPress, gestion et installation.",
+      "fr_value": "WordPress, gestion et installation."
+    }
+  },
+  {
+    "id": "react",
+    "link": "https://reactjs.org/",
+    "en_value": "React",
+    "fr_value": "React",
+    "description": {
+      "en_value": "React, Redux, React Router.",
+      "fr_value": "React, Redux, React Router."
+    }
+  },
+  {
+    "id": "node",
+    "link": "https://nodejs.org/",
+    "en_value": "Node.js",
+    "fr_value": "Node.js",
+    "description": {
+      "en_value": "Node.js, Express, Socket.io.",
+      "fr_value": "Node.js, Express, Socket.io."
+    }
+  },
+  {
+    "id": "java",
+    "link": "https://www.java.com/",
+    "en_value": "Java",
+    "fr_value": "Java",
+    "description": {
+      "en_value": "Java, JavaFX, Java Swing.",
+      "fr_value": "Java, JavaFX, Java Swing."
+    }
+  },
+  {
+    "id": "java-Spring-boot",
+    "link": "https://spring.io/projects/spring-boot",
+    "en_value": "Java Spring",
+    "fr_value": "Java Spring",
+    "description": {
+      "en_value": "Java Spring Boot, Spring Security, Spring Data JPA.",
+      "fr_value": "Java Spring Boot, Spring Security, Spring Data JPA."
+    }
+  },
+  {
+    "id": "JSON",
+    "link": "https://www.json.org/json-en.html",
+    "en_value": "JSON",
+    "fr_value": "JSON",
+    "description": {
+      "en_value": "JavaScript Object Notation.",
+      "fr_value": "JavaScript Object Notation."
+    }
+  },
+  {
+    "id": "mobile-react-native",
+    "link": "https://reactnative.dev/",
+    "en_value": "Mobile React Native",
+    "fr_value": "Mobile React Native",
+    "description": {
+      "en_value": "React Native, Expo, React Navigation.",
+      "fr_value": "React Native, Expo, React Navigation."
+    }
+  },
+  {
+    "id": "no-sql",
+    "link": "https://www.mongodb.com/nosql-explained",
+    "en_value": "NoSQL Databases",
+    "fr_value": "NoSQL Databases",
+    "description": {
+      "en_value": "NoSQL databases : MongoDB, Redis, Cassandra...",
+      "fr_value": "Bases de données NoSQL : MongoDB, Redis, Cassandra..."
+    }
+  },
+  {
+    "id": "sql",
+    "link": "https://www.sqlcourse.com/",
+    "en_value": "SQL",
+    "fr_value": "SQL",
+    "description": {
+      "en_value": "Structured Query Language : Postgres, MySQL, H2...",
+      "fr_value": "Base de données Structurés : Postgres, MySQL, H2..."
+    }
+  },
+  {
+    "id": "jpa",
+    "link": "https://www.oracle.com/java/technologies/persistence-jsp.html",
+    "en_value": "JPA",
+    "fr_value": "JPA",
+    "description": {
+      "en_value": "Java Persistence API, Hibernate, Spring Data JPA.",
+      "fr_value": "Java Persistence API, Hibernate, Spring Data JPA."
+    }
+  },
+  {
+    "id": "debian",
+    "link": "https://www.debian.org/",
+    "en_value": "Debian",
+    "fr_value": "Debian",
+    "description": {
+      "en_value": "The linux Debian destribution.",
+      "fr_value": "La distribution linux Debian."
+    }
+  },
+  {
+    "id": "git",
+    "link": "https://git-scm.com/",
+    "en_value": "Git",
+    "fr_value": "Git",
+    "description": {
+      "en_value": "Version control system.",
+      "fr_value": "Système de contrôle de version."
+    }
+  },
+  {
+    "id": "docker",
+    "link": "https://www.docker.com/",
+    "en_value": "Docker",
+    "fr_value": "Docker",
+    "description": {
+      "en_value": "Containerization platform.",
+      "fr_value": "Plateforme de conteneurisation."
+    }
+  },
+  {
+    "id": "agile",
+    "link": "https://agilemanifesto.org/",
+    "en_value": "Agile",
+    "fr_value": "Agile",
+    "description": {
+      "en_value": "Agile methodology, Scrum, Kanban.",
+      "fr_value": "Méthodologie Agile, Scrum, Kanban."
+    }
+  },
+  {
+    "id": "devops",
+    "link": "https://www.redhat.com/fr/topics/devops/what-is-devops",
+    "en_value": "DevOps",
+    "fr_value": "DevOps",
+    "description": {
+      "en_value": "DevOps culture, CI/CD, Jenkins, GitLab.",
+      "fr_value": "Culture DevOps, CI/CD, Jenkins, GitLab."
+    }
+  },
+  {
+    "id": "python",
+    "description": {
+      "en_value": "Concepts of the Python Language, particulary in Mathematicals Model and Data training.",
+      "fr_value": "Concepts de programation en Python notament sur en modélisation mathéiques et en traitements de données."
+    }
+  }
+]
