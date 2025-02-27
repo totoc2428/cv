@@ -7,17 +7,45 @@ import { getTranslation } from "../../languages/dic";
 
 import "/public/style/view/contact.css";
 
-const time_to_wait = 4000;
+interface ContactLinks {
+  link: {
+    email: string;
+    twitter: string;
+    linkedin: string;
+    github: string;
+  };
+}
 
-export class ContactView extends React.Component {
+interface ContactViewState {
+  mailClicked: boolean;
+  twitterClicked: boolean;
+  linkedInClicked: boolean;
+  gitHubClicked: boolean;
+  contactData: ContactLinks | null;
+}
+
+const TIME_TO_WAIT = 4000;
+
+export class ContactView extends React.Component<{}, ContactViewState> {
   static contextType = LanguageContext;
 
-  state = {
+  state: ContactViewState = {
     mailClicked: false,
     twitterClicked: false,
     linkedInClicked: false,
-    gitHubCliked: false,
+    gitHubClicked: false,
+    contactData: null,
   };
+
+  async componentDidMount() {
+    try {
+      const response = await fetch("/json/contact/contact.json");
+      const contactData = await response.json();
+      this.setState({ contactData });
+    } catch (error) {
+      console.error("Error loading contact data:", error);
+    }
+  }
 
   copyToClipboard = async (text: string) => {
     try {
@@ -28,33 +56,46 @@ export class ContactView extends React.Component {
   };
 
   handleMailClick = () => {
-    this.copyToClipboard("charles.coude@example.com");
-    this.setState({ mailClicked: true });
-    setTimeout(() => this.setState({ mailClicked: false }), time_to_wait);
+    const email = this.state.contactData?.link.email;
+    if (email) {
+      this.copyToClipboard(email);
+      this.setState({ mailClicked: true });
+      setTimeout(() => this.setState({ mailClicked: false }), TIME_TO_WAIT);
+    }
   };
 
   handleTwitterClick = () => {
-    window.open("https://x.com/CharlesCoude", "_blank");
-    this.setState({ twitterClicked: true });
-    setTimeout(() => this.setState({ twitterClicked: false }), time_to_wait);
+    const twitter = this.state.contactData?.link.twitter;
+    if (twitter) {
+      window.open(twitter, "_blank");
+      this.setState({ twitterClicked: true });
+      setTimeout(() => this.setState({ twitterClicked: false }), TIME_TO_WAIT);
+    }
   };
 
   handleLinkedInClick = () => {
-    window.open(
-      "https://www.linkedin.com/in/charles-coud%C3%A9-a4a076284/",
-      "_blank"
-    );
-    this.setState({ linkedInClicked: true });
-    setTimeout(() => this.setState({ linkedInClicked: false }), time_to_wait);
+    const linkedin = this.state.contactData?.link.linkedin;
+    if (linkedin) {
+      window.open(linkedin, "_blank");
+      this.setState({ linkedInClicked: true });
+      setTimeout(() => this.setState({ linkedInClicked: false }), TIME_TO_WAIT);
+    }
   };
 
   handleGitHubClick = () => {
-    window.open("https://github.com/totoc2428", "_blank");
-    this.setState({ gitHubClicked: true });
-    setTimeout(() => this.setState({ gitHubClicked: false }), time_to_wait);
+    const github = this.state.contactData?.link.github;
+    if (github) {
+      window.open(github, "_blank");
+      this.setState({ gitHubClicked: true });
+      setTimeout(() => this.setState({ gitHubClicked: false }), TIME_TO_WAIT);
+    }
   };
 
   render(): React.ReactNode {
+    if (!this.state.contactData) {
+      return <div>Loading...</div>;
+    }
+
     return (
       <LanguageContext.Consumer>
         {({ language }) => (
@@ -67,17 +108,17 @@ export class ContactView extends React.Component {
                   : "✉️ Mail"}
               </button>
               <button onClick={this.handleTwitterClick} className="button">
-                {this.state.mailClicked
+                {this.state.twitterClicked
                   ? getTranslation("button.copied", language)
                   : "🐦 Twitter"}
               </button>
               <button onClick={this.handleLinkedInClick} className="button">
-                {this.state.mailClicked
+                {this.state.linkedInClicked
                   ? getTranslation("button.copied", language)
                   : "🟦 LinkedIn"}
               </button>
               <button onClick={this.handleGitHubClick} className="button">
-                {this.state.mailClicked
+                {this.state.gitHubClicked
                   ? getTranslation("button.copied", language)
                   : "😺 GitHub"}
               </button>
