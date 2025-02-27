@@ -1,3 +1,7 @@
+header.contact h1 {
+  padding-right: 4rem !important;
+}
+
 .contact-section {
   display: flex;
   flex-direction: column;

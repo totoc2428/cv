@@ -30,7 +30,7 @@ header {
 }
 
 header h1 {
-  padding-right: 7.5rem;
+  text-align: center !important;
   margin: auto !important;
 }
 
