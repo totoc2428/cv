@@ -11,13 +11,13 @@ export class LangNav extends React.Component {
         {({ language, setLanguage }) => (
           <nav className="lang-nav">
             <button
-              className={(language === "en" ? "focus" : "") + " button"}
+              className={"button " + (language === "en" ? "focus" : "")}
               onClick={() => setLanguage("en")}
             >
               🇬🇧
             </button>
             <button
-              className={(language === "fr" ? "focus" : "") + " button"}
+              className={"button " + (language === "fr" ? "focus" : "")}
               onClick={() => setLanguage("fr")}
             >
               🇫🇷

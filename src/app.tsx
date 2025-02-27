@@ -6,6 +6,7 @@ import {
 } from "react-router-dom";
 import { AboutView } from "./view/about/aboutView";
 import { LanguageProvider } from "./context/LanguageContext";
+import { ContactView } from "./view/contact/contactView";
 
 const App = () => {
   return (
@@ -14,6 +15,7 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Navigate to="/about" />} />
           <Route path="/about" element={<AboutView />} />
+          <Route path="/contact" element={<ContactView />} />
         </Routes>
       </Router>
     </LanguageProvider>

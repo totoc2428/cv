@@ -8,5 +8,9 @@
       "work": "Réalisations"
     },
     "cv": "Obtenir le CV"
+  },
+
+  "button": {
+    "copied": "Copié dans le presse-papier."
   }
 }

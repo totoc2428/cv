@@ -1,9 +1,3 @@
-.about-container {
-  display: grid;
-  gap: 2rem;
-  padding: 1rem;
-}
-
 .profile-image {
   margin: auto !important;
   width: 100px;

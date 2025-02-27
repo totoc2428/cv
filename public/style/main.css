@@ -6,8 +6,8 @@
 }
 
 body {
-  margin: 0;
-  padding: 0;
+  margin: 0rem;
+  padding: 0rem;
   background-color: var(--primary-bg);
   color: var(--text-color);
   font-family: "Arial", sans-serif;
@@ -17,12 +17,16 @@ header {
   font-size: 100%;
   display: flex;
   justify-content: space-between;
-  padding: 1rem;
-  border-radius: 1rem;
+  margin: 0rem;
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-bottom: 3rem;
+  border-radius: 0rem 0rem 1rem 1rem;
   background: var(--primary-bg);
   box-shadow: 5px 5px 10px var(--shadow-dark),
     -5px -5px 10px var(--shadow-light);
-  margin-bottom: 1rem;
 }
 
 header h1 {
@@ -46,6 +50,7 @@ main {
 }
 
 .button {
+  width: auto;
   outline: none;
   border: none;
   cursor: pointer;
@@ -66,13 +71,27 @@ main {
 }
 
 .button:hover {
+  width: auto;
   transform: scale(1.1);
   filter: brightness(1.1);
   transition: all 0.3s ease;
 }
 
 .button:active {
+  width: auto;
   transform: scale(0.9);
   filter: brightness(0.9);
+  transition: all 0.3s ease;
+}
+
+button span {
+  transition: all 0.3s ease;
+  opacity: 0;
+  transform: translateX(-100%);
+}
+
+button span.copied-text {
+  opacity: 1;
+  transform: translateX(0);
   transition: all 0.3s ease;
 }

@@ -8,5 +8,9 @@
       "work": "Work"
     },
     "cv": "Get Resume"
+  },
+
+  "button": {
+    "copied": "Copied to clipboard."
   }
 }
