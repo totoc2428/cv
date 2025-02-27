@@ -1,6 +1,6 @@
 import { tag } from "./tag";
 
-export interface exp {
+export interface Exp {
   id: string;
   title: string;
   location: string;

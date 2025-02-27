@@ -1,12 +1,12 @@
 import React from "react";
-import { exp } from "../../types/exp/exp";
+import { Exp } from "../../types/exp/exp";
 
 interface ExpProps {
-  exp: exp;
+  exp: Exp;
   isHidden: boolean;
 }
 
-export class Exprience extends React.Component<ExpProps> {
+export class ExprienceDetail extends React.Component<ExpProps> {
   state = {
     isHidden: this.props.isHidden,
   };
