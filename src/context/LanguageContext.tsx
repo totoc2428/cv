@@ -6,9 +6,10 @@ interface LanguageContextType {
   setLanguage: (lang: Language) => void;
 }
 
-const LanguageContext = createContext<LanguageContextType | undefined>(
-  undefined
-);
+export const LanguageContext = createContext<LanguageContextType>({
+  language: "fr",
+  setLanguage: () => {},
+});
 
 export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({
   children,
