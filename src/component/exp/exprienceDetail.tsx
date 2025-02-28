@@ -1,12 +1,12 @@
 import React from "react";
-import { Exp } from "../../types/exp/exp";
+import { ExpTranslated } from "../../types/exp/exp";
 import { getTranslation } from "@/languages/dic";
 import { LanguageContext } from "@/context/LanguageContext";
 import { Tag } from "@/types/exp/tag";
 import { TagThumbmail } from "./tagThumbmail";
 
 interface ExpProps {
-  exp: Exp;
+  exp: ExpTranslated;
 }
 
 export class ExprienceDetail extends React.Component<ExpProps> {

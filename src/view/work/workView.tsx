@@ -4,39 +4,45 @@ import { Header } from "../../component/header/headerComponent";
 import { LangNav } from "../../component/nav/langNav";
 import { MainNav } from "../../component/nav/mainNav";
 import { ExpService } from "../../services/expService";
-import { Exp } from "../../types/exp/exp";
+import { Exp, ExpTranslated } from "../../types/exp/exp";
+import { LanguageContext } from "../../context/LanguageContext";
 
 interface WorkViewState {
-  exp: Exp[];
-  currentExp: Exp | null;
+  exps: ExpTranslated[];
+  currentExp: ExpTranslated | null;
 }
 
 export class WorkView extends React.Component<{}, WorkViewState> {
+  static contextType = LanguageContext;
+  declare context: React.ContextType<typeof LanguageContext>;
+
   state: WorkViewState = {
-    exp: [],
+    exps: [],
     currentExp: null
   }
 
   async componentDidMount(): Promise<void> {
-    const experiences = await ExpService.getExps();
-    this.setState({ exp: experiences });
+    try {
+      const { language } = this.context;
+      const experiences = await ExpService.getExps(language);
+      this.setState({ exps: experiences });
+    } catch (error) {
+      console.error("Error loading experiences:", error);
+    }
   }
 
   render() {
-    const { exp } = this.state;
+    const { exps } = this.state;
     return (
-      <section className="wokr-container">
+      <section className="work-container">
         <Header title="work" />
         <main className="work-section">
-          {exp.map((exp) => {
-            return (
-              <ExperienceThumbMail 
-                key={exp.id}
-                exp={exp} 
-                handleOnClick={() => {}} 
-              />
-            );
-          })}
+          {exps.map((exp) => (
+            <ExperienceThumbMail 
+              exp={exp} 
+              handleOnClick={() => this.setState({ currentExp: exp })} 
+            />
+          ))}
         </main>
         <MainNav />
         <LangNav />

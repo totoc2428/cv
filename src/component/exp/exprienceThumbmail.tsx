@@ -1,11 +1,11 @@
 import React from "react";
-import { Exp } from "../../types/exp/exp";
+import { ExpTranslated } from "../../types/exp/exp";
 import { LanguageContext } from "../../context/LanguageContext";
 import { TagThumbmail } from "./tagThumbmail";
 import "../../../public/style/components/exp/exps.css";
 
 interface ExperienceThumbMailProps {
-  exp: Exp;
+  exp: ExpTranslated;
   handleOnClick: () => void;
 }
 
