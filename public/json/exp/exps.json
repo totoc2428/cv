@@ -7,7 +7,7 @@
     },
     "location": "Lille, France",
     "subTitle": {
-      "en": "University Technology Diploma (DUT)",
+      "en": "University Technology Bachelor (DUT)",
       "fr": "Bachelor Univeritaire de Technologie (BUT)"
     },
     "description": {
@@ -31,8 +31,8 @@
       "fr": "Baccalauréat Général"
     },
     "description": {
-      "en": "Specialization : Mathematics Computer Science Economy",
-      "fr": "Spécialités : Mathématiques Informatique Économie"
+      "en": "Specialization : Mathematics Computer Science Economy.",
+      "fr": "Spécialités : Mathématiques Informatique Économie."
     },
     "start_date": "2020-09-01",
     "end_date": "2022-06-30",

@@ -53,6 +53,8 @@
   width: 100%;
   height: auto;
   overflow: hidden;
+  background: var(--primary-bg);
+  filter: brightness(0.95);
   box-shadow: none;
 }
 
@@ -65,8 +67,8 @@
   padding-top: 0.5rem;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
-  background: var(--shadow-dark);
-  filter: brightness(0.99);
+  background: var(--primary-bg);
+  filter: brightness(0.9);
   overflow: hidden;
 }
 
@@ -89,6 +91,61 @@
   margin-right: 0.5rem;
 }
 
+.exp-detail .header-exp-detail .content {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  padding-left: 0.25rem;
+}
+
+.exp-detail .header-exp-detail .content h1 {
+  font-size: 150%;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.exp-detail .header-exp-detail .content .tags-list {
+  margin-top: 0.5rem;
+  margin-left: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
 .exp-detail .main-exp-detail {
   padding: 1rem;
+}
+
+.exp-detail .main-exp-detail .item {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  margin-top: 0.5rem;
+  background: var(--primary-bg);
+  box-shadow: 5px 5px 10px var(--shadow-dark),
+    -5px -5px 10px var(--shadow-light);
+  border-radius: 0.25rem;
+}
+
+.exp-detail .main-exp-detail .item.location {
+  max-width: 40%;
+}
+
+.exp-detail .main-exp-detail .item.date {
+  max-width: 55%;
+}
+
+.exp-detail .main-exp-detail .item .icon {
+  margin-bottom: 0.25rem;
+  margin-top: 0.25rem;
+}
+
+.exp-detail .main-exp-detail .item .value {
+  margin-top: 0.5rem;
+}
+
+.exp-detail .main-exp-detail .sub-title,
+.exp-detail .main-exp-detail .description {
+  margin-top: 1rem;
+  font-size: 110%;
 }

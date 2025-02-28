@@ -1,6 +1,7 @@
 import { Exp, ExpTranslated } from "../types/exp/exp";
 import { TagService } from "./tagService";
 import { Language } from "../languages/dic";
+import { formatDate } from "../utils/dateFormatter";
 
 export const ExpService = {
   async getExps(language: Language): Promise<ExpTranslated[]> {
@@ -17,8 +18,8 @@ export const ExpService = {
             location: exp.location,
             value: exp.subTitle[language],
             description: exp.description[language],
-            startDate: exp.start_date,
-            endDate: exp.end_date,
+            startDate: formatDate(exp.start_date, language),
+            endDate: formatDate(exp.end_date, language),
             tags,
           } as ExpTranslated;
         })

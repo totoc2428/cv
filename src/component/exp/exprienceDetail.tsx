@@ -39,18 +39,19 @@ export class ExprienceDetail extends React.Component<ExpProps> {
               tags={exp.tags}
             />
             <main className="main-exp-detail">
-              <div className="value">{exp.value}</div>
-              <div className="location">
-                <h1>📍</h1>
-                <span>{exp.location}</span>
+              <div className="item location">
+                <h1 className="icon">📍</h1>
+                <span className="value">{exp.location}</span>
               </div>
-              <div className="date">
-                <h1>📅</h1>
-                <span>
+              <div className="item date">
+                <h1 className="icon">📅</h1>
+                <span className="value">
+                  {getTranslation("exp.date_link_from", language)}{" "}
                   {exp.startDate}{" "}
                   {getTranslation("exp.date_link_btw", language)} {exp.endDate}
                 </span>
               </div>
+              <h2 className="sub-title">{exp.value}</h2>
               <div className="description">{exp.description}</div>
             </main>
           </section>
