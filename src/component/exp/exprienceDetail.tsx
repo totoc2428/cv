@@ -49,6 +49,7 @@ export class ExprienceDetail extends React.Component<ExpProps> {
                   {exp.startDate} {getTranslation("exp.date_link_btw", language)} {exp.endDate}
                 </span>
               </div>
+              <div className="description">{exp.description}</div>
             </main>
           </section>
         )}
