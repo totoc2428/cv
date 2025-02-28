@@ -34,6 +34,21 @@ export class WorkView extends React.Component<{}, WorkViewState> {
     }
   }
 
+  async componentDidUpdate(
+    prevContext: React.ContextType<typeof LanguageContext>
+  ): Promise<void> {
+    if (this.context.language !== prevContext?.language) {
+      const experiences = await ExpService.getExps(this.context.language);
+      this.setState({
+        exps: experiences,
+        currentExp: this.state.currentExp
+          ? experiences.find((exp) => exp.id === this.state.currentExp?.id) ||
+            null
+          : null,
+      });
+    }
+  }
+
   render() {
     const { exps, currentExp } = this.state;
     return (
@@ -43,14 +58,15 @@ export class WorkView extends React.Component<{}, WorkViewState> {
           <div className="exp-list">
             {exps.map((exp) => (
               <ExperienceThumbMail
+                key={exp.id}
                 exp={exp}
                 handleOnClick={() => this.setState({ currentExp: exp })}
               />
             ))}
           </div>
           {currentExp && (
-            <ExprienceDetail 
-              exp={currentExp} 
+            <ExprienceDetail
+              exp={currentExp}
               onClose={() => this.setState({ currentExp: null })}
             />
           )}

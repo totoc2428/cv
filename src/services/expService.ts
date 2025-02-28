@@ -7,7 +7,7 @@ export const ExpService = {
     try {
       const response = await fetch("/json/exp/exps.json");
       const exps: Exp[] = await response.json();
-      
+
       const expsWithTags = await Promise.all(
         exps.map(async (exp) => {
           const tags = await TagService.getTagsByIds(exp.tags);
@@ -15,19 +15,19 @@ export const ExpService = {
             id: exp.id,
             title: exp.title[language],
             location: exp.location,
-            value: exp.subTitle[language], // Using subTitle as value
-            specialization: exp.specialization[`${language}`],
+            value: exp.subTitle[language],
+            description: exp.description[language],
             startDate: exp.start_date,
             endDate: exp.end_date,
-            tags
+            tags,
           } as ExpTranslated;
         })
       );
-      
+
       return expsWithTags;
     } catch (error) {
       console.error("Error loading experiences:", error);
       return [];
     }
-  }
+  },
 };

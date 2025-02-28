@@ -21,9 +21,9 @@ export interface Exp {
     en: string;
     fr: string;
   };
-  specialization: {
-    en: string[];
-    fr: string[];
+  description: {
+    en: string;
+    fr: string;
   };
   start_date: string;
   end_date: string;
@@ -35,8 +35,7 @@ export interface ExpTranslated {
   title: string;
   location: string;
   value: string;
-  specialization: string[];
-  description?: string;
+  description: string;
   startDate: string;
   endDate: string;
   tags: Tag[];

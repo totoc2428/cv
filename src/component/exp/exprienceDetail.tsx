@@ -44,11 +44,6 @@ export class ExprienceDetail extends React.Component<ExpProps> {
                 <h1>📍</h1>
                 <span>{exp.location}</span>
               </div>
-              <div className="specialization">
-                {exp.specialization.map((specialization) => {
-                  return <span key={specialization}>{specialization}</span>;
-                })}
-              </div>
               <div className="date">
                 <h1>📅</h1>
                 <span>

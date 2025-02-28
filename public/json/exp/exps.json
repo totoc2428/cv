@@ -1,18 +1,18 @@
 [
-    {
+  {
     "id": "but",
     "title": {
-      "fr":"Université de Lille",
-      "en":"University of Lille"
+      "fr": "Université de Lille",
+      "en": "University of Lille"
     },
     "location": "Lille, France",
     "subTitle": {
       "en": "University Technology Diploma (DUT)",
       "fr": "Bachelor Univeritaire de Technologie (BUT)"
     },
-    "specialization": {
-      "en": ["Development of Communicating and Secure Applications"],
-      "fr": ["Dévelopement d'Applications Comunicantes et sécurisées"]
+    "description": {
+      "en": "Parcours : Development of Communicating and Secure Applications.",
+      "fr": "Parcours : Dévelopement d'Applications Comunicantes et Sécurisées."
     },
     "start_date": "2022-09-01",
     "end_date": "2024-06-30",
@@ -20,19 +20,19 @@
     "tags": ["school"]
   },
   {
-    "id": "HighSchool",
+    "id": "bac",
     "title": {
-      "fr":"Lycée St Jude",
-      "en":"St Jude High School"
+      "fr": "Lycée St Jude",
+      "en": "St Jude High School"
     },
     "location": "Armentières, France",
     "subTitle": {
       "en": "High School General Diploma",
       "fr": "Baccalauréat Général"
     },
-    "specialization": {
-      "en": ["Mathematics", "Computer Science", "Economy"],
-      "fr": ["Mathématiques", "Informatique", "Économie"]
+    "description": {
+      "en": "Specialization : Mathematics Computer Science Economy",
+      "fr": "Spécialités : Mathématiques Informatique Économie"
     },
     "start_date": "2020-09-01",
     "end_date": "2022-06-30",
