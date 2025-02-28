@@ -5,10 +5,7 @@
   flex-direction: row;
   justify-content: space-around;
   margin-bottom: 4rem;
-  border-radius: 15px;
   background: var(--primary-bg);
-  box-shadow: inset 3px 3px 6px var(--shadow-dark),
-    inset -3px -3px 6px var(--shadow-light);
   transition: all 0.3s ease;
 }
 
@@ -20,10 +17,13 @@
 .work-section .exp-list {
   width: 100%;
   margin: 0rem;
-  padding: 0rem;
+  padding: 1rem;
   display: flex;
   flex-direction: column;
   justify-content: top;
+  border-radius: 0.5rem;
+  box-shadow: inset 3px 3px 6px var(--shadow-dark),
+    inset -3px -3px 6px var(--shadow-light);
   transition: all 0.3s ease;
 }
 

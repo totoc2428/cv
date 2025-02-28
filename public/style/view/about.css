@@ -1,6 +1,11 @@
 .header.about h1 {
   padding-right: 2rem;
 }
+
+.about-section {
+  box-shadow: inset 3px 3px 6px var(--shadow-dark),
+    inset -3px -3px 6px var(--shadow-light);
+}
 .profile-image {
   margin: auto !important;
   width: 100px;
