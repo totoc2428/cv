@@ -3,6 +3,7 @@
   --shadow-light: #ffffff;
   --shadow-dark: #d1d1d1;
   --text-color: #333333;
+  --border-color:#cccccc;
 }
 
 body {

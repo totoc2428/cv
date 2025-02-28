@@ -4,8 +4,10 @@ import { Header } from "../../component/header/headerComponent";
 import { LangNav } from "../../component/nav/langNav";
 import { MainNav } from "../../component/nav/mainNav";
 import { ExpService } from "../../services/expService";
-import { Exp, ExpTranslated } from "../../types/exp/exp";
+import { ExpTranslated } from "../../types/exp/exp";
 import { LanguageContext } from "../../context/LanguageContext";
+
+import "../../../public/style/view/work.css";
 
 interface WorkViewState {
   exps: ExpTranslated[];

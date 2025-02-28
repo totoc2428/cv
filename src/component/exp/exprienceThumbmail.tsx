@@ -2,6 +2,7 @@ import React from "react";
 import { ExpTranslated } from "../../types/exp/exp";
 import { LanguageContext } from "../../context/LanguageContext";
 import { TagThumbmail } from "./tagThumbmail";
+
 import "../../../public/style/components/exp/exps.css";
 
 interface ExperienceThumbMailProps {
