@@ -1,32 +1,44 @@
 [
   {
     "id": "school",
-    "en_value": "School",
-    "fr_value": "École"
+    "value": {
+      "en": "School",
+      "fr": "École"
+    }
   },
   {
     "id": "internship",
-    "en_value": "Internship",
-    "fr_value": "Stage"
+    "value": {
+      "en": "Internship",
+      "fr": "Stage"
+    }
   },
   {
     "id": "school-project",
-    "en_value": "School project",
-    "fr_value": "Projet scolaire"
+    "value": {
+      "en": "School project",
+      "fr": "Projet scolaire"
+    }
   },
   {
     "id": "freelance",
-    "en_value": "Freelance",
-    "fr_value": "Indépandats"
+    "value": {
+      "en": "Freelance",
+      "fr": "Indépendant"
+    }
   },
   {
     "id": "work-project",
-    "en_value": "Work project",
-    "fr_value": "Projet de travail"
+    "value": {
+      "en": "Work project",
+      "fr": "Projet de travail"
+    }
   },
   {
     "id": "personal-project",
-    "en_value": "Personal project",
-    "fr_value": "Projet personnel"
+    "value": {
+      "en": "Personal project",
+      "fr": "Projet personnel"
+    }
   }
 ]

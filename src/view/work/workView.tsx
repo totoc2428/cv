@@ -29,7 +29,13 @@ export class WorkView extends React.Component<{}, WorkViewState> {
         <Header title="work" />
         <main className="work-section">
           {exp.map((exp) => {
-            return (<ExperienceThumbMail exp={exp} handleOnClick={() => {}} />);
+            return (
+              <ExperienceThumbMail 
+                key={exp.id}
+                exp={exp} 
+                handleOnClick={() => {}} 
+              />
+            );
           })}
         </main>
         <MainNav />

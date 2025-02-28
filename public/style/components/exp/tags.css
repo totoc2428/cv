@@ -1,0 +1,37 @@
+.tag-thumbmail {
+  padding: 0.4rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+/* Couleurs pastel pour chaque type de tag */
+.tag-thumbmail.school {
+  background-color: #FFE5E5;
+  color: #D47676;
+}
+
+.tag-thumbmail.internship {
+  background-color: #E5FFE5;
+  color: #76D476;
+}
+
+.tag-thumbmail.school-project {
+  background-color: #E5E5FF;
+  color: #7676D4;
+}
+
+.tag-thumbmail.freelance {
+  background-color: #FFE5FF;
+  color: #D476D4;
+}
+
+.tag-thumbmail.work-project {
+  background-color: #FFFFE5;
+  color: #D4D476;
+}
+
+.tag-thumbmail.personal-project {
+  background-color: #E5FFFF;
+  color: #76D4D4;
+}

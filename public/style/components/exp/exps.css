@@ -1,0 +1,32 @@
+.exp-thumbmail {
+  margin: 1rem;
+  width: 100%;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 12px;
+  background: var(--primary-bg);
+  box-shadow: 5px 5px 10px var(--shadow-dark),
+    -5px -5px 10px var(--shadow-light);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  text-align: left;
+  display: flex;
+  justify-content: row;
+  align-items: left;
+}
+
+.exp-thumbmail:hover {
+  transform: translateY(-2px);
+}
+
+.exp-thumbmail h1 {
+  margin: 0.5rem;
+  font-size: 1.2rem;
+  color: var(--text-color);
+}
+
+.exp-thumbmail-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
