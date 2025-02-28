@@ -24,7 +24,7 @@ interface ContactViewState {
   contactData: ContactLinks | null;
 }
 
-const TIME_TO_WAIT = 4000;
+const TIME_TO_WAIT = 2000;
 
 export class ContactView extends React.Component<{}, ContactViewState> {
   static contextType = LanguageContext;
@@ -101,7 +101,7 @@ export class ContactView extends React.Component<{}, ContactViewState> {
         {({ language }) => (
           <section className="contact-container">
             <Header title="contact" />
-            <main className="contact-section">
+            <main className="main contact-section">
               <button onClick={this.handleMailClick} className="button">
                 {this.state.mailClicked
                   ? getTranslation("button.copied", language)

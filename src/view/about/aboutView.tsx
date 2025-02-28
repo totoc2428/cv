@@ -38,7 +38,7 @@ export class AboutView extends React.Component<{}, AboutViewState> {
     return (
       <section className="about-container">
         <Header title="about" />
-        <main className="about-section">
+        <main className="main main-about">
           <div className="about-title">
             <img src={profileImage} alt="about" className="profile-image" />
             <h2>

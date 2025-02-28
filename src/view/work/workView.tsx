@@ -6,6 +6,7 @@ import { MainNav } from "../../component/nav/mainNav";
 import { ExpService } from "../../services/expService";
 import { ExpTranslated } from "../../types/exp/exp";
 import { LanguageContext } from "../../context/LanguageContext";
+import { ExprienceDetail } from "../../component/exp/exprienceDetail";
 
 import "../../../public/style/view/work.css";
 
@@ -20,8 +21,8 @@ export class WorkView extends React.Component<{}, WorkViewState> {
 
   state: WorkViewState = {
     exps: [],
-    currentExp: null
-  }
+    currentExp: null,
+  };
 
   async componentDidMount(): Promise<void> {
     try {
@@ -34,17 +35,20 @@ export class WorkView extends React.Component<{}, WorkViewState> {
   }
 
   render() {
-    const { exps } = this.state;
+    const { exps, currentExp } = this.state;
     return (
       <section className="work-container">
         <Header title="work" />
-        <main className="work-section">
-          {exps.map((exp) => (
-            <ExperienceThumbMail 
-              exp={exp} 
-              handleOnClick={() => this.setState({ currentExp: exp })} 
-            />
-          ))}
+        <main className={`main work-section ${currentExp ? "open" : ""}`}>
+          <div className="exp-list">
+            {exps.map((exp) => (
+              <ExperienceThumbMail
+                exp={exp}
+                handleOnClick={() => this.setState({ currentExp: exp })}
+              />
+            ))}
+          </div>
+          {currentExp && <ExprienceDetail exp={currentExp} />}
         </main>
         <MainNav />
         <LangNav />

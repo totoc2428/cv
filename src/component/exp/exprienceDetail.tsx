@@ -1,8 +1,8 @@
 import React from "react";
 import { ExpTranslated } from "../../types/exp/exp";
-import { getTranslation } from "@/languages/dic";
-import { LanguageContext } from "@/context/LanguageContext";
-import { Tag } from "@/types/exp/tag";
+import { getTranslation } from "../../languages/dic";
+import { LanguageContext } from "../../context/LanguageContext";
+import { Tag } from "../../types/exp/tag";
 import { TagThumbmail } from "./tagThumbmail";
 
 interface ExpProps {
@@ -10,20 +10,20 @@ interface ExpProps {
 }
 
 export class ExprienceDetail extends React.Component<ExpProps> {
-
   state = {
-    closed: false
-  }
+    closed: false,
+  };
 
-  handleClose = () =>{
-    this.setState({closed: true});
-  }
-  
+  handleClose = () => {
+    this.setState({ closed: true });
+  };
+
   render() {
     const { exp } = this.props;
     const { closed } = this.state;
 
     if (closed) {
+      console.log("closed");
       return null;
     }
 
@@ -31,8 +31,12 @@ export class ExprienceDetail extends React.Component<ExpProps> {
       <LanguageContext.Consumer>
         {({ language }) => (
           <section id={exp.id} className="exp-detail">
-            <ExprienceDetailHeader title={exp.title} handleClose={this.handleClose} tags={exp.tags}/>
-            <main>
+            <ExprienceDetailHeader
+              title={exp.title}
+              handleClose={this.handleClose}
+              tags={exp.tags}
+            />
+            <main className="main-exp-detail">
               <div className="value">{exp.value}</div>
               <div className="location">
                 <h1>📍</h1>
@@ -46,7 +50,8 @@ export class ExprienceDetail extends React.Component<ExpProps> {
               <div className="date">
                 <h1>📅</h1>
                 <span>
-                  {exp.startDate} {getTranslation("exp.date_link_btw", language)} {exp.endDate}
+                  {exp.startDate}{" "}
+                  {getTranslation("exp.date_link_btw", language)} {exp.endDate}
                 </span>
               </div>
               <div className="description">{exp.description}</div>
@@ -66,25 +71,29 @@ interface ExpHeaderProps {
 
 class ExprienceDetailHeader extends React.Component<ExpHeaderProps> {
   render() {
-    const {title, tags } = this.props;
+    const { title, tags, handleClose } = this.props;
 
-    return ( 
+    return (
       <LanguageContext.Consumer>
         {({ language }) => (
-            <header>
-              <nav>
-                <h1>{getTranslation("exp.header.nav.title",language)}</h1>
-                <button>❌</button>
-              </nav>
-              <div className="content">
-                  <h1>{title}</h1>
-                  <div className="tags-list">
-                    {tags.map((tag) => {
-                      return <TagThumbmail key={tag.id} tag={tag} />;
-                    })}
-                  </div>
+          <header className="header-exp-detail">
+            <nav className="nav-exp-detail">
+              <h1 className="title">
+                {getTranslation("exp.header.nav.title", language)}
+              </h1>
+              <button className="exp-button" onClick={handleClose}>
+                ❌
+              </button>
+            </nav>
+            <div className="content">
+              <h1>{title}</h1>
+              <div className="tags-list">
+                {tags.map((tag) => {
+                  return <TagThumbmail key={tag.id} tag={tag} />;
+                })}
               </div>
-            </header>
+            </div>
+          </header>
         )}
       </LanguageContext.Consumer>
     );

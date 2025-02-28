@@ -15,7 +15,7 @@ export class ExperienceThumbMail extends React.Component<ExperienceThumbMailProp
 
   render() {
     const { exp, handleOnClick } = this.props;
-    
+
     return (
       <button onClick={handleOnClick} className="exp-thumbmail">
         <h1>{exp.title}</h1>

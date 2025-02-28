@@ -33,7 +33,7 @@ export class MainNav extends React.Component {
     }
 
     return (
-      <nav className="main-nav">
+      <nav className="nav main-nav">
         <button
           className={isAboutClicked ? "focus" : "" + " button"}
           onClick={() => {

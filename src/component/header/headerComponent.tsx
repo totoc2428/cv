@@ -11,7 +11,7 @@ export class Header extends React.Component<HeaderProps> {
     return (
       <LanguageContext.Consumer>
         {({ language }) => (
-          <header className={this.props.title}>
+          <header className={"main-header " + this.props.title}>
             <h4>{getTranslation("header.note", language)}</h4>
             <h1>
               {getTranslation(`header.title.${this.props.title}`, language)}

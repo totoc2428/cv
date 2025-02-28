@@ -3,7 +3,7 @@
   --shadow-light: #ffffff;
   --shadow-dark: #d1d1d1;
   --text-color: #333333;
-  --border-color:#cccccc;
+  --border-color: #cccccc;
 }
 
 body {
@@ -14,7 +14,7 @@ body {
   font-family: "Arial", sans-serif;
 }
 
-header {
+.main-header {
   font-size: 100%;
   display: flex;
   justify-content: space-between;
@@ -30,12 +30,12 @@ header {
     -5px -5px 10px var(--shadow-light);
 }
 
-header h1 {
+.main-header h1 {
   text-align: center !important;
   margin: auto !important;
 }
 
-main {
+.main {
   max-width: 800px;
   height: auto;
   margin: 0 auto;
@@ -82,17 +82,5 @@ main {
   width: auto;
   transform: scale(0.9);
   filter: brightness(0.9);
-  transition: all 0.3s ease;
-}
-
-button span {
-  transition: all 0.3s ease;
-  opacity: 0;
-  transform: translateX(-100%);
-}
-
-button span.copied-text {
-  opacity: 1;
-  transform: translateX(0);
   transition: all 0.3s ease;
 }

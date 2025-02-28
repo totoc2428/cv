@@ -9,7 +9,7 @@ export class LangNav extends React.Component {
     return (
       <LanguageContext.Consumer>
         {({ language, setLanguage }) => (
-          <nav className="lang-nav">
+          <nav className="nav lang-nav">
             <button
               className={"button " + (language === "en" ? "focus" : "")}
               onClick={() => setLanguage("en")}
