@@ -48,7 +48,12 @@ export class WorkView extends React.Component<{}, WorkViewState> {
               />
             ))}
           </div>
-          {currentExp && <ExprienceDetail exp={currentExp} />}
+          {currentExp && (
+            <ExprienceDetail 
+              exp={currentExp} 
+              onClose={() => this.setState({ currentExp: null })}
+            />
+          )}
         </main>
         <MainNav />
         <LangNav />

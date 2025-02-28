@@ -7,6 +7,7 @@ import { TagThumbmail } from "./tagThumbmail";
 
 interface ExpProps {
   exp: ExpTranslated;
+  onClose: () => void; // New prop
 }
 
 export class ExprienceDetail extends React.Component<ExpProps> {
@@ -16,6 +17,7 @@ export class ExprienceDetail extends React.Component<ExpProps> {
 
   handleClose = () => {
     this.setState({ closed: true });
+    this.props.onClose(); // Call parent callback
   };
 
   render() {
