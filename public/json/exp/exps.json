@@ -1,35 +1,41 @@
 [
-  {
-    "id": "HighSchool",
-    "title": "Lycée St Jude - Armentières",
-    "location": "Armentières, France",
-    "value": {
-      "en_value": "High School General Diploma",
-      "fr_value": "Baccalauréat Général"
-    },
-    "specialization": {
-      "en_value": ["Mathematics", "Computer Science", "Economy"],
-      "fr_value": ["Mathématiques", "Informatique", "Économie"]
-    },
-    "start_date": "2020-09-01",
-    "end_date": "2022-06-30",
-    "tags": ["school"]
-  },
-  {
+    {
     "id": "but",
-    "title": "Université de Lille",
+    "title": {
+      "fr":"Université de Lille",
+      "en":"University of Lille"
+    },
     "location": "Lille, France",
-    "value": {
-      "en_value": "University Technology Diploma (DUT)",
-      "fr_value": "Bachelor Univeritaire de Technologie (BUT)"
+    "subTitle": {
+      "en": "University Technology Diploma (DUT)",
+      "fr": "Bachelor Univeritaire de Technologie (BUT)"
     },
     "specialization": {
-      "en_value": ["Development of Communicating and Secure Applications"],
-      "fr_value": ["Dévelopement d'Applications Comunicantes et sécurisées"]
+      "en": ["Development of Communicating and Secure Applications"],
+      "fr": ["Dévelopement d'Applications Comunicantes et sécurisées"]
     },
     "start_date": "2022-09-01",
     "end_date": "2024-06-30",
 
+    "tags": ["school"]
+  },
+  {
+    "id": "HighSchool",
+    "title": {
+      "fr":"Lycée St Jude",
+      "en":"St Jude High School"
+    },
+    "location": "Armentières, France",
+    "subTitle": {
+      "en": "High School General Diploma",
+      "fr": "Baccalauréat Général"
+    },
+    "specialization": {
+      "en": ["Mathematics", "Computer Science", "Economy"],
+      "fr": ["Mathématiques", "Informatique", "Économie"]
+    },
+    "start_date": "2020-09-01",
+    "end_date": "2022-06-30",
     "tags": ["school"]
   }
 ]

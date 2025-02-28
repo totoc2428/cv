@@ -12,14 +12,22 @@ interface TranslationArray {
 
 export interface Exp {
   id: string;
-  title: string;
+  title: {
+    en: string;
+    fr: string;
+  };
   location: string;
-  value: Translation;
-  specialization: TranslationArray;
-  description?: string;
-  start_date: string;  // Changed from startDate
-  end_date: string;    // Changed from endDate
-  tags: string[];      // Changed from Tag[] to string[]
+  subTitle: {
+    en: string;
+    fr: string;
+  };
+  specialization: {
+    en: string[];
+    fr: string[];
+  };
+  start_date: string;
+  end_date: string;
+  tags: string[];
 }
 
 export interface ExpTranslated {

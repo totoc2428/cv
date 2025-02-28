@@ -12,12 +12,14 @@ export const ExpService = {
         exps.map(async (exp) => {
           const tags = await TagService.getTagsByIds(exp.tags);
           return {
-            ...exp,
-            tags,
-            value: exp.value[`${language}_value`],
-            specialization: exp.specialization[`${language}_value`],
+            id: exp.id,
+            title: exp.title[language],
+            location: exp.location,
+            value: exp.subTitle[language], // Using subTitle as value
+            specialization: exp.specialization[`${language}`],
             startDate: exp.start_date,
-            endDate: exp.end_date
+            endDate: exp.end_date,
+            tags
           } as ExpTranslated;
         })
       );
