@@ -26,7 +26,7 @@ export interface Exp {
     fr: string;
   };
   start_date: string;
-  end_date: string;
+  end_date: string | null;
   tags: string[];
 }
 

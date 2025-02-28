@@ -47,8 +47,7 @@ export class ExprienceDetail extends React.Component<ExpProps> {
                 <h1 className="icon">📅</h1>
                 <span className="value">
                   {getTranslation("exp.date_link_from", language)}{" "}
-                  {exp.startDate}{" "}
-                  {getTranslation("exp.date_link_btw", language)} {exp.endDate}
+                  {exp.startDate} {exp.endDate}
                 </span>
               </div>
               <h2 className="sub-title">{exp.value}</h2>

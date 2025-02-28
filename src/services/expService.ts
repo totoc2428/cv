@@ -1,6 +1,6 @@
 import { Exp, ExpTranslated } from "../types/exp/exp";
 import { TagService } from "./tagService";
-import { Language } from "../languages/dic";
+import { Language, getTranslation } from "../languages/dic";
 import { formatDate } from "../utils/dateFormatter";
 
 export const ExpService = {
@@ -12,6 +12,13 @@ export const ExpService = {
       const expsWithTags = await Promise.all(
         exps.map(async (exp) => {
           const tags = await TagService.getTagsByIds(exp.tags);
+          const endDate =
+            exp.end_date === "null" || exp.end_date === null
+              ? getTranslation("exp.date_no", language)
+              : getTranslation("exp.date_link_btw") +
+                " " +
+                formatDate(exp.end_date, language);
+
           return {
             id: exp.id,
             title: exp.title[language],
@@ -19,7 +26,7 @@ export const ExpService = {
             value: exp.subTitle[language],
             description: exp.description[language],
             startDate: formatDate(exp.start_date, language),
-            endDate: formatDate(exp.end_date, language),
+            endDate,
             tags,
           } as ExpTranslated;
         })
