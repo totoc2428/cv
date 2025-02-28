@@ -4,11 +4,18 @@ import { MainNav } from "../../component/nav/mainNav";
 import React from "react";
 
 export class WorkView extends React.Component {
+  state = {
+    exp : []
+  }
+
+  
   render() {
     return (
       <section className="wokr-container">
         <Header title="work" />
-        <main className="work-section"></main>
+        <main className="work-section">
+          
+        </main>
         <MainNav />
         <LangNav />
       </section>

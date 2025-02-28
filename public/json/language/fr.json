@@ -12,5 +12,15 @@
 
   "button": {
     "copied": "Copié dans le presse-papier."
+  },
+  "exp":{
+    "header":{
+      "nav":{
+        "title":"Détails de l'expérience.",
+        "close":"Fermer"
+      }
+    },
+    "date_link_from":"De",
+    "date_link_btw":"au"
   }
 }
