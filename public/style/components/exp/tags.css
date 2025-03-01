@@ -5,6 +5,7 @@
   border-radius: 0.25rem;
   font-size: 0.9rem;
   font-weight: 500;
+  text-wrap: nowrap;
 }
 
 /* Couleurs pastel pour chaque type de tag */

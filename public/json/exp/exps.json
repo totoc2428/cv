@@ -1,5 +1,24 @@
 [
   {
+    "id": "ubisoft-web-site",
+    "title": {
+      "fr": "Site Web Ubisoft Mobilité",
+      "en": "Ubisoft Web Site Mobility"
+    },
+    "location": "Lille, France",
+    "subTitle": {
+      "en": "Development of a fictitious website for the company's mobility project.",
+      "fr": "Développer un site web fictif pour le projet de mobilité de l'entreprise."
+    },
+    "description": {
+      "en": "The site is a showcase for the company's mobility project. Employees had to be able to select a means of transport and reserve it to ensure their daily journey.",
+      "fr": "Le site est une vitrine pour le projet de mobilité de l'entreprise. Les employées devaient pouvoir seléctioner un moyen de transport et le reserver pour assurer le trajet quotidien."
+    },
+    "start_date": "2022-09-26",
+    "end_date": "2022-01-10",
+    "tags": ["school-project", "dev", "design", "web"]
+  },
+  {
     "id": "but",
     "title": {
       "fr": "Université de Lille",

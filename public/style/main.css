@@ -4,8 +4,12 @@
   --shadow-dark: #d1d1d1;
   --text-color: #333333;
   --border-color: #cccccc;
+  --sb-track-color: var(--primary-bg);
+  --sb-thumb-color: var(--shadow-dark);
+  --sb-size: 5px;
 }
 
+/* BODY */
 body {
   margin: 0rem;
   padding: 0rem;
@@ -14,6 +18,27 @@ body {
   font-family: "Arial", sans-serif;
 }
 
+body::-webkit-scrollbar {
+  width: var(--sb-size);
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--sb-track-color);
+  border-radius: 1px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: var(--sb-thumb-color);
+  border-radius: 1px;
+}
+
+@supports not selector(::-webkit-scrollbar) {
+  body {
+    scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
+  }
+}
+
+/* HEADER */
 .main-header {
   font-size: 100%;
   display: flex;
