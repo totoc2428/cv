@@ -1,72 +1,45 @@
 import React from "react";
-import { Navigate } from "react-router-dom";
+import { Navigate, useLocation } from "react-router-dom";
 
 import "/public/style/components/nav/nav.css";
 
-export class MainNav extends React.Component {
-  state = {
-    isAboutClicked: false,
-    isContactClicked: false,
-    isWorkClicked: false,
-    isProjectClicked: false,
+// Convert to function component to use hooks
+export function MainNav() {
+  const location = useLocation();
+  const [navigation, setNavigation] = React.useState<string | null>(null);
+
+  const handleNavigation = (path: string) => {
+    if (location.pathname !== path) {
+      setNavigation(path);
+    }
   };
 
-  render() {
-    const {
-      isAboutClicked,
-      isContactClicked,
-      isProjectClicked,
-      isWorkClicked,
-    } = this.state;
-
-    if (isAboutClicked) {
-      return <Navigate to="/about" />;
-    }
-    if (isContactClicked) {
-      return <Navigate to="/contact" />;
-    }
-    if (isWorkClicked) {
-      return <Navigate to="/work" />;
-    }
-    if (isProjectClicked) {
-      return <Navigate to="/project" />;
-    }
-
-    return (
-      <nav className="nav main-nav">
-        <button
-          className={isAboutClicked ? "focus" : "" + " button"}
-          onClick={() => {
-            this.setState({ isAboutClicked: true });
-          }}
-        >
-          🏠
-        </button>
-        <button
-          className={isContactClicked ? "focus" : "" + " button"}
-          onClick={() => {
-            this.setState({ isContactClicked: true });
-          }}
-        >
-          👤
-        </button>
-        <button
-          className={isWorkClicked ? "focus" : "" + " button"}
-          onClick={() => {
-            this.setState({ isWorkClicked: true });
-          }}
-        >
-          💼
-        </button>
-        <button
-          className={isProjectClicked ? "focus" : "" + " button"}
-          onClick={() => {
-            this.setState({ isProjectClicked: true });
-          }}
-        >
-          🪁
-        </button>
-      </nav>
-    );
+  if (navigation) {
+    return <Navigate to={navigation} />;
   }
+
+  return (
+    <nav className="nav main-nav">
+      <button
+        className={(location.pathname === "/about" ? "focus" : "") + " button"}
+        onClick={() => handleNavigation("/about")}
+      >
+        🏠
+      </button>
+      <button
+        className={
+          (location.pathname === "/contact" ? "focus" : "") + " button"
+        }
+        onClick={() => handleNavigation("/contact")}
+      >
+        👤
+      </button>
+      <button
+        className={(location.pathname === "/work" ? "focus" : "") + " button"}
+        onClick={() => handleNavigation("/work")}
+      >
+        💼
+      </button>
+    </nav>
+  );
 }
