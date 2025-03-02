@@ -82,13 +82,23 @@ export class ExprienceDetail extends React.Component<ExpProps> {
                 <div className="skills-list">
                   {exp.skills &&
                     Object.entries(exp.skills).map(([skillId, skillValue]) => {
-                      // Type guard to ensure skillValue is SkillTranslations
-                      const skill = skillValue as SkillTranslations;
+                      const typedSkillValue = skillValue as SkillTranslations;
+                      if (
+                        !typedSkillValue ||
+                        typeof typedSkillValue !== "object" ||
+                        !typedSkillValue[language]
+                      ) {
+                        console.warn(
+                          `Invalid skill value for ${skillId}:`,
+                          skillValue
+                        );
+                        return null;
+                      }
                       return (
                         <SkillDetail
                           key={skillId}
                           skillId={skillId}
-                          value={skill[language]}
+                          value={typedSkillValue[language]}
                         />
                       );
                     })}

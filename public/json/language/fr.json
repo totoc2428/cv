@@ -22,6 +22,9 @@
     },
     "date_link_from": "Du",
     "date_link_btw": "au",
-    "date_no": "à Aujourd'hui"
+    "date_no": "à Aujourd'hui",
+    "skills": {
+      "title": "Compétences"
+    }
   }
 }

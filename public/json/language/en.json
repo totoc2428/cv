@@ -13,15 +13,18 @@
   "button": {
     "copied": "Copied to clipboard."
   },
-    "exp":{
-    "header":{
-      "nav":{
-        "title":"Experience details.",
-        "close":"Close"
+  "exp": {
+    "header": {
+      "nav": {
+        "title": "Experience details.",
+        "close": "Close"
       }
     },
-    "date_link_from":"From",
-    "date_link_btw":"to",
-    "date_no":"to Today"
+    "date_link_from": "From",
+    "date_link_btw": "to",
+    "date_no": "to Today",
+    "skills": {
+      "title": "Skills"
+    }
   }
 }
