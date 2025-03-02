@@ -13,7 +13,27 @@ interface ExpProps {
 export class ExprienceDetail extends React.Component<ExpProps> {
   state = {
     closed: false,
+    mounted: false,
   };
+
+  componentDidMount() {
+    this.triggerAnimation();
+  }
+
+  componentDidUpdate(prevProps: ExpProps) {
+    if (prevProps.exp.id !== this.props.exp.id) {
+      // Reset and retrigger animation when experience changes
+      this.setState({ mounted: false }, () => {
+        this.triggerAnimation();
+      });
+    }
+  }
+
+  triggerAnimation() {
+    requestAnimationFrame(() => {
+      this.setState({ mounted: true });
+    });
+  }
 
   handleClose = () => {
     this.setState({ closed: true });
@@ -22,7 +42,7 @@ export class ExprienceDetail extends React.Component<ExpProps> {
 
   render() {
     const { exp } = this.props;
-    const { closed } = this.state;
+    const { closed, mounted } = this.state;
 
     if (closed) {
       console.log("closed");
@@ -32,7 +52,10 @@ export class ExprienceDetail extends React.Component<ExpProps> {
     return (
       <LanguageContext.Consumer>
         {({ language }) => (
-          <section id={exp.id} className="exp-detail">
+          <section
+            id={exp.id}
+            className={`exp-detail ${mounted ? "exp-detail-enter" : ""}`}
+          >
             <ExprienceDetailHeader
               title={exp.title}
               handleClose={this.handleClose}

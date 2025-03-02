@@ -140,13 +140,6 @@
     }
   },
   {
-    "id": "network",
-    "value": {
-      "en": "Network",
-      "fr": "Réseau"
-    }
-  },
-  {
     "id": "database",
     "value": {
       "en": "Database",
@@ -158,6 +151,13 @@
     "value": {
       "en": "DevOps",
       "fr": "DevOps"
+    }
+  },
+  {
+    "id": "economy",
+    "value": {
+      "en": "Economy",
+      "fr": "Économie"
     }
   }
 ]

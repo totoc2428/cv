@@ -15,6 +15,9 @@
 }
 
 .work-section .exp-list {
+  max-height: 50vh;
+  overflow: hidden;
+  overflow-y: scroll;
   width: 100%;
   margin: 0rem;
   padding: 1rem;
@@ -25,6 +28,60 @@
   box-shadow: inset 3px 3px 6px var(--shadow-dark),
     inset -3px -3px 6px var(--shadow-light);
   transition: all 0.3s ease;
+}
+
+.work-section .exp-detail {
+  opacity: 0;
+  transform: translateY(20px);
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.work-section.open .exp-detail {
+  opacity: 1;
+  transform: translateY(0);
+  margin-top: 0rem;
+  margin-bottom: 0rem;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.exp-detail-enter {
+  animation: fadeIn 0.3s ease forwards;
+  animation-fill-mode: both;
+}
+
+.work-section .exp-list::-webkit-scrollbar {
+  width: var(--sb-size);
+  height: var(--sb-size);
+  overflow: hidden;
+}
+
+.work-section .exp-list::-webkit-scrollbar-track {
+  background: var(--sb-track-color);
+  border-radius: 20px;
+}
+
+.work-section .exp-list::-webkit-scrollbar-thumb {
+  background: var(--sb-thumb-color);
+  border-radius: 20px;
+}
+
+@supports not selector(::-webkit-scrollbar) {
+  .work-section .exp-list {
+    scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
+  }
 }
 
 .work-section.open .exp-list {

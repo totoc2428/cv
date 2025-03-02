@@ -1,169 +1,238 @@
 [
   {
-    "id": "web",
-    "link": "https://developer.mozilla.org/en-US/docs/Web",
-    "en_value": "Web",
-    "fr_value": "Web",
+    "id": "html-css-js",
+    "title": {
+      "en": "HTML-CSS-JS",
+      "fr": "HTML-CSS-JS"
+    },
     "description": {
-      "en_value": "Web developpement, HTML, CSS, and JavaScript.",
-      "fr_value": "Développement web, HTML, CSS et JavaScript."
+      "en": "Web developpement, HTML, CSS, and JavaScript.",
+      "fr": "Développement web, HTML, CSS et JavaScript."
     }
   },
   {
     "id": "WordPress",
-    "link": "https://wordpress.org/",
-    "en_value": "WordPress",
-    "fr_value": "WordPress",
+    "title": {
+      "en": "WordPress",
+      "fr": "WordPress"
+    },
     "description": {
-      "en_value": "WordPress, gestion et installation.",
-      "fr_value": "WordPress, gestion et installation."
+      "en": "WordPress, gestion et installation.",
+      "fr": "WordPress, gestion et installation."
+    }
+  },
+  {
+    "id": "figma",
+    "title": { "en": "Figma", "fr": "Figma" },
+    "description": {
+      "en": "Design and prototyping tool.",
+      "fr": "Outil de design et de prototypage."
     }
   },
   {
     "id": "react",
-    "link": "https://reactjs.org/",
-    "en_value": "React",
-    "fr_value": "React",
+    "title": {
+      "en": "React",
+      "fr": "React"
+    },
     "description": {
-      "en_value": "React, Redux, React Router.",
-      "fr_value": "React, Redux, React Router."
+      "en": "React, Redux, React Router.",
+      "fr": "React, Redux, React Router."
     }
   },
   {
     "id": "node",
-    "link": "https://nodejs.org/",
-    "en_value": "Node.js",
-    "fr_value": "Node.js",
+    "title": {
+      "en": "Node.js",
+      "fr": "Node.js"
+    },
     "description": {
-      "en_value": "Node.js, Express, Socket.io.",
-      "fr_value": "Node.js, Express, Socket.io."
+      "en": "Node.js, Express, Socket.io.",
+      "fr": "Node.js, Express, Socket.io."
     }
   },
   {
     "id": "java",
-    "link": "https://www.java.com/",
-    "en_value": "Java",
-    "fr_value": "Java",
+    "title": {
+      "en": "Java",
+      "fr": "Java"
+    },
     "description": {
-      "en_value": "Java, JavaFX, Java Swing.",
-      "fr_value": "Java, JavaFX, Java Swing."
+      "en": "Java, JavaFX, Java Swing.",
+      "fr": "Java, JavaFX, Java Swing."
     }
   },
   {
     "id": "java-Spring-boot",
-    "link": "https://spring.io/projects/spring-boot",
-    "en_value": "Java Spring",
-    "fr_value": "Java Spring",
+    "title": {
+      "en": "Java Spring",
+      "fr": "Java Spring"
+    },
     "description": {
-      "en_value": "Java Spring Boot, Spring Security, Spring Data JPA.",
-      "fr_value": "Java Spring Boot, Spring Security, Spring Data JPA."
+      "en": "Java Spring Boot, Spring Security, Spring Data JPA.",
+      "fr": "Java Spring Boot, Spring Security, Spring Data JPA."
     }
   },
   {
-    "id": "JSON",
-    "link": "https://www.json.org/json-en.html",
-    "en_value": "JSON",
-    "fr_value": "JSON",
+    "id": "json",
+    "title": {
+      "en": "JSON",
+      "fr": "JSON"
+    },
     "description": {
-      "en_value": "JavaScript Object Notation.",
-      "fr_value": "JavaScript Object Notation."
+      "en": "JavaScript Object Notation.",
+      "fr": "JavaScript Object Notation."
+    }
+  },
+  {
+    "id": "csv",
+    "title": {
+      "en": "CSV",
+      "fr": "CSV"
+    },
+    "description": {
+      "en": "Comma-Separated Values.",
+      "fr": "Valeurs Séparées par des Virgules."
     }
   },
   {
     "id": "mobile-react-native",
-    "link": "https://reactnative.dev/",
-    "en_value": "Mobile React Native",
-    "fr_value": "Mobile React Native",
+    "title": {
+      "en": "Mobile React Native",
+      "fr": "Mobile React Native"
+    },
     "description": {
-      "en_value": "React Native, Expo, React Navigation.",
-      "fr_value": "React Native, Expo, React Navigation."
+      "en": "React Native, Expo, React Navigation.",
+      "fr": "React Native, Expo, React Navigation."
     }
   },
   {
     "id": "no-sql",
-    "link": "https://www.mongodb.com/nosql-explained",
-    "en_value": "NoSQL Databases",
-    "fr_value": "NoSQL Databases",
+    "title": {
+      "en": "NoSQL Databases",
+      "fr": "NoSQL Databases"
+    },
     "description": {
-      "en_value": "NoSQL databases : MongoDB, Redis, Cassandra...",
-      "fr_value": "Bases de données NoSQL : MongoDB, Redis, Cassandra..."
+      "en": "NoSQL databases : MongoDB, Redis, Cassandra...",
+      "fr": "Bases de données NoSQL : MongoDB, Redis, Cassandra..."
     }
   },
   {
     "id": "sql",
-    "link": "https://www.sqlcourse.com/",
-    "en_value": "SQL",
-    "fr_value": "SQL",
+    "title": { "en": "SQL", "fr": "SQL" },
     "description": {
-      "en_value": "Structured Query Language : Postgres, MySQL, H2...",
-      "fr_value": "Base de données Structurés : Postgres, MySQL, H2..."
+      "en": "Structured Query Language : Postgres, MySQL, H2...",
+      "fr": "Base de données Structurés : Postgres, MySQL, H2..."
     }
   },
   {
     "id": "jpa",
-    "link": "https://www.oracle.com/java/technologies/persistence-jsp.html",
-    "en_value": "JPA",
-    "fr_value": "JPA",
+    "title": {
+      "en": "JPA",
+      "fr": "JPA"
+    },
     "description": {
-      "en_value": "Java Persistence API, Hibernate, Spring Data JPA.",
-      "fr_value": "Java Persistence API, Hibernate, Spring Data JPA."
+      "en": "Java Persistence API, Hibernate, Spring Data JPA.",
+      "fr": "Java Persistence API, Hibernate, Spring Data JPA."
     }
   },
   {
     "id": "debian",
-    "link": "https://www.debian.org/",
-    "en_value": "Debian",
-    "fr_value": "Debian",
+    "title": {
+      "en": "Debian",
+      "fr": "Debian"
+    },
     "description": {
-      "en_value": "The linux Debian destribution.",
-      "fr_value": "La distribution linux Debian."
+      "en": "The linux Debian destribution.",
+      "fr": "La distribution linux Debian."
     }
   },
   {
     "id": "git",
-    "link": "https://git-scm.com/",
-    "en_value": "Git",
-    "fr_value": "Git",
+    "title": {
+      "en": "Git",
+      "fr": "Git"
+    },
     "description": {
-      "en_value": "Version control system.",
-      "fr_value": "Système de contrôle de version."
+      "en": "Version control system.",
+      "fr": "Système de contrôle de version."
     }
   },
   {
     "id": "docker",
-    "link": "https://www.docker.com/",
-    "en_value": "Docker",
-    "fr_value": "Docker",
+    "title": {
+      "en": "Docker",
+      "fr": "Docker"
+    },
     "description": {
-      "en_value": "Containerization platform.",
-      "fr_value": "Plateforme de conteneurisation."
-    }
-  },
-  {
-    "id": "agile",
-    "link": "https://agilemanifesto.org/",
-    "en_value": "Agile",
-    "fr_value": "Agile",
-    "description": {
-      "en_value": "Agile methodology, Scrum, Kanban.",
-      "fr_value": "Méthodologie Agile, Scrum, Kanban."
+      "en": "Containerization platform.",
+      "fr": "Plateforme de conteneurisation."
     }
   },
   {
     "id": "devops",
-    "link": "https://www.redhat.com/fr/topics/devops/what-is-devops",
-    "en_value": "DevOps",
-    "fr_value": "DevOps",
+    "title": {
+      "en": "DevOps",
+      "fr": "DevOps"
+    },
     "description": {
-      "en_value": "DevOps culture, CI/CD, Jenkins, GitLab.",
-      "fr_value": "Culture DevOps, CI/CD, Jenkins, GitLab."
+      "en": "DevOps culture, CI/CD, Jenkins, GitLab.",
+      "fr": "Culture DevOps, CI/CD, Jenkins, GitLab."
     }
   },
   {
-    "id": "python",
+    "id": "system",
+    "title": {
+      "en": "System",
+      "fr": "Système"
+    },
     "description": {
-      "en_value": "Concepts of the Python Language, particulary in Mathematicals Model and Data training.",
-      "fr_value": "Concepts de programation en Python notament sur en modélisation mathéiques et en traitements de données."
+      "en": "Linux, Windows, MacOS.",
+      "fr": "Linux, Windows, MacOS."
+    }
+  },
+  {
+    "id": "network",
+    "title": {
+      "en": "Network",
+      "fr": "Réseau"
+    },
+    "description": {
+      "en": "Network, TCP/IP, OSI model.",
+      "fr": "Réseau, TCP/IP, Modèle OSI."
+    }
+  },
+  {
+    "id": "communication",
+    "title": {
+      "en": "Communication",
+      "fr": "Communication"
+    },
+    "description": {
+      "en": "Communication, Teamwork, Leadership.",
+      "fr": "Communication, Travail d'équipe, Leadership."
+    }
+  },
+  {
+    "id": "project-management",
+    "title": {
+      "en": "Project Management",
+      "fr": "Gestion de Projet"
+    },
+    "description": {
+      "en": "Project Management, Agile, Scrum, Kanban.",
+      "fr": "Gestion de Projet, Agile, Scrum, Kanban."
+    }
+  },
+  {
+    "id": "presentation",
+    "title": {
+      "en": "Presentation",
+      "fr": "Présentation"
+    },
+    "description": {
+      "en": "Presentation, Public Speaking, PowerPoint.",
+      "fr": "Présentation, Prise de Parole en Public, PowerPoint."
     }
   }
 ]

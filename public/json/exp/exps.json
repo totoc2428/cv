@@ -1,6 +1,233 @@
 [
   {
-    "id": "ubisoft-web-site",
+    "id": "but-agile-project",
+    "title": {
+      "fr": "Projet Agile",
+      "en": "Agile Project"
+    },
+    "location": "Lille, France",
+    "subTitle": {
+      "fr": "Développement d'une application de gestion de projet en méthode Agile.",
+      "en": "Development of a project management application in Agile method."
+    },
+    "description": {
+      "fr": "L'application permettait de gérer des projets en méthode Agile. Les utilisateurs pouvaient créer des projets, des tâches, des sprints, etc. L'application permettait de suivre l'avancement des projets et des tâches.",
+      "en": "The application allowed to manage projects in Agile method. Users could create projects, tasks, sprints, etc. The application allowed to follow the progress of projects and tasks."
+    },
+    "start_date": "2023-09-04",
+    "end_date": "2023-09-06",
+    "tags": ["school-project", "dev"],
+    "skills": {
+      "project-management": {
+        "fr": "Gestion de projet : Utilisation de la méthode Agile, Scrum.",
+        "en": "Project management : Use of the Agile method, Scrum."
+      },
+      "java": {
+        "fr": "Développement de l'application en Java.",
+        "en": "Development of the application in Java."
+      },
+      "git": {
+        "fr": "Gestion du projet via Git. Utilisation de branches pour le développement de fonctionnalités.",
+        "en": "Project management via Git. Use of branches for the development of features."
+      }
+    }
+  },
+
+  {
+    "id": "but-pair-app",
+    "title": {
+      "fr": "Application d'appairage",
+      "en": "Pairing Application"
+    },
+    "location": "Lille, France",
+    "subTitle": {
+      "fr": "Application de gestion des binômes pour un voyage scolaire.",
+      "en": "Management application for pairs for a school trip."
+    },
+    "description": {
+      "fr": "L'application permettait de gérer les binômes pour un voyage scolaire. Les élèves devaient être répartis en binômes pour les activités du voyage. L'application permettait de créer des binômes aléatoires ou de choisir les binômes manuellement.",
+      "en": "The application allowed to manage pairs for a school trip. Students had to be divided into pairs for the activities of the trip. The application allowed to create random pairs or to choose the pairs manually."
+    },
+    "start_date": "2023-03-10",
+    "end_date": "2023-06-30",
+    "tags": ["school-project", "dev", "ui", "backend"],
+    "skills": {
+      "csv": {
+        "fr": "Gestion des données des élèves via des fichiers CSV. Posibilité d'établir des profils et des préferences elle même sauvegardées dans des fichiers CSV ( Données persistantes ).",
+        "en": "Management of student data via CSV files. Possibility to establish profiles and preferences themselves saved in CSV files ( Persistent data )."
+      },
+      "java": {
+        "fr": "Développement de l'application en Java. Utilisation de JavaFx pour la partie graphique.",
+        "en": "Development of the application in Java. Use of JavaFx for the graphical part."
+      },
+      "figma": {
+        "fr": "Réalisation de la maquette de l'application sur Figma.",
+        "en": "Realization of the mockup of the application on Figma."
+      },
+      "git": {
+        "fr": "Gestion du projet via Git. Utilisation de branches pour le développement de fonctionnalités.",
+        "en": "Project management via Git. Use of branches for the development of features."
+      }
+    }
+  },
+  {
+    "id": "but-sql-jo",
+    "title": {
+      "fr": "Ventilation de données",
+      "en": "Data Ventilation"
+    },
+    "location": "Lille, France",
+    "subTitle": {
+      "fr": "Ventilation d'un jeux de données en utilisant les outils de requêtes SQL.",
+      "en": "Ventilation of a data set using SQL query tools."
+    },
+    "description": {
+      "fr": "Le but de ce projet était de ventiler un jeu de données sur les Jeux Olympiques en utilisant des requêtes SQL. Les données étaient fournis au format CSV. Les requêtes devaient permettre d'acceder aux données en fonction de critères précis.",
+      "en": "The purpose of this project was to ventilate a data set about Olympic Game using SQL queries. The data was given in CSV format. The queries had to allow access to the data according to specific criteria."
+    },
+    "start_date": "2023-02-12",
+    "end_date": "2023-04-10",
+    "tags": ["school-project", "database", "presentation"],
+    "skills": {
+      "sql": {
+        "fr": "Utilisation de SQL avec la base de données PostgreSQL pour la ventilation des données. Supréssions des données inutiles, jointures, ect. Desing d'un MCD et d'un MLD pour la base de données.",
+        "en": "Use of SQL with the PostgreSQL database for data ventilation. Deletion of unnecessary data, joins, etc. Design of a MCD and a MLD for the database."
+      },
+      "presentation": "Réalisation d'un rapport de projet en utilisant le language Markdown. Export au format PDF."
+    }
+  },
+  {
+    "id": "but-installation-auto",
+    "title": {
+      "fr": "Installation Automatique",
+      "en": "Automatic Installation"
+    },
+    "location": "Lille, France",
+    "subTitle": {
+      "fr": "Installation de Debian sur un parc de machine virtuelle.",
+      "en": "Automatic installation of Debian on a virtual machine park."
+    },
+    "description": {
+      "fr": "Le but de ce projet était d'installer de manière automatiser un système Débian préconfigurer sur plusieurs machines virtuelles. Le script devait installer plusieurs logiciels et les configurer automatiquement.",
+      "en": "The purpose of this project was to automatically install a preconfigured Debian system on several virtual machines. The script had to install several software and configure them automatically."
+    },
+    "start_date": "2023-01-10",
+    "end_date": "2023-03-10",
+    "tags": ["school-project", "devops", "security"],
+    "skills": {
+      "debian": {
+        "fr": "Utilisation de Debian OS. Installation et configuration des logiciels sur le serveur Debian.",
+        "en": "Use of Debian OS. Installation and configuration of software on the Debian server."
+      },
+      "presentation": {
+        "fr": "Réalisation du procédure et d'un rapport de projet en utilisant le language Markdown. Utilisation de LaTeX pour l'export au format PDF.",
+        "en": "Realization of the procedure and a project report using the Markdown language. Use of LaTeX for export to PDF format."
+      },
+      "devops": {
+        "fr": "Rédaction d'un fichier d'installation script en bash. Gestion des erreurs, ajout de logs, etc.",
+        "en": "Writing an installation script file in bash. Error management, adding logs, etc."
+      },
+      "security": {
+        "fr": "Configuration de la sécurité : Configuration du pare-feu, configuration des droits d'accès, etc.",
+        "en": "Security configuration : Firewall configuration, access rights configuration, etc."
+      }
+    }
+  },
+  {
+    "id": "but-escape-game",
+    "title": {
+      "fr": "Escape Game",
+      "en": "Escape Game"
+    },
+    "location": "Lille, France",
+    "subTitle": {
+      "fr": "Développement d'un jeu d'escape game avec Genially.",
+      "en": "Development of an escape game with Genially."
+    },
+    "description": {
+      "fr": "Le jeu consistait à résoudre des énigmes pour s'échapper d'une pièce. Les énigmes étaient de différents types : mathématiques, logiques, etc. Le but n'était ici n'était pas d'évaluer la partie technique mais de faire de la gestion de projet et de la comunications.",
+      "en": "The game consisted of solving puzzles to escape from a room. The puzzles were of different types: mathematics, logic, etc. The goal here was not to evaluate the technical part but to do project management and communication."
+    },
+    "start_date": "2023-02-23",
+    "end_date": "2023-04-26",
+    "tags": ["school-project", "game", "ui", "design"],
+    "skills": {
+      "presentation": {
+        "fr": "Utilisation de Genially pour la création du jeu d'escape game.",
+        "en": "Use of Genially for the creation of the escape game."
+      },
+      "project-management": {
+        "fr": "Gestion du projet : Répartition des tâches, réunions, etc.",
+        "en": "Project management : Task allocation, meetings, etc."
+      },
+      "communication": {
+        "fr": "Communication : Réunions, compte-rendus, etc.",
+        "en": "Communication : Meetings, reports, etc."
+      }
+    }
+  },
+  {
+    "id": "but-debian-installation",
+    "title": {
+      "fr": "Installation Debian",
+      "en": "Debian Installation"
+    },
+    "location": "Lille, France",
+    "subTitle": {
+      "fr": "Installation d'un serveur Debian sur une machine virtuelle.",
+      "en": "Installation on a virutal Machine."
+    },
+    "description": {
+      "fr": "Prise en main du sytème Linux. Installation complète du système sur la machine virtuelle.",
+      "en": "Getting started with the Linux system. Complete installation of the system on the virtual machine."
+    },
+    "start_date": "2022-09-15",
+    "end_date": "2022-11-26",
+    "tags": ["school-project", "devops", "security"],
+    "skills": {
+      "system": {
+        "fr": "Installation et configuration du système Debian. Ajout de plusieurs utilisateurs groupes avec des autorisations différentes. Installation de paquets.",
+        "en": "Installation and configuration of the Debian system. Adding several user groups with different permissions. Installation of packages."
+      },
+      "network": {
+        "fr": "Configuration du réseau : Configuration de l'adresse IP statique. Configuration d'un proxy.",
+        "en": "Network configuration : Configuration of the static IP address. Configuration of a proxy."
+      }
+    }
+  },
+
+  {
+    "id": "but-educational-game",
+    "title": {
+      "fr": "Jeu Ludo Pédagogique",
+      "en": "Educational Game"
+    },
+    "location": "Lille, France",
+    "subTitle": {
+      "fr": "Devellopement d'un jeu ludo-pédagoique à désitination d'élèves du primaire.",
+      "en": "Development of an educational game for primary school students."
+    },
+    "description": {
+      "fr": "Notre jeu portait sur l'apprentissage et la révision des mathématiques, sur les opérations primaires ( addition, soustraction, multiplication et division ). Le but du jeux était de détruire les tours de de l'adversaire en répondant correctement aux questions posées.",
+      "en": "Our game was about learning and revising mathematics, on primary operations (addition, subtraction, multiplication and division). The goal of the game was to destroy the opponent's towers by correctly answering the questions asked."
+    },
+    "start_date": "2022-01-10",
+    "end_date": "2022-06-30",
+    "tags": ["school-project", "dev", "game"],
+    "skills": {
+      "java": {
+        "fr": "Développement du jeu en Java.",
+        "en": "Development of the game in Java."
+      },
+      "csv": {
+        "fr": "Utilisation de fichiers CSV pour stocker les questions et les réponses.",
+        "en": "Use of CSV files to store questions and answers."
+      }
+    }
+  },
+
+  {
+    "id": "but-ubisoft-web-site",
     "title": {
       "fr": "Site Web Ubisoft Mobilité",
       "en": "Ubisoft Web Site Mobility"
@@ -16,7 +243,17 @@
     },
     "start_date": "2022-09-26",
     "end_date": "2022-01-10",
-    "tags": ["school-project", "dev", "design", "web"]
+    "tags": ["school-project", "dev", "web", "ui"],
+    "skills": {
+      "html-css-js": {
+        "fr": "Devellopement de la partie front-end du site web en HTML et CSS. Utilisation d'une struture simple via HTML uniquement.",
+        "en": "Development of the front-end part of the website in HTML and CSS. Use of a simple structure via HTML only."
+      },
+      "WordPress": {
+        "fr": "Réalisation d'une maquette du site web sur WordPress.",
+        "en": "Realization of a mockup of the website on WordPress."
+      }
+    }
   },
   {
     "id": "but",
