@@ -4,6 +4,7 @@ import { LanguageContext } from "../../context/LanguageContext";
 interface SkillDetailProps {
   skillId: string;
   value: string;
+  title: string;
 }
 
 interface SkillDetailState {
@@ -26,13 +27,13 @@ export class SkillDetail extends React.Component<
   };
 
   render() {
-    const { skillId, value } = this.props;
+    const { skillId, value, title } = this.props;
     const { expanded } = this.state;
 
     return (
       <div className={`skill-detail ${expanded ? "expanded" : ""}`}>
         <button className="skill-header" onClick={this.toggleExpand}>
-          <span className="skill-id">{skillId}</span>
+          <span className={`skill-id ${skillId}`}>{title}</span>
           <span className="expand-icon">{expanded ? "−" : "+"}</span>
         </button>
         {expanded && (

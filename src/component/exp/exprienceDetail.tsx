@@ -5,37 +5,67 @@ import { LanguageContext } from "../../context/LanguageContext";
 import { Tag } from "../../types/exp/tag";
 import { TagThumbmail } from "./tagThumbmail";
 import { SkillDetail } from "./skillDetail";
-import { SkillTranslations } from "../../types/exp/skill";
+import { SkillService } from "../../services/skillService";
+import { ExpSkill } from "../../types/exp/skill";
 
 interface ExpProps {
   exp: ExpTranslated;
   onClose: () => void; // New prop
 }
 
-export class ExprienceDetail extends React.Component<ExpProps> {
-  state = {
+interface SkillTitles {
+  [key: string]: string;
+}
+
+interface ExpState {
+  closed: boolean;
+  mounted: boolean;
+  skillTitles: SkillTitles;
+}
+
+export class ExprienceDetail extends React.Component<ExpProps, ExpState> {
+  static contextType = LanguageContext;
+  declare context: React.ContextType<typeof LanguageContext>;
+
+  state: ExpState = {
     closed: false,
     mounted: false,
+    skillTitles: {},
   };
 
-  componentDidMount() {
+  async componentDidMount() {
     this.triggerAnimation();
+    await this.loadSkillTitles();
   }
 
-  componentDidUpdate(prevProps: ExpProps) {
+  async componentDidUpdate(prevProps: ExpProps) {
     if (prevProps.exp.id !== this.props.exp.id) {
-      // Reset and retrigger animation when experience changes
-      this.setState({ mounted: false }, () => {
+      this.setState({ mounted: false }, async () => {
         this.triggerAnimation();
+        await this.loadSkillTitles();
       });
     }
   }
 
-  triggerAnimation() {
+  async loadSkillTitles() {
+    const { exp } = this.props;
+    if (exp.skills) {
+      const titles: SkillTitles = {};
+      for (const skillId of Object.keys(exp.skills)) {
+        titles[skillId] = await SkillService.getSkillTitle(
+          skillId,
+          this.context.language
+        );
+      }
+      this.setState({ skillTitles: titles });
+    }
+  }
+
+  triggerAnimation = () => {
     requestAnimationFrame(() => {
       this.setState({ mounted: true });
     });
-  }
+  };
 
   handleClose = () => {
     this.setState({ closed: true });
@@ -81,27 +111,16 @@ export class ExprienceDetail extends React.Component<ExpProps> {
                 <h3>{getTranslation("exp.skills.title", language)}</h3>
                 <div className="skills-list">
                   {exp.skills &&
-                    Object.entries(exp.skills).map(([skillId, skillValue]) => {
-                      const typedSkillValue = skillValue as SkillTranslations;
-                      if (
-                        !typedSkillValue ||
-                        typeof typedSkillValue !== "object" ||
-                        !typedSkillValue[language]
-                      ) {
-                        console.warn(
-                          `Invalid skill value for ${skillId}:`,
-                          skillValue
-                        );
-                        return null;
-                      }
-                      return (
+                    Object.entries(exp.skills as ExpSkill).map(
+                      ([skillId, skillValue]) => (
                         <SkillDetail
                           key={skillId}
                           skillId={skillId}
-                          value={typedSkillValue[language]}
+                          value={skillValue[language] || ""}
+                          title={this.state.skillTitles[skillId] || skillId}
                         />
-                      );
-                    })}
+                      )
+                    )}
                 </div>
               </div>
             </main>
