@@ -187,11 +187,11 @@
 }
 
 .exp-detail .main-exp-detail .item.location {
-  max-width: 40%;
+  max-width: 30%;
 }
 
 .exp-detail .main-exp-detail .item.date {
-  max-width: 55%;
+  max-width: 45%;
 }
 
 .exp-detail .main-exp-detail .item .icon {

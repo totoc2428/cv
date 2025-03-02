@@ -21,6 +21,7 @@ interface ExpState {
   closed: boolean;
   mounted: boolean;
   skillTitles: SkillTitles;
+  currentSkillId: string | null; // Add this
 }
 
 export class ExprienceDetail extends React.Component<ExpProps, ExpState> {
@@ -31,6 +32,7 @@ export class ExprienceDetail extends React.Component<ExpProps, ExpState> {
     closed: false,
     mounted: false,
     skillTitles: {},
+    currentSkillId: null, // Add this
   };
 
   async componentDidMount() {
@@ -70,6 +72,12 @@ export class ExprienceDetail extends React.Component<ExpProps, ExpState> {
   handleClose = () => {
     this.setState({ closed: true });
     this.props.onClose(); // Call parent callback
+  };
+
+  toggleSkill = (skillId: string) => {
+    this.setState((prevState) => ({
+      currentSkillId: prevState.currentSkillId === skillId ? null : skillId,
+    }));
   };
 
   render() {
@@ -118,6 +126,8 @@ export class ExprienceDetail extends React.Component<ExpProps, ExpState> {
                           skillId={skillId}
                           value={skillValue[language] || ""}
                           title={this.state.skillTitles[skillId] || skillId}
+                          isExpanded={this.state.currentSkillId === skillId}
+                          onToggle={() => this.toggleSkill(skillId)}
                         />
                       )
                     )}
