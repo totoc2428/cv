@@ -1,0 +1,238 @@
+[
+  {
+    "id": "html-css-js",
+    "title": {
+      "en": "HTML-CSS-JS",
+      "fr": "HTML-CSS-JS"
+    },
+    "description": {
+      "en": "Web developpement, HTML, CSS, and JavaScript.",
+      "fr": "Développement web, HTML, CSS et JavaScript."
+    }
+  },
+  {
+    "id": "WordPress",
+    "title": {
+      "en": "WordPress",
+      "fr": "WordPress"
+    },
+    "description": {
+      "en": "WordPress, gestion et installation.",
+      "fr": "WordPress, gestion et installation."
+    }
+  },
+  {
+    "id": "figma",
+    "title": { "en": "Figma", "fr": "Figma" },
+    "description": {
+      "en": "Design and prototyping tool.",
+      "fr": "Outil de design et de prototypage."
+    }
+  },
+  {
+    "id": "react",
+    "title": {
+      "en": "React",
+      "fr": "React"
+    },
+    "description": {
+      "en": "React, Redux, React Router.",
+      "fr": "React, Redux, React Router."
+    }
+  },
+  {
+    "id": "node",
+    "title": {
+      "en": "Node.js",
+      "fr": "Node.js"
+    },
+    "description": {
+      "en": "Node.js, Express, Socket.io.",
+      "fr": "Node.js, Express, Socket.io."
+    }
+  },
+  {
+    "id": "java",
+    "title": {
+      "en": "Java",
+      "fr": "Java"
+    },
+    "description": {
+      "en": "Java, JavaFX, Java Swing.",
+      "fr": "Java, JavaFX, Java Swing."
+    }
+  },
+  {
+    "id": "java-Spring-boot",
+    "title": {
+      "en": "Java Spring",
+      "fr": "Java Spring"
+    },
+    "description": {
+      "en": "Java Spring Boot, Spring Security, Spring Data JPA.",
+      "fr": "Java Spring Boot, Spring Security, Spring Data JPA."
+    }
+  },
+  {
+    "id": "json",
+    "title": {
+      "en": "JSON",
+      "fr": "JSON"
+    },
+    "description": {
+      "en": "JavaScript Object Notation.",
+      "fr": "JavaScript Object Notation."
+    }
+  },
+  {
+    "id": "csv",
+    "title": {
+      "en": "CSV",
+      "fr": "CSV"
+    },
+    "description": {
+      "en": "Comma-Separated Values.",
+      "fr": "Valeurs Séparées par des Virgules."
+    }
+  },
+  {
+    "id": "mobile-react-native",
+    "title": {
+      "en": "Mobile React Native",
+      "fr": "Mobile React Native"
+    },
+    "description": {
+      "en": "React Native, Expo, React Navigation.",
+      "fr": "React Native, Expo, React Navigation."
+    }
+  },
+  {
+    "id": "no-sql",
+    "title": {
+      "en": "NoSQL Databases",
+      "fr": "NoSQL Databases"
+    },
+    "description": {
+      "en": "NoSQL databases : MongoDB, Redis, Cassandra...",
+      "fr": "Bases de données NoSQL : MongoDB, Redis, Cassandra..."
+    }
+  },
+  {
+    "id": "sql",
+    "title": { "en": "SQL", "fr": "SQL" },
+    "description": {
+      "en": "Structured Query Language : Postgres, MySQL, H2...",
+      "fr": "Base de données Structurés : Postgres, MySQL, H2..."
+    }
+  },
+  {
+    "id": "jpa",
+    "title": {
+      "en": "JPA",
+      "fr": "JPA"
+    },
+    "description": {
+      "en": "Java Persistence API, Hibernate, Spring Data JPA.",
+      "fr": "Java Persistence API, Hibernate, Spring Data JPA."
+    }
+  },
+  {
+    "id": "debian",
+    "title": {
+      "en": "Debian",
+      "fr": "Debian"
+    },
+    "description": {
+      "en": "The linux Debian destribution.",
+      "fr": "La distribution linux Debian."
+    }
+  },
+  {
+    "id": "git",
+    "title": {
+      "en": "Git",
+      "fr": "Git"
+    },
+    "description": {
+      "en": "Version control system.",
+      "fr": "Système de contrôle de version."
+    }
+  },
+  {
+    "id": "docker",
+    "title": {
+      "en": "Docker",
+      "fr": "Docker"
+    },
+    "description": {
+      "en": "Containerization platform.",
+      "fr": "Plateforme de conteneurisation."
+    }
+  },
+  {
+    "id": "devops",
+    "title": {
+      "en": "DevOps",
+      "fr": "DevOps"
+    },
+    "description": {
+      "en": "DevOps culture, CI/CD, Jenkins, GitLab.",
+      "fr": "Culture DevOps, CI/CD, Jenkins, GitLab."
+    }
+  },
+  {
+    "id": "system",
+    "title": {
+      "en": "System",
+      "fr": "Système"
+    },
+    "description": {
+      "en": "Linux, Windows, MacOS.",
+      "fr": "Linux, Windows, MacOS."
+    }
+  },
+  {
+    "id": "network",
+    "title": {
+      "en": "Network",
+      "fr": "Réseau"
+    },
+    "description": {
+      "en": "Network, TCP/IP, OSI model.",
+      "fr": "Réseau, TCP/IP, Modèle OSI."
+    }
+  },
+  {
+    "id": "communication",
+    "title": {
+      "en": "Communication",
+      "fr": "Communication"
+    },
+    "description": {
+      "en": "Communication, Teamwork, Leadership.",
+      "fr": "Communication, Travail d'équipe, Leadership."
+    }
+  },
+  {
+    "id": "project-management",
+    "title": {
+      "en": "Project Management",
+      "fr": "Gestion de Projet"
+    },
+    "description": {
+      "en": "Project Management, Agile, Scrum, Kanban.",
+      "fr": "Gestion de Projet, Agile, Scrum, Kanban."
+    }
+  },
+  {
+    "id": "presentation",
+    "title": {
+      "en": "Presentation",
+      "fr": "Présentation"
+    },
+    "description": {
+      "en": "Presentation, Public Speaking, PowerPoint.",
+      "fr": "Présentation, Prise de Parole en Public, PowerPoint."
+    }
+  }
+]

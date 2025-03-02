@@ -1,0 +1,163 @@
+[
+  {
+    "id": "school",
+    "value": {
+      "en": "School",
+      "fr": "École"
+    }
+  },
+  {
+    "id": "internship",
+    "value": {
+      "en": "Internship",
+      "fr": "Stage"
+    }
+  },
+  {
+    "id": "school-project",
+    "value": {
+      "en": "School project",
+      "fr": "Projet scolaire"
+    }
+  },
+  {
+    "id": "freelance",
+    "value": {
+      "en": "Freelance",
+      "fr": "Indépendant"
+    }
+  },
+  {
+    "id": "work-project",
+    "value": {
+      "en": "Work project",
+      "fr": "Projet de travail"
+    }
+  },
+  {
+    "id": "personal-project",
+    "value": {
+      "en": "Personal project",
+      "fr": "Projet personnel"
+    }
+  },
+  {
+    "id": "hobby",
+    "value": {
+      "en": "Hobby",
+      "fr": "Loisir"
+    }
+  },
+  {
+    "id": "dev",
+    "value": {
+      "en": "Development",
+      "fr": "Développement"
+    }
+  },
+  {
+    "id": "design",
+    "value": {
+      "en": "Design",
+      "fr": "Design"
+    }
+  },
+  {
+    "id": "ux",
+    "value": {
+      "en": "User Experience",
+      "fr": "Expérience Utilisateur"
+    }
+  },
+  {
+    "id": "ui",
+    "value": {
+      "en": "User Interface",
+      "fr": "Interface Utilisateur"
+    }
+  },
+  {
+    "id": "frontend",
+    "value": {
+      "en": "Frontend",
+      "fr": "Frontend"
+    }
+  },
+  {
+    "id": "backend",
+    "value": {
+      "en": "Backend",
+      "fr": "Backend"
+    }
+  },
+  {
+    "id": "fullstack",
+    "value": {
+      "en": "Fullstack",
+      "fr": "Fullstack"
+    }
+  },
+  {
+    "id": "mobile",
+    "value": {
+      "en": "Mobile",
+      "fr": "Mobile"
+    }
+  },
+  {
+    "id": "web",
+    "value": {
+      "en": "Web",
+      "fr": "Web"
+    }
+  },
+  {
+    "id": "game",
+    "value": {
+      "en": "Game",
+      "fr": "Jeu"
+    }
+  },
+  {
+    "id": "iot",
+    "value": {
+      "en": "Internet of Things",
+      "fr": "Internet des Objets"
+    }
+  },
+  {
+    "id": "cloud",
+    "value": {
+      "en": "Cloud",
+      "fr": "Cloud"
+    }
+  },
+  {
+    "id": "security",
+    "value": {
+      "en": "Security",
+      "fr": "Sécurité"
+    }
+  },
+  {
+    "id": "database",
+    "value": {
+      "en": "Database",
+      "fr": "Base de données"
+    }
+  },
+  {
+    "id": "devops",
+    "value": {
+      "en": "DevOps",
+      "fr": "DevOps"
+    }
+  },
+  {
+    "id": "economy",
+    "value": {
+      "en": "Economy",
+      "fr": "Économie"
+    }
+  }
+]

@@ -1,0 +1,111 @@
+:root {
+  --primary-bg: #f0f0f0;
+  --shadow-light: #ffffff;
+  --shadow-dark: #d1d1d1;
+  --text-color: #333333;
+  --border-color: #cccccc;
+  --sb-track-color: var(--primary-bg);
+  --sb-thumb-color: var(--shadow-dark);
+  --sb-size: 5px;
+}
+
+/* BODY */
+body {
+  margin: 0rem;
+  padding: 0rem;
+  background-color: var(--primary-bg);
+  color: var(--text-color);
+  font-family: "Arial", sans-serif;
+}
+
+body::-webkit-scrollbar {
+  width: var(--sb-size);
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--sb-track-color);
+  border-radius: 1px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: var(--sb-thumb-color);
+  border-radius: 1px;
+}
+
+@supports not selector(::-webkit-scrollbar) {
+  body {
+    scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
+  }
+}
+
+/* HEADER */
+.main-header {
+  font-size: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin: 0rem;
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-bottom: 3rem;
+  border-radius: 0rem 0rem 1rem 1rem;
+  background: var(--primary-bg);
+  box-shadow: 5px 5px 10px var(--shadow-dark),
+    -5px -5px 10px var(--shadow-light);
+}
+
+.main-header h1 {
+  text-align: center !important;
+  margin: auto !important;
+}
+
+.main {
+  max-width: 800px;
+  height: auto;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.neumorphic-card {
+  background: var(--primary-bg);
+  border-radius: 15px;
+  padding: 2rem;
+  box-shadow: 5px 5px 10px var(--shadow-dark),
+    -5px -5px 10px var(--shadow-light);
+}
+
+.button {
+  width: auto;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  text-underline-offset: none;
+  text-underline-position: auto;
+  overflow: hidden;
+  color: var(--text-color);
+  text-align: center;
+  padding: 0.75rem;
+  margin: 0.5rem;
+  background: var(--shadow-dark);
+  border-radius: 0.25rem;
+  transform: scale(1.1) brightness(1.1);
+  transition: all 0.3s ease;
+  transform: scale(1);
+  filter: brightness(1);
+}
+
+.button:hover {
+  width: auto;
+  transform: scale(1.1);
+  filter: brightness(1.1);
+  transition: all 0.3s ease;
+}
+
+.button:active {
+  width: auto;
+  transform: scale(0.9);
+  filter: brightness(0.9);
+  transition: all 0.3s ease;
+}

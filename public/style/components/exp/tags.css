@@ -1,0 +1,125 @@
+.tag-thumbmail {
+  opacity: 1;
+  margin-left: 0.5rem;
+  max-height: 1rem;
+  padding: 0.4rem 0.8rem;
+  border-radius: 0.25rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-wrap: nowrap;
+}
+
+.tag-thumbmail.school {
+  background-color: #ffd6d6;
+  color: #cc5151;
+}
+
+.tag-thumbmail.internship {
+  background-color: #d6ffd6;
+  color: #51cc51;
+}
+
+.tag-thumbmail.school-project {
+  background-color: #d6d6ff;
+  color: #5151cc;
+}
+
+.tag-thumbmail.freelance {
+  background-color: #ffd6ff;
+  color: #cc51cc;
+}
+
+.tag-thumbmail.work-project {
+  background-color: #ffffd6;
+  color: #cccc51;
+}
+
+.tag-thumbmail.personal-project {
+  background-color: #d6ffff;
+  color: #51cccc;
+}
+
+.tag-thumbmail.hobby {
+  background-color: #e8ffd6;
+  color: #78cc51;
+}
+
+.tag-thumbmail.dev {
+  background-color: #e0d6ff;
+  color: #6851cc;
+}
+
+.tag-thumbmail.design {
+  background-color: #ffecd6;
+  color: #cc9651;
+}
+
+.tag-thumbmail.ux {
+  background-color: #d6fff0;
+  color: #51cc96;
+}
+
+.tag-thumbmail.ui {
+  background-color: #ffd6ec;
+  color: #cc5196;
+}
+
+.tag-thumbmail.frontend {
+  background-color: #ffd6e0;
+  color: #cc5168;
+}
+
+.tag-thumbmail.backend {
+  background-color: #d6e0ff;
+  color: #5168cc;
+}
+
+.tag-thumbmail.fullstack {
+  background-color: #e0ffd6;
+  color: #68cc51;
+}
+
+.tag-thumbmail.mobile {
+  background-color: #d6ecff;
+  color: #5196cc;
+}
+
+.tag-thumbmail.web {
+  background-color: #d6fff7;
+  color: #51ccb4;
+}
+
+.tag-thumbmail.game {
+  background-color: #ffd6f7;
+  color: #cc51b4;
+}
+
+.tag-thumbmail.iot {
+  background-color: #fff7d6;
+  color: #ccb451;
+}
+
+.tag-thumbmail.cloud {
+  background-color: #f0ffd6;
+  color: #96cc51;
+}
+
+.tag-thumbmail.security {
+  background-color: #ffdbd6;
+  color: #cc6851;
+}
+
+.tag-thumbmail.database {
+  background-color: #ffe6d6;
+  color: #cc7851;
+}
+
+.tag-thumbmail.devops {
+  background-color: #d6ffe6;
+  color: #51cc78;
+}
+
+.tag-thumbmail.economy {
+  background-color: #f7ffd6;
+  color: #b4cc51;
+}

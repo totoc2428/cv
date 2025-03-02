@@ -1,0 +1,221 @@
+.exp-thumbmail {
+  z-index: 0;
+  font-size: 75%;
+  font-weight: 100;
+  text-decoration: none;
+  margin: 0.25rem;
+  width: 100%;
+  padding: 0.25rem;
+  border: none;
+  background: transparent;
+  border-bottom: 0.125rem solid var(--border-color);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  text-align: left;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.exp-thumbmail:hover {
+  transform: scale(1.0125);
+}
+
+.exp-thumbmail h1 {
+  margin: 0.5rem;
+  font-size: 1.2rem;
+  color: var(--text-color);
+}
+
+.exp-thumbmail-tags {
+  width: 45%;
+  opacity: 1;
+  display: flex;
+  margin-left: 1rem;
+  padding: 0.25rem;
+  overflow: hidden;
+  overflow-x: auto;
+}
+
+.exp-thumbmail-tags::-webkit-scrollbar {
+  width: var(--sb-size);
+  height: var(--sb-size);
+}
+
+.exp-thumbmail-tags::-webkit-scrollbar-track {
+  background: var(--sb-track-color);
+  border-radius: 1px;
+}
+
+.exp-thumbmail-tags::-webkit-scrollbar-thumb {
+  background: var(--sb-thumb-color);
+  border-radius: 1px;
+}
+
+@supports not selector(::-webkit-scrollbar) {
+  .exp-thumbmail-tags {
+    scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
+  }
+}
+
+/*DETAILS*/
+
+.exp-detail {
+  max-height: 55vh;
+  overflow: hidden;
+  width: 50%;
+  min-width: 40vw;
+  padding: 0rem;
+  border-radius: 0.5rem;
+  box-shadow: 5px 5px 10px var(--shadow-dark),
+    -5px -5px 10px var(--shadow-light);
+}
+
+.exp-detail .header-exp-detail {
+  display: flex;
+  flex-direction: column;
+  padding: 0rem;
+  margin: 0rem;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  background: var(--primary-bg);
+  filter: brightness(0.95);
+  box-shadow: none;
+}
+
+.exp-detail .header-exp-detail .nav-exp-detail {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 2rem;
+  margin: 0rem;
+  padding-top: 0.5rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  background: var(--primary-bg);
+  filter: brightness(0.9);
+  overflow: hidden;
+}
+
+.exp-detail .header-exp-detail .nav-exp-detail .title {
+  margin: 0.25rem;
+  width: 40%;
+  margin-left: 0rem;
+  padding-left: 0rem;
+  padding: 0rem;
+  text-align: left;
+}
+
+.exp-detail .header-exp-detail .nav-exp-detail .exp-button {
+  font-size: 90%;
+  outline: none;
+  border: none;
+  background: none;
+  cursor: pointer;
+  margin-bottom: 1rem;
+  margin-right: 0.5rem;
+}
+
+.exp-detail .header-exp-detail .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  padding-left: 0.25rem;
+}
+
+.exp-detail .header-exp-detail .content h1 {
+  font-size: 150%;
+  margin-left: 1rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.exp-detail .header-exp-detail .content .tags-list {
+  margin-top: 0.25rem;
+  margin-bottom: 0.5rem;
+  margin-left: 1rem;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  overflow: hidden;
+}
+
+.exp-detail .main-exp-detail {
+  padding: 1rem;
+  max-height: 60%;
+  overflow-y: auto;
+}
+
+.exp-detail .main-exp-detail::-webkit-scrollbar {
+  width: var(--sb-size);
+  height: var(--sb-size);
+  overflow: hidden;
+}
+
+.exp-detail .main-exp-detail::-webkit-scrollbar-track {
+  background: var(--sb-track-color);
+  border-radius: 20px;
+}
+
+.exp-detail .main-exp-detail::-webkit-scrollbar-thumb {
+  background: var(--sb-thumb-color);
+  border-radius: 20px;
+}
+
+@supports not selector(::-webkit-scrollbar) {
+  .exp-detail .main-exp-detail {
+    scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
+  }
+}
+
+.work-section.open .exp-list {
+  width: 40%;
+  transition: all 0.3s ease;
+}
+
+.exp-detail .main-exp-detail .item {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  margin-top: 0.5rem;
+  background: var(--primary-bg);
+  box-shadow: 5px 5px 10px var(--shadow-dark),
+    -5px -5px 10px var(--shadow-light);
+  border-radius: 0.25rem;
+}
+
+.exp-detail .main-exp-detail .item.location {
+  max-width: 30%;
+}
+
+.exp-detail .main-exp-detail .item.date {
+  max-width: 45%;
+}
+
+.exp-detail .main-exp-detail .item .icon {
+  margin-bottom: 0.25rem;
+  margin-top: 0.25rem;
+}
+
+.exp-detail .main-exp-detail .item .value {
+  margin-top: 0.5rem;
+}
+
+.exp-detail .main-exp-detail .sub-title,
+.exp-detail .main-exp-detail .description {
+  margin-top: 1rem;
+  font-size: 110%;
+}
+
+.skills-section {
+  margin-top: 2rem;
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+}

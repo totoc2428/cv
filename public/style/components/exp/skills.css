@@ -1,0 +1,152 @@
+.skill-detail {
+  flex: 1;
+  width: auto;
+  min-width: 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.skill-detail.expanded {
+  min-width: 20rem !important;
+  transition: all 0.3s ease;
+}
+
+.skill-header {
+  width: 100%;
+  padding: 0.8rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--background-color-alt);
+  border: none;
+  cursor: pointer;
+}
+
+.skill-content {
+  padding: 1rem;
+  background: var(--background-color);
+}
+
+.expand-icon {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+/* Skills specific colors */
+.skill-detail[class*="html-css-js"] {
+  background-color: #fff0f0;
+  color: #ff4d4d;
+}
+
+.skill-detail[class*="WordPress"] {
+  background-color: #f0fff0 !important;
+  color: #4dff4d !important;
+}
+
+.skill-detail[class*="figma"] {
+  background-color: #f0f0ff;
+  color: #4d4dff;
+}
+
+.skill-detail[class*="react"] {
+  background-color: #e6f3ff;
+  color: #0066cc;
+}
+
+.skill-detail[class*="node"] {
+  background-color: #f0fff0;
+  color: #33cc33;
+}
+
+.skill-detail[class*="java"] {
+  background-color: #fff0e6;
+  color: #ff6600;
+}
+
+.skill-detail[class*="java-Spring-boot"] {
+  background-color: #f2ffe6;
+  color: #66cc00;
+}
+
+.skill-detail[class*="json"] {
+  background-color: #fff6e6;
+  color: #ffaa00;
+}
+
+.skill-detail[class*="csv"] {
+  background-color: #f0f8ff;
+  color: #0099ff;
+}
+
+.skill-detail[class*="mobile-react-native"] {
+  background-color: #ffe6f2;
+  color: #ff0066;
+}
+
+.skill-detail[class*="no-sql"] {
+  background-color: #f2e6ff;
+  color: #6600ff;
+}
+
+.skill-detail[class*="sql"] {
+  background-color: #e6fff2;
+  color: #00cc66;
+}
+
+.skill-detail[class*="jpa"] {
+  background-color: #ffe6e6;
+  color: #ff0000;
+}
+
+.skill-detail[class*="debian"] {
+  background-color: #ffe6f9;
+  color: #ff00cc;
+}
+
+.skill-detail[class*="git"] {
+  background-color: #fff2e6;
+  color: #ff6600;
+}
+
+.skill-detail[class*="docker"] {
+  background-color: #e6f9ff;
+  color: #00ccff;
+}
+
+.skill-detail[class*="devops"] {
+  background-color: #f9ffe6;
+  color: #99cc00;
+}
+
+.skill-detail[class*="system"] {
+  background-color: #ffe6ec;
+  color: #ff1a66;
+}
+
+.skill-detail[class*="network"] {
+  background-color: #e6ecff;
+  color: #1a66ff;
+}
+
+.skill-detail[class*="communication"] {
+  background-color: #f2ffe6;
+  color: #66cc00;
+}
+
+.skill-detail[class*="project-management"] {
+  background-color: #ffe6f2;
+  color: #ff0066;
+}
+
+.skill-detail[class*="presentation"] {
+  background-color: #e6fff2;
+  color: #00cc66 !important;
+}
+
+/* Default color as fallback */
+.skill-detail {
+  background-color: #f0f0f0;
+  color: #666666;
+}

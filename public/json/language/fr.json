@@ -1,0 +1,30 @@
+{
+  "header": {
+    "note": "Porte-folio de Charles Coudé.",
+    "title": {
+      "about": "À propos",
+      "contact": "Contact",
+      "projects": "Projets",
+      "work": "Réalisations"
+    },
+    "cv": "Obtenir le CV"
+  },
+
+  "button": {
+    "copied": "Copié dans le presse-papier."
+  },
+  "exp": {
+    "header": {
+      "nav": {
+        "title": "Détails de l'expérience.",
+        "close": "Fermer"
+      }
+    },
+    "date_link_from": "Du",
+    "date_link_btw": "au",
+    "date_no": "à Aujourd'hui",
+    "skills": {
+      "title": "Compétences"
+    }
+  }
+}

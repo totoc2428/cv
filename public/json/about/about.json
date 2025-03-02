@@ -1,0 +1,12 @@
+{
+  "name": "Coudé",
+  "firstName": "Charles",
+  "introduction": {
+    "en_value": "Hey ! I'm Charles Coudé, an IT programer. ",
+    "fr_value": "Bonjour ! Je m'appelle Charles Coudé et je suis dévellopeur en informatique. "
+  },
+  "about": {
+    "en_value": "Here you will find my scool career, skills and professional experience. If you have any questions, suggestions or would like to work with me, please do not hesitate to contact me.",
+    "fr_value": "Vous trouverez ici mon parcours scolaire, mes compétences et mes expériences professionnelles. Si vous avez des questions, des suggestions ou si vous souhaitez travailler avec moi, n'hésitez pas à me contacter."
+  }
+}
