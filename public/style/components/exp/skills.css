@@ -145,6 +145,21 @@
   color: #00cc66 !important;
 }
 
+.skill-detail[class*="c"] {
+  background-color: #e6e6ff;
+  color: #4d4dcc;
+}
+
+.skill-detail[class*="security"] {
+  background-color: #ffe6e6;
+  color: #cc4d4d;
+}
+
+.skill-detail[class*="low-level"] {
+  background-color: #e6ffff;
+  color: #4dcccc;
+}
+
 /* Default color as fallback */
 .skill-detail {
   background-color: #f0f0f0;

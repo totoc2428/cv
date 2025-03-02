@@ -215,7 +215,7 @@
 
 .skills-list {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: wrap !important;
   gap: 1rem;
   margin-top: 1rem;
 }
