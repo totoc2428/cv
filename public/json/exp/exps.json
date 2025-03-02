@@ -1,5 +1,268 @@
 [
   {
+    "id": "but-doctolib",
+    "title": {
+      "fr": "Développement d'une copie de l'aplication Doctolib",
+      "en": "Development of a copy of the Doctolib application"
+    },
+    "location": "Lille, France",
+    "subTitle": {
+      "fr": "Développement d'une application de prise de rendez-vous médicaux.",
+      "en": "Development of a medical appointment scheduling application."
+    },
+    "description": {
+      "fr": "Le but de ce projet était de développer une application de prise de rendez-vous médicaux par équipe de 2. L'application devait permettre aux patients de prendre rendez-vous avec des médecins et de gérer leurs rendez-vous.",
+      "en": "The purpose of this project was to develop a medical appointment scheduling application by team of two. The application had to allow patients to make appointments with doctors and manage their appointments."
+    },
+    "start_date": "2024-01-10",
+    "end_date": "2024-04-10",
+    "tags": ["school-project", "dev", "web", "ui", "backend"],
+    "skills": {
+      "html-css-js": {
+        "fr": "Développement de la partie front-end de l'application en HTML, CSS et JavaScript.",
+        "en": "Development of the front-end part of the application in HTML, CSS and JavaScript."
+      },
+      "java": {
+        "fr": "Développement de la partie back-end de l'application en Java. Utilisation de Spring Boot pour la gestion des routes et des requêtes.",
+        "en": "Development of the back-end part of the application in Java. Use of Spring Boot for route and request management."
+      },
+      "sql": {
+        "fr": "Utilisation de SQL avec la base de données PostgreSQL pour la gestion des données de l'application en utilisant JPA.",
+        "en": "Use of SQL with the PostgreSQL database for data management of the application using JPA."
+      },
+      "git": {
+        "fr": "Gestion du projet via Git. Utilisation de branches pour le développement de fonctionnalités.",
+        "en": "Project management via Git. Use of branches for the development of features."
+      }
+    }
+  },
+  {
+    "id": "but-risc-v",
+    "title": {
+      "fr": "Développement d'un simulateur de CPU RISC-V",
+      "en": "Development of a RISC-V CPU simulator"
+    },
+    "location": "Lille, France",
+    "subTitle": {
+      "fr": "Développement d'un simulateur de CPU RISC-V en C.",
+      "en": "Development of a RISC-V CPU simulator in C."
+    },
+    "description": {
+      "fr": "Le but de ce projet était de développer un simulateur de CPU RISC-V en C. Le simulateur devait être capable d'exécuter des instructions RISC-V et de simuler le fonctionnement d'un CPU RISC-V.",
+      "en": "The purpose of this project was to develop a RISC-V CPU simulator in C. The simulator had to be able to execute RISC-V instructions and simulate the operation of a RISC-V CPU."
+    },
+    "start_date": "2024-10-10",
+    "end_date": "2025-01-14",
+    "tags": ["school-project", "dev", "low-level"],
+    "skills": {
+      "c": {
+        "fr": "Développement du simulateur en C. Utilisation de pointeurs, de structures, etc.",
+        "en": "Development of the simulator in C. Use of pointers, structures, etc."
+      },
+      "git": {
+        "fr": "Gestion du projet via Git. Utilisation de branches pour le développement de fonctionnalités.",
+        "en": "Project management via Git. Use of branches for the development of features."
+      }
+    }
+  },
+  {
+    "id": "but-stage-attestatio",
+    "title": {
+      "fr": "Stage chez Attestat.io",
+      "en": "Internship at Attestat.io"
+    },
+    "location": "Lille, France",
+    "subTitle": {
+      "fr": "Développement de nouvelles fonctionalités.",
+      "en": "Development of new features."
+    },
+    "description": {
+      "fr": "Stage de 3 mois chez Attestat.io. Ajout de plusieurs fonctionalité au site web et dévellopement d'un simulateur de taux d'endettement.",
+      "en": "3-month internship at Attestat.io. Addition of several features to the website and development of a debt ratio simulator."
+    },
+    "start_date": "2024-05-27",
+    "end_date": "2023-08-14",
+    "tags": ["internship", "dev", "web", "ui", "backend"],
+    "skills": {
+      "figma": {
+        "fr": "Réalisation de maquettes pour les nouvelles fonctionnalités sur Figma.",
+        "en": "Realization of mockups for new features on Figma."
+      },
+      "php": {
+        "fr": "Développement de nouvelles fonctionnalités pour le site web en PHP. Utilisation de Symfony et du moteur de rendu Twig.",
+        "en": "Development of new features for the website in PHP. Use of Symfony and the Twig rendering engine."
+      },
+      "html-css-js": {
+        "fr": "Développement de la partie front-end du site web en HTML, CSS et JavaScript.",
+        "en": "Development of the front-end part of the website in HTML, CSS and JavaScript."
+      },
+      "git": {
+        "fr": "Gestion du projet via Git. Utilisation de branches pour le développement de fonctionnalités.",
+        "en": "Project management via Git. Use of branches for the development of features."
+      }
+    }
+  },
+  {
+    "id": "but-res-api",
+    "title": {
+      "fr": "API REST - Pizzeria",
+      "en": "REST API - Pizzeria"
+    },
+    "location": "Lille, France",
+    "subTitle": {
+      "fr": "Développement d'une API REST pour une pizzeria.",
+      "en": "Development of a REST API for a pizzeria."
+    },
+    "description": {
+      "fr": "Le but de ce projet était de développer une API REST pour une pizzeria par équipe de 2. L'API devait permettre de gérer les pizzas, leur composition ainsi que les commandes.",
+      "en": "The purpose of this project was to develop a REST API for a pizzeria by team of two. The API had to allow to manage pizzas, their composition as well as orders."
+    },
+    "start_date": "2023-09-10",
+    "end_date": "2023-12-10",
+    "tags": ["school-project", "dev", "backend", "database"],
+    "skills": {
+      "java": {
+        "fr": "Développement de l'API en Java. Utilisation de Apache Tomcat pour l'API REST et la gestion des routes. Java-SQL était utilisé pour la gestion des données.",
+        "en": "Development of the API in Java. Use of Apache Tomcat for the REST API and route management. Java-SQL was used for data management."
+      },
+      "sql": {
+        "fr": "Utilisation de SQL avec la base de données PostgreSQL pour la gestion des données de l'API.",
+        "en": "Use of SQL with the PostgreSQL database for data management of the API."
+      },
+      "json": {
+        "fr": "Utilisation de JSON pour la gestion des données échangées entre le client et le serveur.",
+        "en": "Use of JSON for data management exchanged between the client and the server."
+      },
+      "git": {
+        "fr": "Gestion du projet via Git. Utilisation de branches pour le développement de fonctionnalités.",
+        "en": "Project management via Git. Use of branches for the development of features."
+      }
+    }
+  },
+  {
+    "id": "but-js-game",
+    "title": {
+      "fr": "Jeu JavaScript",
+      "en": "JavaScript Game"
+    },
+    "location": "Lille, France",
+    "subTitle": {
+      "fr": "Développement d'un jeu en JavaScript.",
+      "en": "Development of a game in JavaScript."
+    },
+    "description": {
+      "fr": "Développement d'un jeu de tir à défilement en JavaScript. Le but du jeu était de détruire les ennemis en évitant les obstacles.",
+      "en": "Development of a scrolling shooting game in JavaScript. The goal of the game was to destroy the enemies while avoiding obstacles."
+    },
+    "start_date": "2023-01-10",
+    "end_date": "2023-06-30",
+    "tags": ["school-project", "dev", "game", "ui", "web"],
+    "skills": {
+      "html-css-js": {
+        "fr": "Développement du jeu en JavaScript. Utilisation de Canvas pour la partie graphique.",
+        "en": "Development of the game in JavaScript. Use of Canvas for the graphical part."
+      },
+      "git": {
+        "fr": "Gestion du projet via Git. Utilisation de branches pour le développement de fonctionnalités.",
+        "en": "Project management via Git. Use of branches for the development of features."
+      },
+      "node": {
+        "fr": "Utilisation de Node.js pour la gestion des dépendances du projet.",
+        "en": "Use of Node.js for project dependencies management."
+      },
+      "soket-io": {
+        "fr": "Utilisation de Socket.io pour la gestion des échanges entre le client et le serveur.",
+        "en": "Use of Socket.io for managing exchanges between the client and the server."
+      },
+      "presentation": {
+        "fr": "Réalisation d'une présentation du projet en utilisant le language Markdown.",
+        "en": "Realization of a project presentation using the Markdown language."
+      }
+    }
+  },
+  {
+    "id": "but-matrix-instance",
+    "title": {
+      "fr": "Instance Matrix",
+      "en": "Matrix Instance"
+    },
+    "location": "Lille, France",
+    "subTitle": {
+      "fr": "Installation d'une instance matrix sur une machine virtuelle Debian.",
+      "en": "Installation of a matrix instance on a Debian virtual machine."
+    },
+    "description": {
+      "fr": "Le but de ce projet était d'installer une instance Matrix sur une machine virtuelle Debian. L'instance devait être fonctionnelle et permettre la communication entre plusieurs utilisateurs.",
+      "en": "The purpose of this project was to install a Matrix instance on a Debian virtual machine. The instance had to be functional and allow communication between several users."
+    },
+    "start_date": "2023-10-10",
+    "end_date": "2024-01-10",
+    "tags": ["school-project", "devops", "security"],
+    "skills": {
+      "debian": {
+        "fr": "Utilisation de Debian OS. Installation et configuration des logiciels sur le serveur Debian.",
+        "en": "Use of Debian OS. Installation and configuration of software on the Debian server."
+      },
+      "devops": {
+        "fr": "Rédaction d'un fichier d'installation script en bash. Gestion des erreurs, ajout de logs, etc.",
+        "en": "Writing an installation script file in bash. Error management, adding logs, etc."
+      },
+      "security": {
+        "fr": "Configuration de la sécurité : Configuration du pare-feu, configuration des droits d'accès, etc.",
+        "en": "Security configuration : Firewall configuration, access rights configuration, etc."
+      },
+      "sql": {
+        "fr": "Utilisation de SQL avec la base de données PostgreSQL pour la gestion des données de l'instance.",
+        "en": "Use of SQL with the PostgreSQL database for data management of the instance."
+      },
+      "docker": {
+        "fr": "Utilisation de Docker pour l'installation de l'instance Matrix. Utilisation de Docker-compose pour la gestion des conteneurs.",
+        "en": "Use of Docker for the installation of the Matrix instance. Use of Docker-compose for container management."
+      },
+      "presentation": {
+        "fr": "Réalisation du procédure et d'un rapport de projet en utilisant le language Markdown. Utilisation de LaTeX pour l'export au format PDF.",
+        "en": "Realization of the procedure and a project report using the Markdown language. Use of LaTeX for export to PDF format."
+      }
+    }
+  },
+  {
+    "id": "but-maze-game",
+    "title": {
+      "fr": "Jeu de Labyrinthe",
+      "en": "Maze Game"
+    },
+    "location": "Lille, France",
+    "subTitle": {
+      "fr": "Développement d'un jeu de labyrinthe 'Chasse au monstre'.",
+      "en": "Development of a maze game 'Monster Hunt'."
+    },
+    "description": {
+      "fr": "Le but du jeux était de trouver le monstre caché dans le labyrinthe. Le joueur devait se déplacer dans le labyrinthe pour trouver le monstre. Les deux entités pouvait être automatisé.",
+      "en": "The goal of the game was to find the monster hidden in the maze. The player had to move in the maze to find the monster. The two entities could be automated."
+    },
+    "start_date": "2023-01-10",
+    "end_date": "2024-01-10",
+    "tags": ["school-project", "dev", "game", "ui"],
+    "skills": {
+      "java": {
+        "fr": "Développement du jeu en Java. Elaboration et Transposition d'algorithmes de recherche de chemin dans le labyrinthe pour l'automatisation.",
+        "en": "Development of the game in Java. Elaboration and Transposition of path search algorithms in the maze for automation."
+      },
+      "javaFx": {
+        "fr": "Utilisation de JavaFx pour la partie graphique du jeu. Définition d'un interface de couleurs pour les éléments graphique du Jeux. Implémentation du shéma MVC.",
+        "en": "Use of JavaFx for the graphical part of the game. Definition of a color interface for the graphic elements of the game. Implementation of the MVC schema."
+      },
+      "git": {
+        "fr": "Gestion du projet via Git. Utilisation de branches pour le développement de fonctionnalités.",
+        "en": "Project management via Git. Use of branches for the development of features."
+      },
+      "csv": {
+        "fr": "Utilisation de fichiers CSV pour stocker les données des labyrinthes. Internationalisation du jeux avec plusieurs langues disponibles.",
+        "en": "Use of CSV files to store maze data. Internationalization of the game with several languages available."
+      }
+    }
+  },
+  {
     "id": "but-agile-project",
     "title": {
       "fr": "Projet Agile",

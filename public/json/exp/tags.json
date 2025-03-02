@@ -159,5 +159,12 @@
       "en": "Economy",
       "fr": "Économie"
     }
+  },
+  {
+    "id": "low-level",
+    "value": {
+      "en": "Low-level",
+      "fr": "Bas niveau"
+    }
   }
 ]

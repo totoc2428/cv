@@ -11,6 +11,17 @@
     }
   },
   {
+    "id": "php",
+    "title": {
+      "en": "PHP",
+      "fr": "PHP"
+    },
+    "description": {
+      "en": "PHP, Laravel, Symfony.",
+      "fr": "PHP, Laravel, Symfony."
+    }
+  },
+  {
     "id": "WordPress",
     "title": {
       "en": "WordPress",
@@ -49,6 +60,28 @@
     "description": {
       "en": "Node.js, Express, Socket.io.",
       "fr": "Node.js, Express, Socket.io."
+    }
+  },
+  {
+    "id": "soket-io",
+    "title": {
+      "en": "Socket.io",
+      "fr": "Socket.io"
+    },
+    "description": {
+      "en": "Real-time, bidirectional and event-based communication.",
+      "fr": "Communication en temps réel, bidirectionnelle et basée sur des événements."
+    }
+  },
+  {
+    "id": "c",
+    "title": {
+      "en": "C",
+      "fr": "C"
+    },
+    "description": {
+      "en": "C programming language.",
+      "fr": "Langage de programmation C."
     }
   },
   {
