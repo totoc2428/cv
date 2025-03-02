@@ -21,9 +21,7 @@ export class TagThumbmail extends React.Component<TagThumbmailProps> {
     }
 
     return (
-      <span className={`tag-thumbmail ${tag.id}`}>
-        {tag.value[language]}
-      </span>
+      <span className={`tag-thumbmail ${tag.id}`}>{tag.value[language]}</span>
     );
   }
 }

@@ -1,4 +1,4 @@
-import { Exp, ExpTranslated } from "../types/exp/exp";
+import { ExpTranslated, Exp } from "../types/exp/exp";
 import { TagService } from "./tagService";
 import { Language, getTranslation } from "../languages/dic";
 import { formatDate } from "../utils/dateFormatter";

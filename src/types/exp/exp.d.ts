@@ -11,7 +11,6 @@ interface TranslationArray {
 }
 
 export interface Exp {
-  skills: any;
   id: string;
   title: {
     en: string;
@@ -29,6 +28,7 @@ export interface Exp {
   start_date: string;
   end_date: string | null;
   tags: string[];
+  skills?: ExpSkill;
 }
 
 export interface ExpTranslated {
