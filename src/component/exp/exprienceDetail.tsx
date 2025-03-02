@@ -4,6 +4,8 @@ import { getTranslation } from "../../languages/dic";
 import { LanguageContext } from "../../context/LanguageContext";
 import { Tag } from "../../types/exp/tag";
 import { TagThumbmail } from "./tagThumbmail";
+import { SkillDetail } from "./skillDetail";
+import { SkillTranslations } from "../../types/exp/skill";
 
 interface ExpProps {
   exp: ExpTranslated;
@@ -75,6 +77,23 @@ export class ExprienceDetail extends React.Component<ExpProps> {
               </div>
               <h2 className="sub-title">{exp.value}</h2>
               <div className="description">{exp.description}</div>
+              <div className="skills-section">
+                <h2>{getTranslation("exp.skills.title", language)}</h2>
+                <div className="skills-list">
+                  {exp.skills &&
+                    Object.entries(exp.skills).map(([skillId, skillValue]) => {
+                      // Type guard to ensure skillValue is SkillTranslations
+                      const skill = skillValue as SkillTranslations;
+                      return (
+                        <SkillDetail
+                          key={skillId}
+                          skillId={skillId}
+                          value={skill[language]}
+                        />
+                      );
+                    })}
+                </div>
+              </div>
             </main>
           </section>
         )}

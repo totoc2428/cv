@@ -178,3 +178,43 @@
   margin-top: 1rem;
   font-size: 110%;
 }
+
+.skills-section {
+  margin-top: 2rem;
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.skill-detail {
+  flex: 1;
+  min-width: 200px;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.skill-header {
+  width: 100%;
+  padding: 0.8rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--background-color-alt);
+  border: none;
+  cursor: pointer;
+}
+
+.skill-content {
+  padding: 1rem;
+  background: var(--background-color);
+}
+
+.expand-icon {
+  font-size: 1.2rem;
+  font-weight: bold;
+}

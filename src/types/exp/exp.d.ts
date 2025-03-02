@@ -31,6 +31,7 @@ export interface Exp {
 }
 
 export interface ExpTranslated {
+  skills: any;
   id: string;
   title: string;
   location: string;
