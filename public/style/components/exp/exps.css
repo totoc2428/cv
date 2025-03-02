@@ -61,13 +61,14 @@
 /*DETAILS*/
 
 .exp-detail {
+  max-height: 55vh;
+  overflow: hidden;
   width: 50%;
   min-width: 40vw;
   padding: 0rem;
   border-radius: 0.5rem;
   box-shadow: 5px 5px 10px var(--shadow-dark),
     -5px -5px 10px var(--shadow-light);
-  overflow: hidden;
 }
 
 .exp-detail .header-exp-detail {
@@ -143,6 +144,35 @@
 
 .exp-detail .main-exp-detail {
   padding: 1rem;
+  max-height: 60%;
+  overflow-y: auto;
+}
+
+.exp-detail .main-exp-detail::-webkit-scrollbar {
+  width: var(--sb-size);
+  height: var(--sb-size);
+  overflow: hidden;
+}
+
+.exp-detail .main-exp-detail::-webkit-scrollbar-track {
+  background: var(--sb-track-color);
+  border-radius: 20px;
+}
+
+.exp-detail .main-exp-detail::-webkit-scrollbar-thumb {
+  background: var(--sb-thumb-color);
+  border-radius: 20px;
+}
+
+@supports not selector(::-webkit-scrollbar) {
+  .exp-detail .main-exp-detail {
+    scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
+  }
+}
+
+.work-section.open .exp-list {
+  width: 40%;
+  transition: all 0.3s ease;
 }
 
 .exp-detail .main-exp-detail .item {

@@ -78,7 +78,7 @@ export class ExprienceDetail extends React.Component<ExpProps> {
               <h2 className="sub-title">{exp.value}</h2>
               <div className="description">{exp.description}</div>
               <div className="skills-section">
-                <h2>{getTranslation("exp.skills.title", language)}</h2>
+                <h3>{getTranslation("exp.skills.title", language)}</h3>
                 <div className="skills-list">
                   {exp.skills &&
                     Object.entries(exp.skills).map(([skillId, skillValue]) => {
