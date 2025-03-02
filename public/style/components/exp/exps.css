@@ -219,3 +219,37 @@
   gap: 1rem;
   margin-top: 1rem;
 }
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+  .exp-thumbmail {
+    font-size: 70%;
+  }
+
+  .exp-thumbmail h1 {
+    font-size: 1rem;
+  }
+
+  .exp-thumbmail-tags {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .exp-detail {
+    max-height: 45vh;
+    width: 100%;
+  }
+
+  .exp-detail .header-exp-detail .content h1 {
+    font-size: 120%;
+  }
+
+  .exp-detail .main-exp-detail .item.location,
+  .exp-detail .main-exp-detail .item.date {
+    max-width: 100%;
+  }
+
+  .skills-list {
+    gap: 0.5rem;
+  }
+}

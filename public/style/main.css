@@ -109,3 +109,28 @@ body::-webkit-scrollbar-thumb {
   filter: brightness(0.9);
   transition: all 0.3s ease;
 }
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+  .main {
+    padding: 1rem;
+    margin: 0;
+    max-width: 100%;
+  }
+
+  .main-header {
+    padding: 1rem;
+    margin-bottom: 2rem;
+    font-size: 80%;
+  }
+
+  .neumorphic-card {
+    padding: 1rem;
+  }
+
+  .button {
+    padding: 0.5rem;
+    margin: 0.25rem;
+    font-size: 90%;
+  }
+}

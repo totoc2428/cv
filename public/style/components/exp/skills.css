@@ -171,3 +171,27 @@
   background-color: #f0f0f0;
   color: #666666;
 }
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+  .skill-detail {
+    min-width: 100%;
+  }
+
+  .skill-detail.expanded {
+    min-width: 100% !important;
+  }
+
+  .skill-header {
+    padding: 0.25rem;
+  }
+
+  .skill-content {
+    padding: 0.125rem;
+  }
+
+  .skill-content p {
+    margin: 0.25rem;
+    font-size: 90%;
+  }
+}

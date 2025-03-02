@@ -88,3 +88,30 @@
   width: 40%;
   transition: all 0.3s ease;
 }
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+  .work-section {
+    flex-direction: column;
+    padding: 0.5rem;
+  }
+
+  .work-section.open {
+    max-width: 100%;
+  }
+
+  .work-section .exp-list {
+    width: 100% !important;
+    max-height: 40vh;
+  }
+
+  .work-section .exp-detail {
+    width: 100%;
+    min-width: 100%;
+    margin-top: 1rem;
+  }
+
+  .work-section.open .exp-list {
+    width: 100% !important;
+  }
+}

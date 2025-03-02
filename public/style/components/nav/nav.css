@@ -33,3 +33,25 @@
   padding: 0.5rem;
   margin: 0.5rem;
 }
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+  .nav {
+    font-size: 90% !important;
+  }
+
+  .nav.main-nav {
+    translate: 0vw 0vh;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .nav.lang-nav {
+    bottom: 3rem;
+    right: 0.5rem;
+  }
+
+  .nav:hover {
+    transform: none;
+  }
+}

@@ -2,17 +2,17 @@
   {
     "id": "tonga",
     "title": {
-      "fr": "Déploiment d'un SI",
+      "fr": "Déploiement d'un SI",
       "en": "Deployment of an IS"
     },
     "location": "Hazebrouck, France",
     "subTitle": {
-      "fr": "Déploiment d'un système d'information pour Tonga-Schools Network.",
+      "fr": "Déploiement d'un système d'information pour Tonga-Schools Network.",
       "en": "Deployment of an information system for Tonga-Schools Network."
     },
     "description": {
-      "fr": "Le but de ce projet était de déployer un système d'information pour Tonga-Schools Network. Une association à but éducatifs, celle ci avait besoin d'un site, d'une platforme de type Moodle ainsi que d'un client / serveur mail.",
-      "en": "The purpose of this project was to deploy an information system for Tonga-Schools Network. An educational association, it needed a website, a Moodle-type platform as well as a mail client / server."
+      "fr": "Le but de ce projet était de déployer un système d'information pour Tonga-Schools Network, une association à but éducatifs. Celle ci avait besoin d'un site, d'une platforme de type Moodle ainsi que d'un client / serveur mail.",
+      "en": "The purpose of this project was to deploy an information system for Tonga-Schools Network, an educational association. It needed a website, a Moodle-type platform as well as a mail client / server."
     },
     "start_date": "2025-01-10",
     "end_date": "2025-06-10",
@@ -31,7 +31,7 @@
         "en": "Writing an installation script file in bash. Error management, adding logs, etc."
       },
       "presentation": {
-        "fr": "Réalisation de la procédure et d'un rapport de projet en utilisant le language Markdown.",
+        "fr": "Réalisation de la procédure et d'un rapport de projet en utilisant le langage Markdown.",
         "en": "Realization of the procedure and a project report using the Markdown language."
       }
     }
@@ -48,15 +48,15 @@
       "en": "Development of an AI-chat assistant for a website."
     },
     "description": {
-      "fr": "Le but de ce projet était de développer un assistant IA-chat pour le site 'Le Blog du Dirigeant'. L'assistant devait être capable de répondre à des questions simple pour permettre aux utilisateurs de réaliser des schémas simple de visualisation de marché ( PESTEL, SWOT ).",
-      "en": "The purpose of this project was to develop an AI-chat assistant for 'Le Blog du Dirigeant' web site. The assistant had to be able to answer simple questions to allow users to make simple market visualization schemes ( PESTEL, SWOT )."
+      "fr": "Le but de ce projet était de développer un assistant IA-chat pour le site 'Le Blog du Dirigeant'. L'assistant devait être capable de répondre à des questions simples pour permettre aux utilisateurs de réaliser des schémas simples de visualisation de marché ( PESTEL, SWOT...).",
+      "en": "The purpose of this project was to develop an AI-chat assistant for 'Le Blog du Dirigeant' web site. The assistant had to be able to answer simple questions to allow users to make simple market visualization schemes ( PESTEL, SWOT... )."
     },
     "start_date": "2024-09-10",
     "end_date": "2024-12-10",
     "tags": ["freelance", "work-project", "web", "dev", "fullstack"],
     "skills": {
       "react": {
-        "fr": "Développement du client de l'aplication en React.",
+        "fr": "Développement du client de l'application en React.",
         "en": "Development of the client of the application in React."
       },
       "java": {
@@ -89,8 +89,8 @@
       "en": "Development of a medical appointment scheduling application."
     },
     "description": {
-      "fr": "Le but de ce projet était de développer une application de prise de rendez-vous médicaux par équipe de 2. L'application devait permettre aux patients de prendre rendez-vous avec des médecins et de gérer leurs rendez-vous.",
-      "en": "The purpose of this project was to develop a medical appointment scheduling application by team of two. The application had to allow patients to make appointments with doctors and manage their appointments."
+      "fr": "Le but de ce projet était de développer une application de prise de rendez-vous médicaux par équipes de 2. L'application devait permettre aux patients de prendre rendez-vous avec des médecins et de gérer leurs rendez-vous.",
+      "en": "The purpose of this project was to develop a medical appointment scheduling application by teams of two. The application had to allow patients to make appointments with doctors and manage their appointments."
     },
     "start_date": "2024-01-10",
     "end_date": "2024-04-10",
@@ -154,8 +154,8 @@
   {
     "id": "but-stage-attestatio",
     "title": {
-      "fr": "Stage chez Attestat.io",
-      "en": "Internship at Attestat.io"
+      "fr": "Attestat.io",
+      "en": "Attestat.io"
     },
     "location": "Lille, France",
     "subTitle": {
