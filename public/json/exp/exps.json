@@ -2,7 +2,7 @@
   {
     "id": "but-doctolib",
     "title": {
-      "fr": "Développement d'une copie de l'aplication Doctolib",
+      "fr": "Développement d'une copie de l'application Doctolib",
       "en": "Development of a copy of the Doctolib application"
     },
     "location": "Lille, France",
@@ -77,7 +77,7 @@
       "en": "Development of new features."
     },
     "description": {
-      "fr": "Stage de 3 mois chez Attestat.io. Ajout de plusieurs fonctionalité au site web et dévellopement d'un simulateur de taux d'endettement.",
+      "fr": "Stage de 3 mois chez Attestat.io. Ajout de plusieurs fonctionalités au site web et développement d'un simulateur de taux d'endettement.",
       "en": "3-month internship at Attestat.io. Addition of several features to the website and development of a debt ratio simulator."
     },
     "start_date": "2024-05-27",
@@ -114,7 +114,7 @@
       "en": "Development of a REST API for a pizzeria."
     },
     "description": {
-      "fr": "Le but de ce projet était de développer une API REST pour une pizzeria par équipe de 2. L'API devait permettre de gérer les pizzas, leur composition ainsi que les commandes.",
+      "fr": "Le but de ce projet était de développer une API REST pour une pizzeria par équipe de 2. L'API devait permettre de gérer les pizzas, leurs compositions ainsi que les commandes.",
       "en": "The purpose of this project was to develop a REST API for a pizzeria by team of two. The API had to allow to manage pizzas, their composition as well as orders."
     },
     "start_date": "2023-09-10",
@@ -159,8 +159,8 @@
     "tags": ["school-project", "dev", "game", "ui", "web"],
     "skills": {
       "html-css-js": {
-        "fr": "Développement du jeu en JavaScript. Utilisation de Canvas pour la partie graphique.",
-        "en": "Development of the game in JavaScript. Use of Canvas for the graphical part."
+        "fr": "Développement du jeu en JavaScript. Utilisation de Canva pour la partie graphique.",
+        "en": "Development of the game in JavaScript. Use of Canva for the graphical part."
       },
       "git": {
         "fr": "Gestion du projet via Git. Utilisation de branches pour le développement de fonctionnalités.",
@@ -208,8 +208,8 @@
         "en": "Writing an installation script file in bash. Error management, adding logs, etc."
       },
       "security": {
-        "fr": "Configuration de la sécurité : Configuration du pare-feu, configuration des droits d'accès, etc.",
-        "en": "Security configuration : Firewall configuration, access rights configuration, etc."
+        "fr": "Configuration de la sécurité : configuration du pare-feu, configuration des droits d'accès, etc.",
+        "en": "Security configuration : firewall configuration, access rights configuration, etc."
       },
       "sql": {
         "fr": "Utilisation de SQL avec la base de données PostgreSQL pour la gestion des données de l'instance.",
@@ -220,7 +220,7 @@
         "en": "Use of Docker for the installation of the Matrix instance. Use of Docker-compose for container management."
       },
       "presentation": {
-        "fr": "Réalisation du procédure et d'un rapport de projet en utilisant le language Markdown. Utilisation de LaTeX pour l'export au format PDF.",
+        "fr": "Réalisation de la procédure et d'un rapport de projet en utilisant le language Markdown. Utilisation de LaTeX pour l'export au format PDF.",
         "en": "Realization of the procedure and a project report using the Markdown language. Use of LaTeX for export to PDF format."
       }
     }
@@ -237,7 +237,7 @@
       "en": "Development of a maze game 'Monster Hunt'."
     },
     "description": {
-      "fr": "Le but du jeux était de trouver le monstre caché dans le labyrinthe. Le joueur devait se déplacer dans le labyrinthe pour trouver le monstre. Les deux entités pouvait être automatisé.",
+      "fr": "Le but du jeux était de trouver le monstre caché dans le labyrinthe. Le joueur devait se déplacer dans le labyrinthe pour trouver le monstre. Les deux entités pouvaient être automatisées.",
       "en": "The goal of the game was to find the monster hidden in the maze. The player had to move in the maze to find the monster. The two entities could be automated."
     },
     "start_date": "2023-01-10",
@@ -245,11 +245,11 @@
     "tags": ["school-project", "dev", "game", "ui"],
     "skills": {
       "java": {
-        "fr": "Développement du jeu en Java. Elaboration et Transposition d'algorithmes de recherche de chemin dans le labyrinthe pour l'automatisation.",
-        "en": "Development of the game in Java. Elaboration and Transposition of path search algorithms in the maze for automation."
+        "fr": "Développement du jeu en Java. Élaboration et Transposition d'algorithmes de recherches de chemin dans le labyrinthe pour l'automatisation.",
+        "en": "Development of the game in Java. Élaboration and Transposition of path search algorithms in the maze for automation."
       },
       "javaFx": {
-        "fr": "Utilisation de JavaFx pour la partie graphique du jeu. Définition d'un interface de couleurs pour les éléments graphique du Jeux. Implémentation du shéma MVC.",
+        "fr": "Utilisation de JavaFx pour la partie graphique du jeu. Définition d'un interface de couleurs pour les éléments graphiques du jeu. Implémentation du shéma MVC.",
         "en": "Use of JavaFx for the graphical part of the game. Definition of a color interface for the graphic elements of the game. Implementation of the MVC schema."
       },
       "git": {
@@ -257,7 +257,7 @@
         "en": "Project management via Git. Use of branches for the development of features."
       },
       "csv": {
-        "fr": "Utilisation de fichiers CSV pour stocker les données des labyrinthes. Internationalisation du jeux avec plusieurs langues disponibles.",
+        "fr": "Utilisation de fichiers CSV pour stocker les données des labyrinthes. Internationalisation du jeu avec plusieurs langues disponibles.",
         "en": "Use of CSV files to store maze data. Internationalization of the game with several languages available."
       }
     }
@@ -316,7 +316,7 @@
     "tags": ["school-project", "dev", "ui", "backend"],
     "skills": {
       "csv": {
-        "fr": "Gestion des données des élèves via des fichiers CSV. Posibilité d'établir des profils et des préferences elle même sauvegardées dans des fichiers CSV ( Données persistantes ).",
+        "fr": "Gestion des données des élèves via des fichiers CSV. Posibilité d'établir des profils et des préferences elles-mêmes sauvegardées dans des fichiers CSV ( Données persistantes ).",
         "en": "Management of student data via CSV files. Possibility to establish profiles and preferences themselves saved in CSV files ( Persistent data )."
       },
       "java": {
@@ -341,11 +341,11 @@
     },
     "location": "Lille, France",
     "subTitle": {
-      "fr": "Ventilation d'un jeux de données en utilisant les outils de requêtes SQL.",
+      "fr": "Ventilation d'un jeu de données en utilisant les outils de requêtes SQL.",
       "en": "Ventilation of a data set using SQL query tools."
     },
     "description": {
-      "fr": "Le but de ce projet était de ventiler un jeu de données sur les Jeux Olympiques en utilisant des requêtes SQL. Les données étaient fournis au format CSV. Les requêtes devaient permettre d'acceder aux données en fonction de critères précis.",
+      "fr": "Le but de ce projet était de ventiler un jeu de données sur les Jeux Olympiques en utilisant des requêtes SQL. Les données étaient fournies au format CSV. Les requêtes devaient permettre d'accéder aux données en fonction de critères précis.",
       "en": "The purpose of this project was to ventilate a data set about Olympic Game using SQL queries. The data was given in CSV format. The queries had to allow access to the data according to specific criteria."
     },
     "start_date": "2023-02-12",
@@ -353,7 +353,7 @@
     "tags": ["school-project", "database", "presentation"],
     "skills": {
       "sql": {
-        "fr": "Utilisation de SQL avec la base de données PostgreSQL pour la ventilation des données. Supréssions des données inutiles, jointures, ect. Desing d'un MCD et d'un MLD pour la base de données.",
+        "fr": "Utilisation de SQL avec la base de données PostgreSQL pour la ventilation des données. Supression des données inutiles, jointures, ect. Design d'un MCD et d'un MLD pour la base de données.",
         "en": "Use of SQL with the PostgreSQL database for data ventilation. Deletion of unnecessary data, joins, etc. Design of a MCD and a MLD for the database."
       },
       "presentation": "Réalisation d'un rapport de projet en utilisant le language Markdown. Export au format PDF."
@@ -371,7 +371,7 @@
       "en": "Automatic installation of Debian on a virtual machine park."
     },
     "description": {
-      "fr": "Le but de ce projet était d'installer de manière automatiser un système Débian préconfigurer sur plusieurs machines virtuelles. Le script devait installer plusieurs logiciels et les configurer automatiquement.",
+      "fr": "Le but de ce projet était d'installer de manière automatisée un système Débian préconfiguré sur plusieurs machines virtuelles. Le script devait installer plusieurs logiciels et les configurer automatiquement.",
       "en": "The purpose of this project was to automatically install a preconfigured Debian system on several virtual machines. The script had to install several software and configure them automatically."
     },
     "start_date": "2023-01-10",
@@ -383,7 +383,7 @@
         "en": "Use of Debian OS. Installation and configuration of software on the Debian server."
       },
       "presentation": {
-        "fr": "Réalisation du procédure et d'un rapport de projet en utilisant le language Markdown. Utilisation de LaTeX pour l'export au format PDF.",
+        "fr": "Réalisation de la procédure et d'un rapport de projet en utilisant le language Markdown. Utilisation de LaTeX pour l'export au format PDF.",
         "en": "Realization of the procedure and a project report using the Markdown language. Use of LaTeX for export to PDF format."
       },
       "devops": {
@@ -391,8 +391,8 @@
         "en": "Writing an installation script file in bash. Error management, adding logs, etc."
       },
       "security": {
-        "fr": "Configuration de la sécurité : Configuration du pare-feu, configuration des droits d'accès, etc.",
-        "en": "Security configuration : Firewall configuration, access rights configuration, etc."
+        "fr": "Configuration de la sécurité : configuration du pare-feu, configuration des droits d'accès, etc.",
+        "en": "Security configuration : firewall configuration, access rights configuration, etc."
       }
     }
   },
@@ -408,7 +408,7 @@
       "en": "Development of an escape game with Genially."
     },
     "description": {
-      "fr": "Le jeu consistait à résoudre des énigmes pour s'échapper d'une pièce. Les énigmes étaient de différents types : mathématiques, logiques, etc. Le but n'était ici n'était pas d'évaluer la partie technique mais de faire de la gestion de projet et de la comunications.",
+      "fr": "Le jeu consistait à résoudre des énigmes pour s'échapper d'une pièce. Les énigmes étaient de différents types : mathématiques, logiques, etc. Le but ici n'était pas d'évaluer la partie technique mais de faire de la gestion de projet et de la communication.",
       "en": "The game consisted of solving puzzles to escape from a room. The puzzles were of different types: mathematics, logic, etc. The goal here was not to evaluate the technical part but to do project management and communication."
     },
     "start_date": "2023-02-23",
@@ -467,11 +467,11 @@
     },
     "location": "Lille, France",
     "subTitle": {
-      "fr": "Devellopement d'un jeu ludo-pédagoique à désitination d'élèves du primaire.",
+      "fr": "Developpement d'un jeu ludo-pédagoique à destination d'élèves du primaire.",
       "en": "Development of an educational game for primary school students."
     },
     "description": {
-      "fr": "Notre jeu portait sur l'apprentissage et la révision des mathématiques, sur les opérations primaires ( addition, soustraction, multiplication et division ). Le but du jeux était de détruire les tours de de l'adversaire en répondant correctement aux questions posées.",
+      "fr": "Notre jeu portait sur l'apprentissage et la révision des mathématiques, sur les opérations primaires ( addition, soustraction, multiplication et division ). Le but du jeu était de détruire les tours de l'adversaire en répondant correctement aux questions posées.",
       "en": "Our game was about learning and revising mathematics, on primary operations (addition, subtraction, multiplication and division). The goal of the game was to destroy the opponent's towers by correctly answering the questions asked."
     },
     "start_date": "2022-01-10",
@@ -502,14 +502,14 @@
     },
     "description": {
       "en": "The site is a showcase for the company's mobility project. Employees had to be able to select a means of transport and reserve it to ensure their daily journey.",
-      "fr": "Le site est une vitrine pour le projet de mobilité de l'entreprise. Les employées devaient pouvoir seléctioner un moyen de transport et le reserver pour assurer le trajet quotidien."
+      "fr": "Le site est une vitrine pour le projet de mobilité de l'entreprise. Les employées devaient pouvoir seléctionner un moyen de transport et le réserver pour assurer le trajet quotidien."
     },
     "start_date": "2022-09-26",
     "end_date": "2022-01-10",
     "tags": ["school-project", "dev", "web", "ui"],
     "skills": {
       "html-css-js": {
-        "fr": "Devellopement de la partie front-end du site web en HTML et CSS. Utilisation d'une struture simple via HTML uniquement.",
+        "fr": "Developpement de la partie front-end du site web en HTML et CSS. Utilisation d'une struture simple via HTML uniquement.",
         "en": "Development of the front-end part of the website in HTML and CSS. Use of a simple structure via HTML only."
       },
       "WordPress": {
@@ -531,7 +531,7 @@
     },
     "description": {
       "en": "Parcours : Development of Communicating and Secure Applications.",
-      "fr": "Parcours : Dévelopement d'Applications Comunicantes et Sécurisées."
+      "fr": "Parcours : Développement d'Applications Communicantes et Sécurisées."
     },
     "start_date": "2022-09-01",
     "end_date": "null",
@@ -540,8 +540,8 @@
   {
     "id": "bac",
     "title": {
-      "fr": "Lycée St Jude",
-      "en": "St Jude High School"
+      "fr": "Lycée Saint Jude",
+      "en": "Saint Jude High School"
     },
     "location": "Armentières, France",
     "subTitle": {
