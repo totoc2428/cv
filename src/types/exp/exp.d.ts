@@ -11,6 +11,7 @@ interface TranslationArray {
 }
 
 export interface Exp {
+  skills: any;
   id: string;
   title: {
     en: string;

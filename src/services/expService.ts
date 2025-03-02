@@ -28,6 +28,7 @@ export const ExpService = {
             startDate: formatDate(exp.start_date, language),
             endDate,
             tags,
+            skills: exp.skills, // Ajout des skills ici
           } as ExpTranslated;
         })
       );
