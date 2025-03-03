@@ -130,6 +130,8 @@
     height: 100%;
     max-height: 100% !important;
     margin-top: 1rem;
+    margin-bottom: 5rem;
+    transition: all 0.3s ease;
   }
 
   .work-section.open .exp-list {
@@ -138,6 +140,7 @@
 
   .header-exp-detail .nav-exp-detail .title {
     text-wrap: nowrap;
+    width: 120% !important;
     overflow: hidden;
   }
 }

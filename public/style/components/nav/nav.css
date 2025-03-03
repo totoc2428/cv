@@ -41,6 +41,9 @@
   }
 
   .nav.main-nav {
+    padding: 0rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
     translate: 0vw 0vh;
     width: 100%;
     justify-content: center;
@@ -58,7 +61,7 @@
   }
 
   .nav .button {
-    font-size: 200%;
+    font-size: 125%;
   }
 
   .nav:hover {

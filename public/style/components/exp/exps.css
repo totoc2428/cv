@@ -238,10 +238,18 @@
   .exp-detail {
     max-height: 45vh;
     width: 100%;
+    overflow-y: scroll;
   }
 
   .exp-detail .header-exp-detail .content h1 {
     font-size: 120%;
+  }
+
+  .exp-detail .main-exp-detail {
+    max-height: 100% !important;
+    margin-bottom: 5rem;
+    overflow-y: scroll !important;
+    transition: all 0.3s ease;
   }
 
   .exp-detail .main-exp-detail .item.location,
