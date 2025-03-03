@@ -7,10 +7,13 @@ import { TagThumbmail } from "./tagThumbmail";
 import { SkillDetail } from "./skillDetail";
 import { SkillService } from "../../services/skillService";
 import { ExpSkill } from "../../types/exp/skill";
+import { ExpImage } from "../../types/exp/image";
+import { ImageService } from "../../services/imageService";
 
 interface ExpProps {
   exp: ExpTranslated;
-  onClose: () => void; // New prop
+  onClose: () => void;
+  onImageClick: (expId: string) => void;
 }
 
 interface SkillTitles {
@@ -21,7 +24,8 @@ interface ExpState {
   closed: boolean;
   mounted: boolean;
   skillTitles: SkillTitles;
-  currentSkillId: string | null; // Add this
+  currentSkillId: string | null;
+  images: ExpImage[];
 }
 
 export class ExprienceDetail extends React.Component<ExpProps, ExpState> {
@@ -32,12 +36,14 @@ export class ExprienceDetail extends React.Component<ExpProps, ExpState> {
     closed: false,
     mounted: false,
     skillTitles: {},
-    currentSkillId: null, // Add this
+    currentSkillId: null,
+    images: [],
   };
 
   async componentDidMount() {
     this.triggerAnimation();
     await this.loadSkillTitles();
+    await this.loadImages();
   }
 
   async componentDidUpdate(prevProps: ExpProps) {
@@ -45,6 +51,7 @@ export class ExprienceDetail extends React.Component<ExpProps, ExpState> {
       this.setState({ mounted: false }, async () => {
         this.triggerAnimation();
         await this.loadSkillTitles();
+        await this.loadImages();
       });
     }
   }
@@ -63,6 +70,11 @@ export class ExprienceDetail extends React.Component<ExpProps, ExpState> {
     }
   }
 
+  async loadImages() {
+    const images = await ImageService.getExpImages(this.props.exp.id);
+    this.setState({ images });
+  }
+
   triggerAnimation = () => {
     requestAnimationFrame(() => {
       this.setState({ mounted: true });
@@ -71,7 +83,7 @@ export class ExprienceDetail extends React.Component<ExpProps, ExpState> {
 
   handleClose = () => {
     this.setState({ closed: true });
-    this.props.onClose(); // Call parent callback
+    this.props.onClose();
   };
 
   toggleSkill = (skillId: string) => {
@@ -82,7 +94,7 @@ export class ExprienceDetail extends React.Component<ExpProps, ExpState> {
 
   render() {
     const { exp } = this.props;
-    const { closed, mounted } = this.state;
+    const { closed, mounted, images } = this.state;
 
     if (closed) {
       console.log("closed");
@@ -113,6 +125,14 @@ export class ExprienceDetail extends React.Component<ExpProps, ExpState> {
                   {exp.startDate} {exp.endDate}
                 </span>
               </div>
+              {images.length > 0 && (
+                <button
+                  className="image-button"
+                  onClick={() => this.props.onImageClick(exp.id)}
+                >
+                  📸 ({images.length})
+                </button>
+              )}
               <h2 className="sub-title">{exp.value}</h2>
               <div className="description">{exp.description}</div>
               <div className="skills-section">

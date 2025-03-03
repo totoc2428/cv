@@ -10,11 +10,20 @@ import { ExprienceDetail } from "../../component/exp/exprienceDetail";
 import { Loader } from "../../component/loader/loaderComponent";
 
 import "../../../public/style/view/work.css";
+import { ImageService } from "@/services/imageService";
+import { Carousel } from "../../component/exp/carousel";
+
+interface CarouselState {
+  isOpen: boolean;
+  images: string[];
+  expId: string | null;
+}
 
 interface WorkViewState {
   exps: ExpTranslated[];
   currentExp: ExpTranslated | null;
   error: string | null;
+  carousel: CarouselState;
 }
 
 export class WorkView extends React.Component<{}, WorkViewState> {
@@ -25,6 +34,11 @@ export class WorkView extends React.Component<{}, WorkViewState> {
     exps: [],
     currentExp: null,
     error: null,
+    carousel: {
+      isOpen: false,
+      images: [],
+      expId: null,
+    },
   };
 
   async componentDidMount(): Promise<void> {
@@ -68,8 +82,33 @@ export class WorkView extends React.Component<{}, WorkViewState> {
     }
   }
 
+  handleCarouselOpen = async (expId: string) => {
+    try {
+      const images = await ImageService.getExpImages(expId);
+      this.setState({
+        carousel: {
+          isOpen: true,
+          images: images.map((img) => img.url), // Convert ExpImage[] to string[]
+          expId,
+        },
+      });
+    } catch (error) {
+      console.error("Error loading images:", error);
+    }
+  };
+
+  handleCarouselClose = () => {
+    this.setState({
+      carousel: {
+        isOpen: false,
+        images: [],
+        expId: null,
+      },
+    });
+  };
+
   render() {
-    const { exps, currentExp, error } = this.state;
+    const { exps, currentExp, error, carousel } = this.state;
 
     if (error) {
       return (
@@ -112,6 +151,13 @@ export class WorkView extends React.Component<{}, WorkViewState> {
             <ExprienceDetail
               exp={currentExp}
               onClose={() => this.setState({ currentExp: null })}
+              onImageClick={this.handleCarouselOpen}
+            />
+          )}
+          {carousel.isOpen && carousel.images.length > 0 && (
+            <Carousel
+              images={carousel.images}
+              onClose={this.handleCarouselClose}
             />
           )}
         </main>

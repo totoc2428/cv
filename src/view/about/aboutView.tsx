@@ -6,7 +6,7 @@ import { LanguageContext } from "../../context/LanguageContext";
 import { Language } from "../../languages/dic";
 import { Loader } from "../../component/loader/loaderComponent";
 
-import profileImage from "/images/about/profil.jpg";
+const profileImage = "/images/about/profil.jpg";
 import "/public/style/view/about.css";
 import { Header } from "../../component/header/headerComponent";
 
