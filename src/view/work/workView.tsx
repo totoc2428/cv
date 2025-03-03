@@ -44,8 +44,13 @@ export class WorkView extends React.Component<{}, WorkViewState> {
   async componentDidMount(): Promise<void> {
     try {
       const { language } = this.context;
-      const experiences = await ExpService.getExps(language);
-      this.setState({ exps: experiences, error: null });
+      if (this.state.exps.length === 0) {
+        const experiences = await ExpService.getExps(language);
+        this.setState({
+          exps: experiences,
+          error: null,
+        });
+      }
     } catch (error) {
       this.setState({
         error:
@@ -57,18 +62,16 @@ export class WorkView extends React.Component<{}, WorkViewState> {
     }
   }
 
-  async componentDidUpdate(
-    prevContext: React.ContextType<typeof LanguageContext>
-  ): Promise<void> {
-    if (this.context.language !== prevContext?.language) {
+  async componentDidUpdate(snapshot: any): Promise<void> {
+    const prevContext = snapshot;
+    if (
+      this.context.language !== prevContext?.language &&
+      this.state.exps.length === 0
+    ) {
       try {
         const experiences = await ExpService.getExps(this.context.language);
         this.setState({
           exps: experiences,
-          currentExp: this.state.currentExp
-            ? experiences.find((exp) => exp.id === this.state.currentExp?.id) ||
-              null
-            : null,
           error: null,
         });
       } catch (error) {
@@ -80,6 +83,10 @@ export class WorkView extends React.Component<{}, WorkViewState> {
         });
       }
     }
+  }
+
+  getSnapshotBeforeUpdate() {
+    return this.context;
   }
 
   handleCarouselOpen = async (expId: string) => {
