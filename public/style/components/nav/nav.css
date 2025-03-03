@@ -58,7 +58,7 @@
   }
 
   .nav .button {
-    transform: scale(1.5);
+    font-size: 200%;
   }
 
   .nav:hover {
