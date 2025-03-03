@@ -49,7 +49,9 @@ export class AboutView extends React.Component<{}, AboutViewState> {
             <p>
               {about.introduction[language === "fr" ? "fr_value" : "en_value"]}
             </p>
-            <p>{about.about[language === "fr" ? "fr_value" : "en_value"]}</p>
+            <p className="content">
+              {about.about[language === "fr" ? "fr_value" : "en_value"]}
+            </p>
           </div>
         </main>
         <MainNav />
