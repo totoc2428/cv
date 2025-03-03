@@ -98,8 +98,9 @@
     justify-content: start;
     padding: 0.5rem;
     width: 99vw !important;
-    height: 80vh;
+    height: 90vh;
     overflow: hidden;
+    overflow-y: scroll;
   }
 
   .work-section.open {
@@ -109,6 +110,7 @@
 
   .work-section .exp-list {
     margin: 0rem;
+    padding-bottom: 10rem !important;
     max-height: 100% !important;
     width: 100% !important;
     height: 100% !important;
