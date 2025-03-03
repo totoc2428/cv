@@ -4,6 +4,7 @@ import { LangNav } from "../../component/nav/langNav";
 import { MainNav } from "../../component/nav/mainNav";
 import { LanguageContext } from "../../context/LanguageContext";
 import { Language } from "../../languages/dic";
+import { Loader } from "../../component/loader/loaderComponent";
 
 import profileImage from "/images/about/profil.jpg";
 import "/public/style/view/about.css";
@@ -32,7 +33,7 @@ export class AboutView extends React.Component<{}, AboutViewState> {
     const { about } = this.state;
 
     if (!about) {
-      return <div>Loading...</div>;
+      return <Loader />;
     }
 
     return (

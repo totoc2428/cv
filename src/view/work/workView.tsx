@@ -7,12 +7,14 @@ import { ExpService } from "../../services/expService";
 import { ExpTranslated } from "../../types/exp/exp";
 import { LanguageContext } from "../../context/LanguageContext";
 import { ExprienceDetail } from "../../component/exp/exprienceDetail";
+import { Loader } from "../../component/loader/loaderComponent";
 
 import "../../../public/style/view/work.css";
 
 interface WorkViewState {
   exps: ExpTranslated[];
   currentExp: ExpTranslated | null;
+  error: string | null;
 }
 
 export class WorkView extends React.Component<{}, WorkViewState> {
@@ -22,14 +24,21 @@ export class WorkView extends React.Component<{}, WorkViewState> {
   state: WorkViewState = {
     exps: [],
     currentExp: null,
+    error: null,
   };
 
   async componentDidMount(): Promise<void> {
     try {
       const { language } = this.context;
       const experiences = await ExpService.getExps(language);
-      this.setState({ exps: experiences });
+      this.setState({ exps: experiences, error: null });
     } catch (error) {
+      this.setState({
+        error:
+          this.context.language === "fr"
+            ? "Erreur lors du chargement des expériences"
+            : "Error loading experiences",
+      });
       console.error("Error loading experiences:", error);
     }
   }
@@ -38,19 +47,54 @@ export class WorkView extends React.Component<{}, WorkViewState> {
     prevContext: React.ContextType<typeof LanguageContext>
   ): Promise<void> {
     if (this.context.language !== prevContext?.language) {
-      const experiences = await ExpService.getExps(this.context.language);
-      this.setState({
-        exps: experiences,
-        currentExp: this.state.currentExp
-          ? experiences.find((exp) => exp.id === this.state.currentExp?.id) ||
-            null
-          : null,
-      });
+      try {
+        const experiences = await ExpService.getExps(this.context.language);
+        this.setState({
+          exps: experiences,
+          currentExp: this.state.currentExp
+            ? experiences.find((exp) => exp.id === this.state.currentExp?.id) ||
+              null
+            : null,
+          error: null,
+        });
+      } catch (error) {
+        this.setState({
+          error:
+            this.context.language === "fr"
+              ? "Erreur lors du chargement des expériences"
+              : "Error loading experiences",
+        });
+      }
     }
   }
 
   render() {
-    const { exps, currentExp } = this.state;
+    const { exps, currentExp, error } = this.state;
+
+    if (error) {
+      return (
+        <section className="work-container">
+          <Header title="work" />
+          <main className="main work-section">
+            <div className="error-message">{error}</div>
+          </main>
+          <MainNav />
+          <LangNav />
+        </section>
+      );
+    }
+
+    if (exps.length === 0) {
+      return (
+        <section className="work-container">
+          <Header title="work" />
+          <Loader />
+          <MainNav />
+          <LangNav />
+        </section>
+      );
+    }
+
     return (
       <section className="work-container">
         <Header title="work" />
