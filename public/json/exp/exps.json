@@ -1,83 +1,5 @@
 [
   {
-    "id": "tonga",
-    "title": {
-      "fr": "Déploiement d'un SI",
-      "en": "Deployment of an IS"
-    },
-    "location": "Hazebrouck, France",
-    "subTitle": {
-      "fr": "Déploiement d'un système d'information pour Tonga-Schools Network.",
-      "en": "Deployment of an information system for Tonga-Schools Network."
-    },
-    "description": {
-      "fr": "Le but de ce projet était de déployer un système d'information pour Tonga-Schools Network, une association à but éducatifs. Celle ci avait besoin d'un site, d'une platforme de type Moodle ainsi que d'un client / serveur mail.",
-      "en": "The purpose of this project was to deploy an information system for Tonga-Schools Network, an educational association. It needed a website, a Moodle-type platform as well as a mail client / server."
-    },
-    "start_date": "2025-01-10",
-    "end_date": "2025-06-10",
-    "tags": ["freelance", "work-project", "devops", "cloud", "security"],
-    "skills": {
-      "debian": {
-        "fr": "Installation et configuration du système Debian sur un VPS dédié pour les services.",
-        "en": "Installation and configuration of the Debian system on a dedicated VPS for services."
-      },
-      "network": {
-        "fr": "Configuration du réseau : Configuration de l'adresse IP statique. Configuration d'un proxy. Ajout des certificats SSL.",
-        "en": "Network configuration : Configuration of the static IP address. Configuration of a proxy. Adding SSL certificates."
-      },
-      "devops": {
-        "fr": "Rédaction d'un fichier d'installation script en bash. Gestion des erreurs, ajout de logs, etc.",
-        "en": "Writing an installation script file in bash. Error management, adding logs, etc."
-      },
-      "presentation": {
-        "fr": "Réalisation de la procédure et d'un rapport de projet en utilisant le langage Markdown.",
-        "en": "Realization of the procedure and a project report using the Markdown language."
-      }
-    }
-  },
-  {
-    "id": "lbdd",
-    "title": {
-      "fr": "Developpement d'un assistant IA-chat",
-      "en": "Development of an AI-chat assistant"
-    },
-    "location": "Lille, France",
-    "subTitle": {
-      "fr": "Développement d'un assistant IA-chat pour un site web.",
-      "en": "Development of an AI-chat assistant for a website."
-    },
-    "description": {
-      "fr": "Le but de ce projet était de développer un assistant IA-chat pour le site 'Le Blog du Dirigeant'. L'assistant devait être capable de répondre à des questions simples pour permettre aux utilisateurs de réaliser des schémas simples de visualisation de marché ( PESTEL, SWOT...).",
-      "en": "The purpose of this project was to develop an AI-chat assistant for 'Le Blog du Dirigeant' web site. The assistant had to be able to answer simple questions to allow users to make simple market visualization schemes ( PESTEL, SWOT... )."
-    },
-    "start_date": "2024-09-10",
-    "end_date": "2024-12-10",
-    "tags": ["freelance", "work-project", "web", "dev", "fullstack"],
-    "skills": {
-      "react": {
-        "fr": "Développement du client de l'application en React.",
-        "en": "Development of the client of the application in React."
-      },
-      "java": {
-        "fr": "Développement de la partie back-end de l'application en Java.",
-        "en": "Development of the back-end part of the application in Java."
-      },
-      "maven": {
-        "fr": "Utilisation de Maven pour la gestion des dépendances du projet.",
-        "en": "Use of Maven for project dependencies management."
-      },
-      "java-Spring-boot": {
-        "fr": "Utilisation de Spring Boot pour la gestion des routes et des requêtes : Spring Data JPA, Spring Security, etc.",
-        "en": "Use of Spring Boot for route and request management : Spring Data JPA, Spring Security, etc."
-      },
-      "git": {
-        "fr": "Gestion du projet via Git. Utilisation de branches pour le développement de fonctionnalités.",
-        "en": "Project management via Git. Use of branches for the development of features."
-      }
-    }
-  },
-  {
     "id": "but-doctolib",
     "title": {
       "fr": "Développement d'une copie de l'application Doctolib",
@@ -93,7 +15,7 @@
       "en": "The purpose of this project was to develop a medical appointment scheduling application by teams of two. The application had to allow patients to make appointments with doctors and manage their appointments."
     },
     "start_date": "2024-01-10",
-    "end_date": "2024-04-10",
+    "end_date": "2025-01-15",
     "tags": ["school-project", "dev", "web", "ui", "backend"],
     "skills": {
       "html-css-js": {
@@ -137,13 +59,91 @@
       "fr": "Le but de ce projet était de développer un simulateur de CPU RISC-V en C. Le simulateur devait être capable d'exécuter des instructions RISC-V et de simuler le fonctionnement d'un CPU RISC-V.",
       "en": "The purpose of this project was to develop a RISC-V CPU simulator in C. The simulator had to be able to execute RISC-V instructions and simulate the operation of a RISC-V CPU."
     },
-    "start_date": "2024-10-10",
+    "start_date": "2024-02-10",
     "end_date": "2025-01-14",
     "tags": ["school-project", "dev", "low-level"],
     "skills": {
       "c": {
         "fr": "Développement du simulateur en C. Utilisation de pointeurs, de structures, etc.",
         "en": "Development of the simulator in C. Use of pointers, structures, etc."
+      },
+      "git": {
+        "fr": "Gestion du projet via Git. Utilisation de branches pour le développement de fonctionnalités.",
+        "en": "Project management via Git. Use of branches for the development of features."
+      }
+    }
+  },
+  {
+    "id": "tonga",
+    "title": {
+      "fr": "Déploiement d'un SI",
+      "en": "Deployment of an IS"
+    },
+    "location": "Hazebrouck, France",
+    "subTitle": {
+      "fr": "Déploiement d'un système d'information pour Tonga-Schools Network.",
+      "en": "Deployment of an information system for Tonga-Schools Network."
+    },
+    "description": {
+      "fr": "Le but de ce projet était de déployer un système d'information pour Tonga-Schools Network, une association à but éducatifs. Celle ci avait besoin d'un site, d'une platforme de type Moodle ainsi que d'un client / serveur mail.",
+      "en": "The purpose of this project was to deploy an information system for Tonga-Schools Network, an educational association. It needed a website, a Moodle-type platform as well as a mail client / server."
+    },
+    "start_date": "2024-11-05",
+    "end_date": "2025-06-10",
+    "tags": ["freelance", "work-project", "devops", "cloud", "security"],
+    "skills": {
+      "debian": {
+        "fr": "Installation et configuration du système Debian sur un VPS dédié pour les services.",
+        "en": "Installation and configuration of the Debian system on a dedicated VPS for services."
+      },
+      "network": {
+        "fr": "Configuration du réseau : Configuration de l'adresse IP statique. Configuration d'un proxy. Ajout des certificats SSL.",
+        "en": "Network configuration : Configuration of the static IP address. Configuration of a proxy. Adding SSL certificates."
+      },
+      "devops": {
+        "fr": "Rédaction d'un fichier d'installation script en bash. Gestion des erreurs, ajout de logs, etc.",
+        "en": "Writing an installation script file in bash. Error management, adding logs, etc."
+      },
+      "presentation": {
+        "fr": "Réalisation de la procédure et d'un rapport de projet en utilisant le langage Markdown.",
+        "en": "Realization of the procedure and a project report using the Markdown language."
+      }
+    }
+  },
+  {
+    "id": "lbdd",
+    "title": {
+      "fr": "Developpement d'un assistant IA-chat",
+      "en": "Development of an AI-chat assistant"
+    },
+    "location": "Lille, France",
+    "subTitle": {
+      "fr": "Développement d'un assistant IA-chat pour un site web.",
+      "en": "Development of an AI-chat assistant for a website."
+    },
+    "description": {
+      "fr": "Le but de ce projet était de développer un assistant IA-chat pour le site 'Le Blog du Dirigeant'. L'assistant devait être capable de répondre à des questions simples pour permettre aux utilisateurs de réaliser des schémas simples de visualisation de marché ( PESTEL, SWOT...).",
+      "en": "The purpose of this project was to develop an AI-chat assistant for 'Le Blog du Dirigeant' web site. The assistant had to be able to answer simple questions to allow users to make simple market visualization schemes ( PESTEL, SWOT... )."
+    },
+    "start_date": "2024-09-10",
+    "end_date": "2025-02-26",
+    "tags": ["freelance", "work-project", "web", "dev", "fullstack"],
+    "skills": {
+      "react": {
+        "fr": "Développement du client de l'application en React.",
+        "en": "Development of the client of the application in React."
+      },
+      "java": {
+        "fr": "Développement de la partie back-end de l'application en Java.",
+        "en": "Development of the back-end part of the application in Java."
+      },
+      "maven": {
+        "fr": "Utilisation de Maven pour la gestion des dépendances du projet.",
+        "en": "Use of Maven for project dependencies management."
+      },
+      "java-Spring-boot": {
+        "fr": "Utilisation de Spring Boot pour la gestion des routes et des requêtes : Spring Data JPA, Spring Security, etc.",
+        "en": "Use of Spring Boot for route and request management : Spring Data JPA, Spring Security, etc."
       },
       "git": {
         "fr": "Gestion du projet via Git. Utilisation de branches pour le développement de fonctionnalités.",

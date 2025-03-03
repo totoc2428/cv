@@ -39,3 +39,9 @@
   box-shadow: inset 3px 3px 6px var(--shadow-dark),
     inset -3px -3px 6px var(--shadow-light);
 }
+
+@media screen and (max-width: 768px) {
+  .profile-image {
+    width: 200px;
+  }
+}

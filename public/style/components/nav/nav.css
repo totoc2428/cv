@@ -46,9 +46,19 @@
     justify-content: center;
   }
 
+  .nav.nav.main-nav .button {
+    min-width: 5rem;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+
   .nav.lang-nav {
-    bottom: 3rem;
+    bottom: 5rem;
     right: 0.5rem;
+  }
+
+  .nav .button {
+    transform: scale(1.5);
   }
 
   .nav:hover {

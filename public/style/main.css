@@ -119,9 +119,22 @@ body::-webkit-scrollbar-thumb {
   }
 
   .main-header {
+    justify-content: space-between;
     padding: 1rem;
     margin-bottom: 2rem;
     font-size: 80%;
+  }
+
+  .main-header h1 {
+    margin: 0rem !important;
+    padding: 0rem !important;
+    text-align: left !important;
+    font-size: 1.5rem;
+  }
+
+  .main-header h4 {
+    visibility: hidden;
+    display: none;
   }
 
   .neumorphic-card {
