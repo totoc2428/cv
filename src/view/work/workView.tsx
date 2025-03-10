@@ -41,16 +41,34 @@ export class WorkView extends React.Component<{}, WorkViewState> {
     },
   };
 
+  shouldComponentUpdate(
+    nextProps: {},
+    nextState: WorkViewState,
+    nextContext: any
+  ) {
+    return (
+      this.state.exps.length !== nextState.exps.length ||
+      this.state.currentExp?.id !== nextState.currentExp?.id ||
+      this.state.error !== nextState.error ||
+      this.state.carousel.isOpen !== nextState.carousel.isOpen ||
+      this.context.language !== nextContext.language
+    );
+  }
+
   async componentDidMount(): Promise<void> {
     try {
       const { language } = this.context;
-      if (this.state.exps.length === 0) {
-        const experiences = await ExpService.getExps(language);
-        this.setState({
-          exps: experiences,
-          error: null,
-        });
-      }
+      const experiences = await ExpService.getExps(language);
+
+      // Préchargement des images pour une meilleure expérience utilisateur
+      experiences.forEach((exp) => {
+        ImageService.preloadExpImages(exp.id);
+      });
+
+      this.setState({
+        exps: experiences,
+        error: null,
+      });
     } catch (error) {
       this.setState({
         error:
@@ -64,14 +82,20 @@ export class WorkView extends React.Component<{}, WorkViewState> {
 
   async componentDidUpdate(snapshot: any): Promise<void> {
     const prevContext = snapshot;
-    if (
-      this.context.language !== prevContext?.language &&
-      this.state.exps.length === 0
-    ) {
+    if (this.context.language !== prevContext?.language) {
       try {
+        ExpService.clearCache();
         const experiences = await ExpService.getExps(this.context.language);
+
+        // Update current experience with new translation if one is selected
+        const updatedCurrentExp = this.state.currentExp
+          ? experiences.find((exp) => exp.id === this.state.currentExp?.id) ??
+            null
+          : null;
+
         this.setState({
           exps: experiences,
+          currentExp: updatedCurrentExp,
           error: null,
         });
       } catch (error) {
@@ -114,6 +138,12 @@ export class WorkView extends React.Component<{}, WorkViewState> {
     });
   };
 
+  handleExpClick = (exp: ExpTranslated) => {
+    // Précharger les images de l'expérience sélectionnée
+    ImageService.preloadExpImages(exp.id);
+    this.setState({ currentExp: exp });
+  };
+
   render() {
     const { exps, currentExp, error, carousel } = this.state;
 
@@ -150,7 +180,7 @@ export class WorkView extends React.Component<{}, WorkViewState> {
               <ExperienceThumbMail
                 key={exp.id}
                 exp={exp}
-                handleOnClick={() => this.setState({ currentExp: exp })}
+                handleOnClick={() => this.handleExpClick(exp)}
               />
             ))}
           </div>

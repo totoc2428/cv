@@ -13,6 +13,14 @@ interface ExperienceThumbMailProps {
 export class ExperienceThumbMail extends React.Component<ExperienceThumbMailProps> {
   static contextType = LanguageContext;
 
+  shouldComponentUpdate(nextProps: ExperienceThumbMailProps) {
+    return (
+      this.props.exp.id !== nextProps.exp.id ||
+      this.props.exp.title !== nextProps.exp.title ||
+      JSON.stringify(this.props.exp.tags) !== JSON.stringify(nextProps.exp.tags)
+    );
+  }
+
   render() {
     const { exp, handleOnClick } = this.props;
 

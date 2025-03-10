@@ -1,6 +1,6 @@
 import React from "react";
 import { ExpTranslated } from "../../types/exp/exp";
-import { getTranslation } from "../../languages/dic";
+import { getTranslation, Language } from "../../languages/dic";
 import { LanguageContext } from "../../context/LanguageContext";
 import { Tag } from "../../types/exp/tag";
 import { TagThumbmail } from "./tagThumbmail";
@@ -46,8 +46,17 @@ export class ExprienceDetail extends React.Component<ExpProps, ExpState> {
     await this.loadImages();
   }
 
-  async componentDidUpdate(prevProps: ExpProps) {
-    if (prevProps.exp.id !== this.props.exp.id) {
+  getSnapshotBeforeUpdate() {
+    return this.context;
+  }
+
+  async componentDidUpdate(prevProps: ExpProps, snapshot: any) {
+    const prevContext = snapshot;
+    const needsUpdate =
+      prevProps.exp.id !== this.props.exp.id ||
+      prevContext.language !== this.context.language;
+
+    if (needsUpdate) {
       this.setState({ mounted: false }, async () => {
         this.triggerAnimation();
         await this.loadSkillTitles();
@@ -56,15 +65,45 @@ export class ExprienceDetail extends React.Component<ExpProps, ExpState> {
     }
   }
 
+  shouldComponentUpdate(
+    nextProps: ExpProps,
+    nextState: ExpState,
+    nextContext: any
+  ) {
+    return (
+      this.props.exp.id !== nextProps.exp.id ||
+      this.context.language !== nextContext.language ||
+      this.state.mounted !== nextState.mounted ||
+      this.state.closed !== nextState.closed ||
+      this.state.currentSkillId !== nextState.currentSkillId ||
+      JSON.stringify(this.state.skillTitles) !==
+        JSON.stringify(nextState.skillTitles) ||
+      this.state.images.length !== nextState.images.length
+    );
+  }
+
+  // Cache skill titles by language
+  private skillTitleCache = new Map<string, Map<Language, string>>();
+
   async loadSkillTitles() {
     const { exp } = this.props;
+    const { language } = this.context;
+
     if (exp.skills) {
       const titles: SkillTitles = {};
       for (const skillId of Object.keys(exp.skills)) {
-        titles[skillId] = await SkillService.getSkillTitle(
-          skillId,
-          this.context.language
-        );
+        // Check cache first
+        if (!this.skillTitleCache.has(skillId)) {
+          this.skillTitleCache.set(skillId, new Map());
+        }
+        const cache = this.skillTitleCache.get(skillId)!;
+
+        if (!cache.has(language)) {
+          const title = await SkillService.getSkillTitle(skillId, language);
+          cache.set(language, title);
+        }
+
+        titles[skillId] = cache.get(language)!;
       }
       this.setState({ skillTitles: titles });
     }

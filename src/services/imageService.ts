@@ -13,36 +13,44 @@ export const ImageService = {
     });
   },
 
+  preloadExpImages(expId: string): void {
+    // Ne recharge pas si déjà dans le cache
+    if (IMAGE_CACHE.has(expId)) {
+      return;
+    }
+
+    // Charge en arrière-plan sans bloquer
+    setTimeout(async () => {
+      try {
+        await this.getExpImages(expId);
+      } catch (error) {
+        console.error("Error preloading images:", error);
+      }
+    }, 0);
+  },
+
   async getExpImages(expId: string): Promise<ExpImage[]> {
-    // Return cached images if available
     if (IMAGE_CACHE.has(expId)) {
       return IMAGE_CACHE.get(expId) || [];
     }
 
-    try {
-      // Create array for 3 possible PNG images
-      const possibleImages = Array.from({ length: MAX_IMAGES }, (_, i) => ({
-        id: `${expId}-${i}`,
-        url: `/images/experiences/${expId}/${i + 1}.png`,
-        alt: `Image ${i + 1} for experience ${expId}`,
-      }));
-
-      // Check image existence in parallel with preloading
-      const imageChecks = await Promise.all(
-        possibleImages.map((img) => this.preloadImage(img.url))
+    const promises = Array.from({ length: MAX_IMAGES }, (_, i) => {
+      const url = `/images/experiences/${expId}/${i + 1}.png`;
+      return this.preloadImage(url).then((exists) =>
+        exists
+          ? {
+              id: `${expId}-${i}`,
+              url,
+              alt: `Image ${i + 1} for experience ${expId}`,
+            }
+          : null
       );
+    });
 
-      const validImages = possibleImages.filter(
-        (_, index) => imageChecks[index]
-      );
+    const results = await Promise.all(promises);
+    const validImages = results.filter((img): img is ExpImage => img !== null);
 
-      // Cache the valid images
-      IMAGE_CACHE.set(expId, validImages);
-
-      return validImages;
-    } catch (error) {
-      console.error("Error loading images:", error);
-      return [];
-    }
+    IMAGE_CACHE.set(expId, validImages);
+    return validImages;
   },
 };
