@@ -1,4 +1,3 @@
-import React from "react";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { AboutView } from "./view/about/aboutView";
 import { LanguageProvider } from "./context/LanguageContext";

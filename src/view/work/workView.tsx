@@ -50,7 +50,7 @@ export class WorkView extends React.Component<WorkViewProps, WorkViewState> {
   };
 
   shouldComponentUpdate(
-    nextProps: {},
+    _nextProps: {}, // Ajoutez un underscore pour indiquer que c'est un paramètre inutilisé
     nextState: WorkViewState,
     nextContext: any
   ) {
