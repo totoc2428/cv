@@ -1,6 +1,7 @@
 [build]
   command = "npm run build"
   publish = "dist"
+  ignore = "git diff --quiet $CACHED_COMMIT_REF $COMMIT_REF . '!(src/**/*)"
 
 [build.environment]
   NODE_VERSION = "18"
@@ -9,3 +10,25 @@
   from = "/*"
   to = "/index.html"
   status = 200
+
+# Protection des fichiers sources
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
+
+# Bloquer l'accès au dossier src
+[[redirects]]
+  from = "/src/*"
+  to = "/404.html"
+  status = 404
+  force = true
+
+# Bloquer l'accès aux fichiers de configuration
+[[redirects]]
+  from = "/*.config.*"
+  to = "/404.html"
+  status = 404
+  force = true

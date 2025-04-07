@@ -8,6 +8,7 @@ import { ExpTranslated } from "../../types/exp/exp";
 import { LanguageContext } from "../../context/LanguageContext";
 import { ExprienceDetail } from "../../component/exp/exprienceDetail";
 import { Loader } from "../../component/loader/loaderComponent";
+import { useParams, useNavigate } from "react-router-dom";
 
 import "../../../public/style/view/work.css";
 import { ImageService } from "@/services/imageService";
@@ -26,7 +27,14 @@ interface WorkViewState {
   carousel: CarouselState;
 }
 
-export class WorkView extends React.Component<{}, WorkViewState> {
+interface WorkViewProps {
+  params?: {
+    expId?: string;
+  };
+  navigate?: (path: string) => void;
+}
+
+export class WorkView extends React.Component<WorkViewProps, WorkViewState> {
   static contextType = LanguageContext;
   declare context: React.ContextType<typeof LanguageContext>;
 
@@ -65,8 +73,14 @@ export class WorkView extends React.Component<{}, WorkViewState> {
         ImageService.preloadExpImages(exp.id);
       });
 
+      // Gestion explicite du undefined avec ??
+      const currentExp = this.props.params?.expId
+        ? experiences.find((exp) => exp.id === this.props.params?.expId) ?? null
+        : null;
+
       this.setState({
         exps: experiences,
+        currentExp,
         error: null,
       });
     } catch (error) {
@@ -141,7 +155,13 @@ export class WorkView extends React.Component<{}, WorkViewState> {
   handleExpClick = (exp: ExpTranslated) => {
     // Précharger les images de l'expérience sélectionnée
     ImageService.preloadExpImages(exp.id);
+    this.props.navigate?.(`/work/${exp.id}`);
     this.setState({ currentExp: exp });
+  };
+
+  handleClose = () => {
+    this.props.navigate?.("/work");
+    this.setState({ currentExp: null });
   };
 
   render() {
@@ -187,7 +207,7 @@ export class WorkView extends React.Component<{}, WorkViewState> {
           {currentExp && (
             <ExprienceDetail
               exp={currentExp}
-              onClose={() => this.setState({ currentExp: null })}
+              onClose={this.handleClose}
               onImageClick={this.handleCarouselOpen}
             />
           )}
@@ -203,4 +223,11 @@ export class WorkView extends React.Component<{}, WorkViewState> {
       </section>
     );
   }
+}
+
+// Wrapper pour obtenir les paramètres d'URL
+export default function WorkViewWrapper() {
+  const params = useParams();
+  const navigate = useNavigate();
+  return <WorkView params={params} navigate={navigate} />;
 }
