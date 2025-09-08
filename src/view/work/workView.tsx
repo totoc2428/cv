@@ -50,7 +50,7 @@ export class WorkView extends React.Component<WorkViewProps, WorkViewState> {
   };
 
   shouldComponentUpdate(
-    _nextProps: {}, // Ajoutez un underscore pour indiquer que c'est un paramètre inutilisé
+    nextProps: WorkViewProps,
     nextState: WorkViewState,
     nextContext: any
   ) {
@@ -59,7 +59,8 @@ export class WorkView extends React.Component<WorkViewProps, WorkViewState> {
       this.state.currentExp?.id !== nextState.currentExp?.id ||
       this.state.error !== nextState.error ||
       this.state.carousel.isOpen !== nextState.carousel.isOpen ||
-      this.context.language !== nextContext.language
+      this.context.language !== nextContext.language ||
+      this.props.params?.expId !== nextProps.params?.expId
     );
   }
 
@@ -94,9 +95,17 @@ export class WorkView extends React.Component<WorkViewProps, WorkViewState> {
     }
   }
 
-  async componentDidUpdate(snapshot: any): Promise<void> {
-    const prevContext = snapshot;
-    if (this.context.language !== prevContext?.language) {
+  async componentDidUpdate(
+    prevProps: WorkViewProps,
+    prevState: WorkViewState,
+    snapshot: any
+  ): Promise<void> {
+    const prevContext = snapshot.context;
+    const languageChanged = this.context.language !== prevContext?.language;
+    const expIdChanged =
+      this.props.params?.expId !== snapshot.prevProps.params?.expId;
+
+    if (languageChanged) {
       try {
         ExpService.clearCache();
         const experiences = await ExpService.getExps(this.context.language);
@@ -121,10 +130,32 @@ export class WorkView extends React.Component<WorkViewProps, WorkViewState> {
         });
       }
     }
+
+    // Handle URL parameter changes
+    if (expIdChanged && this.state.exps.length > 0) {
+      const expId = this.props.params?.expId;
+      if (expId) {
+        const foundExp = this.state.exps.find((exp) => exp.id === expId);
+        if (foundExp) {
+          ImageService.preloadExpImages(foundExp.id);
+          this.setState({ currentExp: foundExp });
+        } else {
+          // If expId doesn't exist, redirect to /work
+          this.props.navigate?.("/work");
+          this.setState({ currentExp: null });
+        }
+      } else {
+        // If no expId in URL, close detail view
+        this.setState({ currentExp: null });
+      }
+    }
   }
 
-  getSnapshotBeforeUpdate() {
-    return this.context;
+  getSnapshotBeforeUpdate(prevProps: WorkViewProps) {
+    return {
+      context: this.context,
+      prevProps: prevProps,
+    };
   }
 
   handleCarouselOpen = async (expId: string) => {
@@ -200,6 +231,7 @@ export class WorkView extends React.Component<WorkViewProps, WorkViewState> {
               <ExperienceThumbMail
                 key={exp.id}
                 exp={exp}
+                isActive={currentExp?.id === exp.id}
                 handleOnClick={() => this.handleExpClick(exp)}
               />
             ))}

@@ -2,7 +2,7 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { AboutView } from "./view/about/aboutView";
 import { LanguageProvider } from "./context/LanguageContext";
 import { ContactView } from "./view/contact/contactView";
-import { WorkView } from "./view/work/workView";
+import WorkView from "./view/work/workView"; // Import du wrapper par défaut
 
 export default function App() {
   return (

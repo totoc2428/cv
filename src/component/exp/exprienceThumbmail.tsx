@@ -8,6 +8,7 @@ import "../../../public/style/components/exp/exps.css";
 interface ExperienceThumbMailProps {
   exp: ExpTranslated;
   handleOnClick: () => void;
+  isActive?: boolean;
 }
 
 export class ExperienceThumbMail extends React.Component<ExperienceThumbMailProps> {
@@ -17,15 +18,19 @@ export class ExperienceThumbMail extends React.Component<ExperienceThumbMailProp
     return (
       this.props.exp.id !== nextProps.exp.id ||
       this.props.exp.title !== nextProps.exp.title ||
+      this.props.isActive !== nextProps.isActive ||
       JSON.stringify(this.props.exp.tags) !== JSON.stringify(nextProps.exp.tags)
     );
   }
 
   render() {
-    const { exp, handleOnClick } = this.props;
+    const { exp, handleOnClick, isActive = false } = this.props;
 
     return (
-      <button onClick={handleOnClick} className="exp-thumbmail">
+      <button
+        onClick={handleOnClick}
+        className={`exp-thumbmail ${isActive ? "active" : ""}`}
+      >
         <h1>{exp.title}</h1>
         <div className="exp-thumbmail-tags">
           {exp.tags.map((tag) => (
