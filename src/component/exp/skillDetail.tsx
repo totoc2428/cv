@@ -1,5 +1,6 @@
 import React from "react";
 import { LanguageContext } from "../../context/LanguageContext";
+import { sanitizeHtml } from "../../utils/htmlSanitizer";
 
 import "../../../public/style/components/exp/skills.css";
 
@@ -28,7 +29,7 @@ export class SkillDetail extends React.Component<SkillDetailProps> {
         </button>
         {isExpanded && (
           <div className="skill-content">
-            <p>{value}</p>
+            <div dangerouslySetInnerHTML={{ __html: sanitizeHtml(value) }} />
           </div>
         )}
       </div>

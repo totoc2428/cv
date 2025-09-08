@@ -267,5 +267,16 @@
       "en": "Presentation, Public Speaking, PowerPoint.",
       "fr": "Présentation, Prise de Parole en Public, PowerPoint."
     }
+  },
+  {
+    "id": "certification",
+    "title": {
+      "en": "Certification",
+      "fr": "Certification"
+    },
+    "description": {
+      "en": "Digital certification and diploma validation.",
+      "fr": "Certification numérique et validation de diplôme."
+    }
   }
 ]

@@ -9,6 +9,7 @@ import { SkillService } from "../../services/skillService";
 import { ExpSkill } from "../../types/exp/skill";
 import { ExpImage } from "../../types/exp/image";
 import { ImageService } from "../../services/imageService";
+import { sanitizeHtml } from "../../utils/htmlSanitizer";
 
 interface ExpProps {
   exp: ExpTranslated;
@@ -172,8 +173,16 @@ export class ExprienceDetail extends React.Component<ExpProps, ExpState> {
                   📸 ({images.length})
                 </button>
               )}
-              <h2 className="sub-title">{exp.value}</h2>
-              <div className="description">{exp.description}</div>
+              <h2
+                className="sub-title"
+                dangerouslySetInnerHTML={{ __html: sanitizeHtml(exp.value) }}
+              />
+              <div
+                className="description"
+                dangerouslySetInnerHTML={{
+                  __html: sanitizeHtml(exp.description),
+                }}
+              />
               <div className="skills-section">
                 <h3>{getTranslation("exp.skills.title", language)}</h3>
                 <div className="skills-list">
