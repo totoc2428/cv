@@ -674,8 +674,8 @@
     "tags": ["school"],
     "skills": {
       "certification": {
-        "fr": "<a href='https://diplome-certificat.univ-lille.fr/index.html?key=1E16EA572895298E019EB975B2512D036E783BF20913C8E9C48B0B53370BBBFEMktDZ3N4cExoYmtNSkltdmkvME1DV0JXTHJPZThwTjgvNlkza2xCdlI0YXlPODA0'>Certification Numérique de réussite au Diplôme.</a>",
-        "en": "<a href='https://diplome-certificat.univ-lille.fr/index.html?key=1E16EA572895298E019EB975B2512D036E783BF20913C8E9C48B0B53370BBBFEMktDZ3N4cExoYmtNSkltdmkvME1DV0JXTHJPZThwTjgvNlkza2xCdlI0YXlPODA0'>Digital Certification of Success.</a>"
+        "fr": "<a href='https://diplome-certificat.univ-lille.fr/index.html?key=1E16EA572895298E019EB975B2512D036E783BF20913C8E9C48B0B53370BBBFEMktDZ3N4cExoYmtNSkltdmkvME1DV0JXTHJPZThwTjgvNlkza2xCdlI0YXlPODA0' >Certification Numérique de réussite au Diplôme.</a>",
+        "en": "<a href='https://diplome-certificat.univ-lille.fr/index.html?key=1E16EA572895298E019EB975B2512D036E783BF20913C8E9C48B0B53370BBBFEMktDZ3N4cExoYmtNSkltdmkvME1DV0JXTHJPZThwTjgvNlkza2xCdlI0YXlPODA0' >Digital Certification of Success.</a>"
       }
     }
   },
