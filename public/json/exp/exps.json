@@ -1,5 +1,55 @@
 [
   {
+    "id": "but-thales",
+    "title": {
+      "fr": "Stagiaire Développeur IVVQ - Thales SIX",
+      "en": "Intern Developer IVVQ - Thales SIX"
+    },
+    "location": "Lambersart, France",
+    "subTitle": {
+      "fr": "Développement et installation de modules sur des outils de gestion d'infrastructure de centre de données (DCIM).",
+      "en": "Development and installation of modules on data center infrastructure management (DCIM) tools."
+    },
+    "description": {
+      "fr": "Développement d'un projet interne à l'entreprise pour la surveillance des équipements d'alimentation des infrastructures (DCIM), notament la mesures en temps réél de la consommation électrique. Installation et configuration de modules sur des outils DCIM (Netbox, OpenDCIM).",
+      "en": "The purpose of this project was to develop a monitoring solution for data center infrastructure (DCIM), including real-time measurement of power consumption. Installation and configuration of modules on DCIM tools (Netbox, OpenDCIM)."
+    },
+    "start_date": "2025-03-10",
+    "end_date": "2025-06-27",
+    "tags": [
+      "dev",
+      "web",
+      "ui",
+      "backend",
+      "devops",
+      "security",
+      "internship",
+      "work-project"
+    ],
+    "skills": {
+      "python": {
+        "fr": "Utilisation de Python pour le développement de scripts et d'automatisations.",
+        "en": "Use of Python for scripting and automation development."
+      },
+      "fastAPI": {
+        "fr": "Développement de la partie back-end du module de gestion avec FastAPI.",
+        "en": "Development of the back-end part of the application with FastAPI."
+      },
+      "sql": {
+        "fr": "Utilisation de PostgreSQL pour faire le lien avec la BDD de Netbox.",
+        "en": "Use of PostgreSQL to link with the Netbox database."
+      },
+      "git": {
+        "fr": "Mise en place d'une chaine de CI/CD avec Jenkins CI. Gestion du projet via Git. Utilisation de branches pour le développement de fonctionnalités.",
+        "en": "Implementation of a CI/CD chain with Jenkins CI. Project management via Git. Use of branches for the development of features."
+      },
+      "docker": {
+        "fr": "Utilisation de Docker pour le déploiement automatique de Netbox avec le module développé.",
+        "en": "Use of Docker for the automatic deployment of Netbox with the developed module."
+      }
+    }
+  },
+  {
     "id": "but-doctolib",
     "title": {
       "fr": "Développement d'une copie de l'application Doctolib",
