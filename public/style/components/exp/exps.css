@@ -193,11 +193,6 @@
   display: flex;
   flex-direction: row;
   justify-content: left;
-  margin-top: 0.5rem;
-  background: var(--primary-bg);
-  box-shadow: 5px 5px 10px var(--shadow-dark),
-    -5px -5px 10px var(--shadow-light);
-  border-radius: 0.25rem;
 }
 
 .exp-detail .main-exp-detail .item.location {
@@ -211,9 +206,16 @@
 .exp-detail .main-exp-detail .item .icon {
   margin-bottom: 0.25rem;
   margin-top: 0.25rem;
+  font-size: 102.5%;
+  padding: 0.25rem;
+  background: var(--primary-bg);
+  box-shadow: 5px 5px 10px var(--shadow-dark),
+    -5px -5px 10px var(--shadow-light);
+  border-radius: 0.25rem;
 }
 
 .exp-detail .main-exp-detail .item .value {
+  margin-left: 0.5rem;
   margin-top: 0.5rem;
 }
 

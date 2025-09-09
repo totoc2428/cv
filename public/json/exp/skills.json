@@ -278,5 +278,38 @@
       "en": "Digital certification and diploma validation.",
       "fr": "Certification numérique et validation de diplôme."
     }
+  },
+  {
+    "id": "python",
+    "title": {
+      "en": "Python",
+      "fr": "Python"
+    },
+    "description": {
+      "en": "Python programming language.",
+      "fr": "Langage de programmation Python."
+    }
+  },
+  {
+    "id": "fastAPI",
+    "title": {
+      "en": "FastAPI",
+      "fr": "FastAPI"
+    },
+    "description": {
+      "en": "FastAPI web framework.",
+      "fr": "Framework web FastAPI."
+    }
+  },
+  {
+    "id": "maven",
+    "title": {
+      "en": "Maven",
+      "fr": "Maven"
+    },
+    "description": {
+      "en": "Build automation tool for Java projects.",
+      "fr": "Outil d'automatisation de la construction pour les projets Java."
+    }
   }
 ]

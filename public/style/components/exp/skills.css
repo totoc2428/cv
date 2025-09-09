@@ -57,8 +57,8 @@
 }
 
 .skill-detail[class*="react"] {
-  background-color: #e6f3ff;
-  color: #0066cc;
+  background-color: #2fd5ff;
+  color: #00a9d3;
 }
 
 .skill-detail[class*="node"] {
@@ -67,18 +67,18 @@
 }
 
 .skill-detail[class*="java"] {
-  background-color: #fff0e6;
-  color: #ff6600;
+  background-color: #f53535;
+  color: #920202;
 }
 
 .skill-detail[class*="java-Spring-boot"] {
-  background-color: #f2ffe6;
-  color: #66cc00;
+  background-color: #99f047;
+  color: #3c7206;
 }
 
 .skill-detail[class*="json"] {
-  background-color: #fff6e6;
-  color: #ffaa00;
+  background-color: #ffcf31;
+  color: #a16c00;
 }
 
 .skill-detail[class*="csv"] {
@@ -92,13 +92,13 @@
 }
 
 .skill-detail[class*="no-sql"] {
-  background-color: #f2e6ff;
-  color: #6600ff;
+  background-color: #993cfc;
+  color: #4000a0;
 }
 
 .skill-detail[class*="sql"] {
-  background-color: #e6fff2;
-  color: #00cc66;
+  background-color: #8a6340;
+  color: #492c12;
 }
 
 .skill-detail[class*="jpa"] {
@@ -107,18 +107,18 @@
 }
 
 .skill-detail[class*="debian"] {
-  background-color: #ffe6f9;
-  color: #ff00cc;
+  background-color: #e9467c;
+  color: #c90f4d;
 }
 
 .skill-detail[class*="git"] {
-  background-color: #fff2e6;
+  background-color: #ffaf64;
   color: #ff6600;
 }
 
 .skill-detail[class*="docker"] {
-  background-color: #e6f9ff;
-  color: #00ccff;
+  background-color: #32cefd;
+  color: #117b96;
 }
 
 .skill-detail[class*="devops"] {
@@ -147,13 +147,13 @@
 }
 
 .skill-detail[class*="presentation"] {
-  background-color: #e6fff2;
-  color: #00cc66 !important;
+  background-color: #ac64ff;
+  color: #7700ff !important;
 }
 
 .skill-detail[class*="c"] {
-  background-color: #e6e6ff;
-  color: #4d4dcc;
+  background-color: #5698fc;
+  color: #0066ff;
 }
 
 .skill-detail[class*="security"] {
@@ -164,6 +164,21 @@
 .skill-detail[class*="low-level"] {
   background-color: #e6ffff;
   color: #4dcccc;
+}
+
+.skill-detail[class*="python"] {
+  background-color: #4da6ee;
+  color: #306998;
+}
+
+.skill-detail[class*="fastAPI"] {
+  background-color: #44aca1;
+  color: #009688;
+}
+
+.skill-detail[class*="maven"] {
+  background-color: #e4432d;
+  color: #831111;
 }
 
 /* Default color as fallback */
