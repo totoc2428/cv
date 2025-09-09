@@ -45,7 +45,7 @@ export const ExpService = {
           endDate:
             exp.end_date === "null" || exp.end_date === null
               ? getTranslation("exp.date_no", language)
-              : `${getTranslation("exp.date_link_btw")} ${formatDate(
+              : `${getTranslation("exp.date_link_btw", language)} ${formatDate(
                   exp.end_date,
                   language
                 )}`,

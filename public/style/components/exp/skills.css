@@ -47,13 +47,13 @@
 }
 
 .skill-detail[class*="WordPress"] {
-  background-color: #f0fff0 !important;
-  color: #4dff4d !important;
+  background-color: #5ea1ce !important;
+  color: #316385 !important;
 }
 
 .skill-detail[class*="figma"] {
-  background-color: #f0f0ff;
-  color: #4d4dff;
+  background-color: #cbb9fd;
+  color: #401e9e;
 }
 
 .skill-detail[class*="react"] {
@@ -62,8 +62,8 @@
 }
 
 .skill-detail[class*="node"] {
-  background-color: #f0fff0;
-  color: #33cc33;
+  background-color: #5dcc5d;
+  color: #12a112;
 }
 
 .skill-detail[class*="java"] {
@@ -108,17 +108,17 @@
 
 .skill-detail[class*="debian"] {
   background-color: #e9467c;
-  color: #c90f4d;
+  color: #770a2e;
 }
 
 .skill-detail[class*="git"] {
   background-color: #ffaf64;
-  color: #ff6600;
+  color: #ad4500;
 }
 
 .skill-detail[class*="docker"] {
-  background-color: #32cefd;
-  color: #117b96;
+  background-color: #4ad3fd;
+  color: #003441;
 }
 
 .skill-detail[class*="devops"] {
@@ -172,8 +172,8 @@
 }
 
 .skill-detail[class*="fastAPI"] {
-  background-color: #44aca1;
-  color: #009688;
+  background-color: #4fada4;
+  color: #035a51;
 }
 
 .skill-detail[class*="maven"] {
