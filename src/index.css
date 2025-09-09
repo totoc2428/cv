@@ -1,0 +1,38 @@
+@import "tailwindcss";
+
+/* Variables CSS pour la cohérence */
+:root {
+  --primary-bg: #f0f0f0;
+  --shadow-light: #ffffff;
+  --shadow-dark: #d1d1d1;
+  --text-color: #333333;
+  --border-color: #cccccc;
+  --sb-track-color: var(--primary-bg);
+  --sb-thumb-color: var(--shadow-dark);
+  --sb-size: 5px;
+}
+
+/* Custom utilities pour maintenir la compatibilité avec le design neumorphique */
+.neumorphic {
+  background: var(--primary-bg);
+  box-shadow: 5px 5px 10px var(--shadow-dark),
+    -5px -5px 10px var(--shadow-light);
+}
+
+.neumorphic-inset {
+  box-shadow: inset 3px 3px 6px var(--shadow-dark),
+    inset -3px -3px 6px var(--shadow-light);
+}
+
+.neumorphic-small {
+  box-shadow: 3px 3px 6px var(--shadow-dark), -3px -3px 6px var(--shadow-light);
+}
+
+/* Body reset avec TailwindCSS */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--primary-bg);
+  color: var(--text-color);
+  font-family: "Arial", sans-serif;
+}

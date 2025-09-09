@@ -1,6 +1,6 @@
 .work-section {
-  max-width: 600px;
-  padding: 1rem;
+  max-width: 800px;
+  width: auto;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -10,12 +10,12 @@
 }
 
 .work-section.open {
-  max-width: 1300px;
+  max-width: 95vw;
   transition: all 0.3s ease;
 }
 
 .work-section .exp-list {
-  max-height: 50vh;
+  max-height: 55vh;
   overflow: hidden;
   overflow-y: scroll;
   width: 100%;
@@ -85,7 +85,7 @@
 }
 
 .work-section.open .exp-list {
-  width: 40%;
+  width: 45%;
   transition: all 0.3s ease;
 }
 

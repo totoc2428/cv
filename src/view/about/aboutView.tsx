@@ -41,16 +41,20 @@ export class AboutView extends React.Component<{}, AboutViewState> {
         <Header title="about" />
         <main className="main about-section">
           <div className="about-title">
-            <img src={profileImage} alt="about" className="profile-image" />
-            <h2>
+            <img
+              src={profileImage}
+              alt="about"
+              className="profile-image mx-auto w-24 sm:w-48 md:w-32 lg:w-24 rounded-3xl neumorphic-small"
+            />
+            <h2 className="text-2xl font-bold text-center m-4">
               {about.firstName} {about.name}
             </h2>
           </div>
-          <div className="about-content">
-            <p>
+          <div className="about-content leading-relaxed text-lg">
+            <p className="mb-4">
               {about.introduction[language === "fr" ? "fr_value" : "en_value"]}
             </p>
-            <p className="content">
+            <p className="content mb-4 sm:mb-40">
               {about.about[language === "fr" ? "fr_value" : "en_value"]}
             </p>
           </div>

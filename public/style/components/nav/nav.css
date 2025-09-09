@@ -18,7 +18,7 @@
 .nav.main-nav {
   position: fixed;
   bottom: 0rem;
-  translate: 45vw 0vh;
+  transform: translateX(40vw);
 }
 
 .nav.lang-nav {
@@ -44,7 +44,8 @@
     padding: 0rem;
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
-    translate: 0vw 0vh;
+    left: 50%;
+    transform: translateX(-50%);
     width: 100%;
     justify-content: center;
   }

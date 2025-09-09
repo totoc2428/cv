@@ -1,3 +1,5 @@
+@import "tailwindcss";
+
 :root {
   --primary-bg: #f0f0f0;
   --shadow-light: #ffffff;
@@ -11,8 +13,8 @@
 
 /* BODY */
 body {
-  margin: 0rem;
-  padding: 0rem;
+  margin: 0;
+  padding: 0;
   background-color: var(--primary-bg);
   color: var(--text-color);
   font-family: "Arial", sans-serif;
@@ -56,10 +58,20 @@ body::-webkit-scrollbar-thumb {
 }
 
 .main-header h1 {
+  position: absolute;
+  width: 98%;
   text-align: center !important;
   margin: auto !important;
+  font-size: 2.5rem;
+  font-weight: bold;
 }
 
+.main-header h4 {
+  height: 100%;
+  margin-top: 1rem;
+  max-width: 25%;
+  font-size: 1rem;
+}
 .main {
   max-width: 800px;
   height: auto;
@@ -90,10 +102,9 @@ body::-webkit-scrollbar-thumb {
   margin: 0.5rem;
   background: var(--shadow-dark);
   border-radius: 0.25rem;
-  transform: scale(1.1) brightness(1.1);
-  transition: all 0.3s ease;
   transform: scale(1);
   filter: brightness(1);
+  transition: all 0.3s ease;
 }
 
 .button:hover {
@@ -128,8 +139,9 @@ body::-webkit-scrollbar-thumb {
   .main-header h1 {
     margin: 0rem !important;
     padding: 0rem !important;
-    text-align: left !important;
-    font-size: 1.5rem;
+    text-align: center !important;
+    font-size: 1.8rem;
+    font-weight: bold;
   }
 
   .main-header h4 {

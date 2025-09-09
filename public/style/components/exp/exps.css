@@ -9,6 +9,7 @@
   border: none;
   background: transparent;
   border-bottom: 0.125rem solid var(--border-color);
+  border-radius: 0.5rem;
   transition: all 0.3s ease;
   cursor: pointer;
   text-align: left;
@@ -25,7 +26,6 @@
   background: var(--primary-bg);
   box-shadow: inset 3px 3px 6px var(--shadow-dark),
     inset -3px -3px 6px var(--shadow-light);
-  border-bottom-color: var(--accent-color);
 }
 
 .exp-thumbmail.active h1 {
@@ -46,6 +46,8 @@
   padding: 0.25rem;
   overflow: hidden;
   overflow-x: auto;
+  align-items: center;
+  min-height: 2rem;
 }
 
 .exp-thumbmail-tags::-webkit-scrollbar {
@@ -88,6 +90,7 @@
   padding: 0rem;
   margin: 0rem;
   width: 100%;
+  min-height: 6rem;
   height: auto;
   overflow: hidden;
   background: var(--primary-bg);
@@ -110,7 +113,6 @@
 }
 
 .exp-detail .header-exp-detail .nav-exp-detail .title {
-  margin: 0.25rem;
   width: 40%;
   margin-left: 0rem;
   padding-left: 0rem;
@@ -139,7 +141,8 @@
   font-size: 150%;
   margin-left: 1rem;
   margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
 }
 
 .exp-detail .header-exp-detail .content .tags-list {

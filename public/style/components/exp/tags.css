@@ -1,12 +1,15 @@
 .tag-thumbmail {
   opacity: 1;
   margin-left: 0.5rem;
-  max-height: 1rem;
-  padding: 0.4rem 0.8rem;
+  min-height: 1.5rem;
+  height: auto;
+  padding: 0.6rem 0.8rem;
   border-radius: 0.25rem;
   font-size: 0.9rem;
   font-weight: 500;
   text-wrap: nowrap;
+  display: inline-flex;
+  align-items: center;
 }
 
 .tag-thumbmail.school {

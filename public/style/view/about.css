@@ -3,9 +3,15 @@
 }
 
 .about-section {
+  margin-bottom: 8rem;
+  padding: 2rem;
+  border-radius: 15px;
+  background: var(--primary-bg);
   box-shadow: inset 3px 3px 6px var(--shadow-dark),
     inset -3px -3px 6px var(--shadow-light);
+  height: 25rem;
 }
+
 .profile-image {
   margin: auto !important;
   width: 100px;
@@ -31,15 +37,6 @@
   font-size: 125%;
 }
 
-.about-section {
-  margin-bottom: 2rem;
-  padding: 2rem;
-  border-radius: 15px;
-  background: var(--primary-bg);
-  box-shadow: inset 3px 3px 6px var(--shadow-dark),
-    inset -3px -3px 6px var(--shadow-light);
-}
-
 @media screen and (max-width: 768px) {
   .profile-image {
     width: 200px;
@@ -47,5 +44,6 @@
 
   .about-section p.content {
     margin-bottom: 10rem;
+    height: auto;
   }
 }
