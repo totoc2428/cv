@@ -41,6 +41,9 @@
   .profile-image {
     width: 200px;
   }
+  .about-section {
+    height: auto;
+  }
 
   .about-section p.content {
     margin-bottom: 10rem;
