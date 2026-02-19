@@ -4,10 +4,13 @@ import { Header } from "../../component/header/headerComponent";
 import { LangNav } from "../../component/nav/langNav";
 import { MainNav } from "../../component/nav/mainNav";
 import { ExpService } from "../../services/expService";
+import { CategoryService } from "../../services/categoryService";
 import { ExpTranslated } from "../../types/exp/exp";
+import { Category } from "../../types/exp/category";
 import { LanguageContext } from "../../context/LanguageContext";
 import { ExprienceDetail } from "../../component/exp/exprienceDetail";
 import { Loader } from "../../component/loader/loaderComponent";
+import { CategoryNav } from "../../component/exp/categoryNav";
 import { useParams, useNavigate } from "react-router-dom";
 
 import "../../../public/style/view/work.css";
@@ -22,6 +25,8 @@ interface CarouselState {
 
 interface WorkViewState {
   exps: ExpTranslated[];
+  categories: Category[];
+  selectedFilter: string | null;
   currentExp: ExpTranslated | null;
   error: string | null;
   carousel: CarouselState;
@@ -40,6 +45,8 @@ export class WorkView extends React.Component<WorkViewProps, WorkViewState> {
 
   state: WorkViewState = {
     exps: [],
+    categories: [],
+    selectedFilter: null,
     currentExp: null,
     error: null,
     carousel: {
@@ -52,10 +59,12 @@ export class WorkView extends React.Component<WorkViewProps, WorkViewState> {
   shouldComponentUpdate(
     nextProps: WorkViewProps,
     nextState: WorkViewState,
-    nextContext: any
+    nextContext: any,
   ) {
     return (
       this.state.exps.length !== nextState.exps.length ||
+      this.state.categories.length !== nextState.categories.length ||
+      this.state.selectedFilter !== nextState.selectedFilter ||
       this.state.currentExp?.id !== nextState.currentExp?.id ||
       this.state.error !== nextState.error ||
       this.state.carousel.isOpen !== nextState.carousel.isOpen ||
@@ -67,7 +76,10 @@ export class WorkView extends React.Component<WorkViewProps, WorkViewState> {
   async componentDidMount(): Promise<void> {
     try {
       const { language } = this.context;
-      const experiences = await ExpService.getExps(language);
+      const [experiences, categories] = await Promise.all([
+        ExpService.getExps(language),
+        CategoryService.getCategories(),
+      ]);
 
       // Préchargement des images pour une meilleure expérience utilisateur
       experiences.forEach((exp) => {
@@ -76,11 +88,13 @@ export class WorkView extends React.Component<WorkViewProps, WorkViewState> {
 
       // Gestion explicite du undefined avec ??
       const currentExp = this.props.params?.expId
-        ? experiences.find((exp) => exp.id === this.props.params?.expId) ?? null
+        ? (experiences.find((exp) => exp.id === this.props.params?.expId) ??
+          null)
         : null;
 
       this.setState({
         exps: experiences,
+        categories,
         currentExp,
         error: null,
       });
@@ -98,7 +112,7 @@ export class WorkView extends React.Component<WorkViewProps, WorkViewState> {
   async componentDidUpdate(
     prevProps: WorkViewProps,
     prevState: WorkViewState,
-    snapshot: any
+    snapshot: any,
   ): Promise<void> {
     const prevContext = snapshot.context;
     const languageChanged = this.context.language !== prevContext?.language;
@@ -112,8 +126,8 @@ export class WorkView extends React.Component<WorkViewProps, WorkViewState> {
 
         // Update current experience with new translation if one is selected
         const updatedCurrentExp = this.state.currentExp
-          ? experiences.find((exp) => exp.id === this.state.currentExp?.id) ??
-            null
+          ? (experiences.find((exp) => exp.id === this.state.currentExp?.id) ??
+            null)
           : null;
 
         this.setState({
@@ -158,6 +172,31 @@ export class WorkView extends React.Component<WorkViewProps, WorkViewState> {
     };
   }
 
+  getFilteredExps(): ExpTranslated[] {
+    const { exps, categories, selectedFilter } = this.state;
+
+    if (!selectedFilter) return exps;
+
+    if (selectedFilter.startsWith("group:")) {
+      const groupTag = selectedFilter.replace("group:", "");
+      const groupCategoryIds = categories
+        .filter((c) => c.tag === groupTag)
+        .map((c) => c.id);
+      return exps.filter((exp) =>
+        exp.tags.some((tag) => groupCategoryIds.includes(tag.id)),
+      );
+    }
+
+    return exps.filter((exp) =>
+      exp.tags.some((tag) => tag.id === selectedFilter),
+    );
+  }
+
+  handleFilterChange = (filter: string | null) => {
+    this.setState({ selectedFilter: filter, currentExp: null });
+    this.props.navigate?.("/work");
+  };
+
   handleCarouselOpen = async (expId: string) => {
     try {
       const images = await ImageService.getExpImages(expId);
@@ -196,7 +235,9 @@ export class WorkView extends React.Component<WorkViewProps, WorkViewState> {
   };
 
   render() {
-    const { exps, currentExp, error, carousel } = this.state;
+    const { currentExp, error, carousel, categories, selectedFilter } =
+      this.state;
+    const filteredExps = this.getFilteredExps();
 
     if (error) {
       return (
@@ -211,7 +252,7 @@ export class WorkView extends React.Component<WorkViewProps, WorkViewState> {
       );
     }
 
-    if (exps.length === 0) {
+    if (this.state.exps.length === 0) {
       return (
         <section className="work-container">
           <Header title="work" />
@@ -226,8 +267,15 @@ export class WorkView extends React.Component<WorkViewProps, WorkViewState> {
       <section className="work-container">
         <Header title="work" />
         <main className={`main work-section ${currentExp ? "open" : ""}`}>
+          {categories.length > 0 && (
+            <CategoryNav
+              categories={categories}
+              selectedFilter={selectedFilter}
+              onFilterChange={this.handleFilterChange}
+            />
+          )}
           <div className="exp-list">
-            {exps.map((exp) => (
+            {filteredExps.map((exp) => (
               <ExperienceThumbMail
                 key={exp.id}
                 exp={exp}

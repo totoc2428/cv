@@ -1,0 +1,42 @@
+[
+  {
+    "id": "univ-lille",
+    "tag": "school",
+    "title": {
+      "en": "University of Lille",
+      "fr": "Université de Lille"
+    }
+  },
+  {
+    "id": "iut-lille",
+    "tag": "school",
+    "title": {
+      "en": "IUT de Lille",
+      "fr": "IUT de Lille"
+    }
+  },
+  {
+    "id": "st-jude",
+    "tag": "school",
+    "title": {
+      "fr": "Lycée St Jude Armentières",
+      "en": "St Jude High School, Armentières"
+    }
+  },
+  {
+    "id": "internship",
+    "tag": "work-project",
+    "title": {
+      "en": "Internship",
+      "fr": "Stage"
+    }
+  },
+  {
+    "id": "freelance",
+    "tag": "work-project",
+    "title": {
+      "en": "Freelance",
+      "fr": "Indépendant"
+    }
+  }
+]

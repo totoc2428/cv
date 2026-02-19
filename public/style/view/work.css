@@ -1,9 +1,11 @@
 .work-section {
-  max-width: 800px;
+  max-width: 1000px;
   width: auto;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 0.75rem;
   margin-bottom: 4rem;
   background: var(--primary-bg);
   transition: all 0.3s ease;
@@ -15,17 +17,19 @@
 }
 
 .work-section .exp-list {
+  flex: 1 1 0;
+  min-width: 0;
   max-height: 55vh;
   overflow: hidden;
   overflow-y: scroll;
-  width: 100%;
   margin: 0rem;
   padding: 1rem;
   display: flex;
   flex-direction: column;
   justify-content: top;
   border-radius: 0.5rem;
-  box-shadow: inset 3px 3px 6px var(--shadow-dark),
+  box-shadow:
+    inset 3px 3px 6px var(--shadow-dark),
     inset -3px -3px 6px var(--shadow-light);
   transition: all 0.3s ease;
 }
@@ -35,7 +39,9 @@
   transform: translateY(20px);
   margin-top: 3rem;
   margin-bottom: 3rem;
-  transition: opacity 0.3s ease, transform 0.3s ease;
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
 }
 
 .work-section.open .exp-detail {
@@ -43,7 +49,9 @@
   transform: translateY(0);
   margin-top: 0rem;
   margin-bottom: 0rem;
-  transition: opacity 0.3s ease, transform 0.3s ease;
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
 }
 
 @keyframes fadeIn {
@@ -85,7 +93,8 @@
 }
 
 .work-section.open .exp-list {
-  width: 45%;
+  flex: 0 0 30%;
+  width: 30%;
   transition: all 0.3s ease;
 }
 
@@ -94,32 +103,37 @@
   .work-section {
     margin: 0rem !important;
     padding: 0rem !important;
-    flex-direction: column;
-    justify-content: start;
-    padding: 0.5rem;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 0.5rem;
     width: 99vw !important;
     height: 90vh;
     overflow: hidden;
-    overflow-y: scroll;
+    padding: 0.25rem !important;
   }
 
   .work-section.open {
     overflow: hidden;
-    width: 90vw;
+    width: 99vw !important;
   }
 
   .work-section .exp-list {
     margin: 0rem;
     padding-bottom: 10rem !important;
     max-height: 100% !important;
-    width: 100% !important;
     height: 100% !important;
+    flex: 1 1 0 !important;
+    width: auto !important;
+    min-width: 0 !important;
     transition: all 0.3s ease;
   }
 
   .work-section.open .exp-list {
-    width: 100%;
-    height: 0px !important;
+    flex: 0 0 0 !important;
+    width: 0 !important;
+    min-width: 0 !important;
     margin: 0rem !important;
     padding: 0rem !important;
     overflow: hidden !important;
@@ -134,10 +148,6 @@
     margin-top: 1rem;
     margin-bottom: 5rem;
     transition: all 0.3s ease;
-  }
-
-  .work-section.open .exp-list {
-    width: 100% !important;
   }
 
   .header-exp-detail .nav-exp-detail .title {

@@ -2,8 +2,8 @@
   {
     "id": "school",
     "value": {
-      "en": "School",
-      "fr": "École"
+      "en": "Education",
+      "fr": "Formation"
     }
   },
   {
@@ -165,6 +165,27 @@
     "value": {
       "en": "Low-level",
       "fr": "Bas niveau"
+    }
+  },
+  {
+    "id": "iut-lille",
+    "value": {
+      "en": "IUT de Lille",
+      "fr": "IUT de Lille"
+    }
+  },
+  {
+    "id": "univ-lille",
+    "value": {
+      "en": "University of Lille",
+      "fr": "Université de Lille"
+    }
+  },
+  {
+    "id": "st-jude",
+    "value": {
+      "en": "St Jude High School",
+      "fr": "Lycée St Jude"
     }
   }
 ]
