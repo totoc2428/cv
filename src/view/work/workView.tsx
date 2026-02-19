@@ -266,14 +266,14 @@ export class WorkView extends React.Component<WorkViewProps, WorkViewState> {
     return (
       <section className="work-container">
         <Header title="work" />
+        {categories.length > 0 && (
+          <CategoryNav
+            categories={categories}
+            selectedFilter={selectedFilter}
+            onFilterChange={this.handleFilterChange}
+          />
+        )}
         <main className={`main work-section ${currentExp ? "open" : ""}`}>
-          {categories.length > 0 && (
-            <CategoryNav
-              categories={categories}
-              selectedFilter={selectedFilter}
-              onFilterChange={this.handleFilterChange}
-            />
-          )}
           <div className="exp-list">
             {filteredExps.map((exp) => (
               <ExperienceThumbMail
