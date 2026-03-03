@@ -13,7 +13,7 @@
   border-radius: 0.5rem 0.5rem 0 0;
   background: var(--primary-bg);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  transition: all 0.2s ease;
+  transition: all 0.3s ease;
 }
 
 .category-nav.open {
@@ -32,6 +32,11 @@
   font-size: 80%;
   white-space: nowrap;
   border-radius: 0.5rem 0.5rem 0 0;
+  transition:
+    box-shadow 0.3s ease,
+    filter 0.3s ease,
+    background 0.3s ease,
+    transform 0.3s ease;
 }
 
 .category-nav-toggle:hover {
@@ -58,7 +63,27 @@
   gap: 0.1rem;
   padding-bottom: 0.25rem;
   border-bottom: 1px solid var(--shadow-dark);
+  animation: slideUp 0.25s ease forwards;
 }
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.category-nav-options > * {
+  animation: slideUp 0.2s ease backwards;
+}
+
+.category-nav-options > *:nth-child(1) { animation-delay: 0s; }
+.category-nav-options > *:nth-child(2) { animation-delay: 0.05s; }
+.category-nav-options > *:nth-child(3) { animation-delay: 0.1s; }
 
 .category-nav-item {
   display: flex;
@@ -69,13 +94,17 @@
   border-radius: 0.25rem;
   font-size: 80%;
   color: var(--text-color);
-  transition: background 0.2s ease;
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease,
+    filter 0.2s ease;
   user-select: none;
 }
 
 .category-nav-item:hover {
   background: var(--shadow-dark);
   filter: brightness(0.95);
+  transform: translateX(3px);
 }
 
 .category-nav-item input[type="radio"] {
@@ -98,6 +127,7 @@
     inset 2px 2px 4px var(--shadow-dark),
     inset -2px -2px 4px var(--shadow-light);
   background: var(--shadow-dark);
+  transform: scale(0.9);
 }
 
 .category-group {
@@ -109,6 +139,7 @@
   display: flex;
   flex-direction: column;
   gap: 0.1rem;
+  transition: filter 0.2s ease;
 }
 
 .category-group-header span {

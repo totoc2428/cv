@@ -13,6 +13,7 @@ interface ContactLinks {
     twitter: string;
     linkedin: string;
     github: string;
+    codewars: string;
   };
 }
 
@@ -21,6 +22,7 @@ interface ContactViewState {
   twitterClicked: boolean;
   linkedInClicked: boolean;
   gitHubClicked: boolean;
+  codewarsClicked: boolean;
   contactData: ContactLinks | null;
 }
 
@@ -34,6 +36,7 @@ export class ContactView extends React.Component<{}, ContactViewState> {
     twitterClicked: false,
     linkedInClicked: false,
     gitHubClicked: false,
+    codewarsClicked: false,
     contactData: null,
   };
 
