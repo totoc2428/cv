@@ -27,6 +27,26 @@ export class CategoryNav extends React.Component<
 
   state: CategoryNavState = { isOpen: false };
 
+  private navRef = React.createRef<HTMLElement>();
+
+  componentDidMount() {
+    document.addEventListener("click", this.handleClickOutside);
+  }
+
+  componentWillUnmount() {
+    document.removeEventListener("click", this.handleClickOutside);
+  }
+
+  handleClickOutside = (event: MouseEvent) => {
+    if (
+      this.state.isOpen &&
+      this.navRef.current &&
+      !this.navRef.current.contains(event.target as Node)
+    ) {
+      this.setState({ isOpen: false });
+    }
+  };
+
   getGroups(): Map<string, Category[]> {
     const groups = new Map<string, Category[]>();
     this.props.categories.forEach((cat) => {
@@ -43,7 +63,7 @@ export class CategoryNav extends React.Component<
     const groups = this.getGroups();
 
     return (
-      <nav className={`category-nav${isOpen ? " open" : ""}`}>
+      <nav ref={this.navRef} className={`category-nav${isOpen ? " open" : ""}`}>
         <button
           className={`button category-nav-toggle${isOpen ? " focus" : ""}`}
           onClick={() => this.setState({ isOpen: !isOpen })}
