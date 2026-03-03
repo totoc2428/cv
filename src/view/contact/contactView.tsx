@@ -94,6 +94,18 @@ export class ContactView extends React.Component<{}, ContactViewState> {
     }
   };
 
+  handleCodewarsClick = () => {
+    const codewars = this.state.contactData?.link.codewars;
+    if (codewars) {
+      window.open(codewars, "_blank");
+      this.setState({ codewarsClicked: true });
+      setTimeout(
+        () => this.setState({ codewarsClicked: false }),
+        TIME_TO_WAIT
+      );
+    }
+  };
+
   render(): React.ReactNode {
     if (!this.state.contactData) {
       return <div>Loading...</div>;
@@ -124,6 +136,11 @@ export class ContactView extends React.Component<{}, ContactViewState> {
                 {this.state.gitHubClicked
                   ? getTranslation("button.copied", language)
                   : "😺 GitHub"}
+              </button>
+              <button onClick={this.handleCodewarsClick} className="button">
+                {this.state.codewarsClicked
+                  ? getTranslation("button.copied", language)
+                  : "⚔️ Codewars"}
               </button>
             </main>
             <MainNav />
