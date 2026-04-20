@@ -1,38 +1,33 @@
 import React from "react";
-import { LanguageContext } from "../../context/LanguageContext";
+import { useLanguage } from "../../context/LanguageContext";
 import "/public/style/components/nav/nav.css";
+import { Language } from "../../languages/dic";
 
-export class LangNav extends React.Component {
-  static contextType = LanguageContext;
+export function LangNav() {
+  const { language, setLanguage } = useLanguage();
 
-  handleLanguageChange = (
-    setLanguage: (lang: "en" | "fr") => void,
-    newLang: "en" | "fr"
-  ) => {
+  const handleLanguageChange = (newLang: Language) => {
+    if (language === newLang) {
+      return;
+    }
+
     setLanguage(newLang);
-    window.location.reload(); // Force page reload
   };
 
-  render() {
-    return (
-      <LanguageContext.Consumer>
-        {({ language, setLanguage }) => (
-          <nav className="nav lang-nav">
-            <button
-              className={"button " + (language === "en" ? "focus" : "")}
-              onClick={() => this.handleLanguageChange(setLanguage, "en")}
-            >
-              🇬🇧
-            </button>
-            <button
-              className={"button " + (language === "fr" ? "focus" : "")}
-              onClick={() => this.handleLanguageChange(setLanguage, "fr")}
-            >
-              🇫🇷
-            </button>
-          </nav>
-        )}
-      </LanguageContext.Consumer>
-    );
-  }
+  return (
+    <nav className="nav lang-nav">
+      <button
+        className={"button " + (language === "en" ? "focus" : "")}
+        onClick={() => handleLanguageChange("en")}
+      >
+        🇬🇧
+      </button>
+      <button
+        className={"button " + (language === "fr" ? "focus" : "")}
+        onClick={() => handleLanguageChange("fr")}
+      >
+        🇫🇷
+      </button>
+    </nav>
+  );
 }

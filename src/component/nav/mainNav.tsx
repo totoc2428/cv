@@ -35,7 +35,12 @@ export function MainNav() {
         👤
       </button>
       <button
-        className={(location.pathname === "/work" ? "focus" : "") + " button"}
+        className={
+          (location.pathname === "/work" ||
+          location.pathname.startsWith("/work/")
+            ? "focus"
+            : "") + " button"
+        }
         onClick={() => handleNavigation("/work")}
       >
         💼

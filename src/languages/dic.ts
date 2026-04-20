@@ -3,6 +3,15 @@ import frTranslations from "../../public/json/language/fr.json";
 
 export type Language = "en" | "fr";
 
+export const isLanguage = (value: unknown): value is Language => {
+  return value === "en" || value === "fr";
+};
+
+export const getLanguageFromPathname = (pathname: string): Language | null => {
+  const matchedLang = pathname.match(/^\/(en|fr)(?=\/|$)/)?.[1];
+  return isLanguage(matchedLang) ? matchedLang : null;
+};
+
 export const translations = {
   en: enTranslations,
   fr: frTranslations,
@@ -10,7 +19,7 @@ export const translations = {
 
 export const getTranslation = (
   key: string,
-  language: Language = "fr"
+  language: Language = "fr",
 ): string => {
   const keys = key.split(".");
   let value: any = translations[language];

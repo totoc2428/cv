@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useState } from "react";
-import { Language } from "../languages/dic";
+import { isLanguage, Language } from "../languages/dic";
 
 interface LanguageContextType {
   language: Language;
@@ -15,8 +15,12 @@ export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({
   children,
 }) => {
   const [language, setLanguageState] = useState<Language>(() => {
-    // Lire depuis localStorage au montage initial
-    return (localStorage.getItem("language") as Language) || "fr";
+    if (typeof window === "undefined") {
+      return "fr";
+    }
+
+    const storedLanguage = localStorage.getItem("language");
+    return isLanguage(storedLanguage) ? storedLanguage : "fr";
   });
 
   const setLanguage = (newLang: Language) => {
