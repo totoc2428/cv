@@ -41,7 +41,7 @@
 
 @media screen and (max-width: 768px) {
   .contact-section {
-    margin: 1rem;
+    margin: 0.5rem;
     height: 70vh;
   }
 
@@ -50,7 +50,7 @@
     justify-content: center;
     text-align: center;
     vertical-align: middle;
-    margin: 0.75rem;
+    margin: 0.05vh;
     border-radius: 0.75rem;
     width: 80%;
     font-size: 150%;
