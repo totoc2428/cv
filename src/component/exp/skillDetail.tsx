@@ -15,12 +15,60 @@ interface SkillDetailProps {
 export class SkillDetail extends React.Component<SkillDetailProps> {
   static contextType = LanguageContext;
   declare context: React.ContextType<typeof LanguageContext>;
+  private containerRef = React.createRef<HTMLDivElement>();
+  private scrollTimeoutId: number | null = null;
+
+  componentDidUpdate(prevProps: SkillDetailProps) {
+    if (!prevProps.isExpanded && this.props.isExpanded) {
+      this.scheduleParentScroll();
+    }
+  }
+
+  componentWillUnmount() {
+    if (this.scrollTimeoutId !== null) {
+      window.clearTimeout(this.scrollTimeoutId);
+      this.scrollTimeoutId = null;
+    }
+  }
+
+  private scheduleParentScroll() {
+    if (this.scrollTimeoutId !== null) {
+      window.clearTimeout(this.scrollTimeoutId);
+    }
+
+    // Match the CSS transition duration to avoid layout jump during expansion.
+    this.scrollTimeoutId = window.setTimeout(() => {
+      this.scrollParentToBottom();
+      this.scrollTimeoutId = null;
+    }, 320);
+  }
+
+  private scrollParentToBottom() {
+    const skillContainer = this.containerRef.current;
+    if (!skillContainer) {
+      return;
+    }
+
+    const parent = skillContainer.closest(
+      ".main-exp-detail",
+    ) as HTMLElement | null;
+
+    if (!parent) {
+      return;
+    }
+
+    parent.scrollTo({
+      top: parent.scrollHeight,
+      behavior: "smooth",
+    });
+  }
 
   render() {
     const { skillId, value, title, isExpanded, onToggle } = this.props;
 
     return (
       <div
+        ref={this.containerRef}
         className={`skill-detail ${isExpanded ? "expanded" : ""} ${skillId}`}
       >
         <button className="skill-header" onClick={onToggle}>
