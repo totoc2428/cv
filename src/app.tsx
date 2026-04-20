@@ -17,6 +17,7 @@ function AppRoutesWithTransition() {
   const location = useLocation();
   const [displayLocation, setDisplayLocation] = React.useState(location);
   const [transitionClass, setTransitionClass] = React.useState("route-fade-in");
+  const isWorkRoute = location.pathname.startsWith("/work");
 
   React.useEffect(() => {
     if (location.pathname !== displayLocation.pathname) {
@@ -31,7 +32,9 @@ function AppRoutesWithTransition() {
   }, [location, displayLocation]);
 
   return (
-    <div className={`route-transition ${transitionClass}`}>
+    <div
+      className={`route-transition ${transitionClass} ${isWorkRoute ? "route-transition--work" : ""}`}
+    >
       <Routes location={displayLocation}>
         <Route path="/about" element={<AboutView />} />
         <Route path="/contact" element={<ContactView />} />

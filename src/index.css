@@ -53,6 +53,14 @@ body {
   animation: routeFadeOut 0.28s ease forwards;
 }
 
+@media screen and (min-width: 769px) {
+  .route-transition--work.route-fade-in,
+  .route-transition--work.route-fade-out {
+    animation: none;
+    opacity: 1;
+  }
+}
+
 @keyframes routeFadeIn {
   from {
     opacity: 0;
