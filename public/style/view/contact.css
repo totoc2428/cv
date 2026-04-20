@@ -8,7 +8,8 @@
   gap: 1rem;
   align-items: center;
   padding: 2rem;
-  box-shadow: 3px 3px 6px var(--shadow-dark) inset,
+  box-shadow:
+    3px 3px 6px var(--shadow-dark) inset,
     -3px -3px 6px var(--shadow-light) inset;
   border-radius: 0.5rem;
 }
@@ -41,12 +42,15 @@
 @media screen and (max-width: 768px) {
   .contact-section {
     margin: 1rem;
-    height: 60vh;
+    height: 70vh;
   }
 
   .contact-section .button {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    vertical-align: middle;
     margin: 0.75rem;
-    padding: 1rem;
     border-radius: 0.75rem;
     width: 80%;
     font-size: 150%;

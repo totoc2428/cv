@@ -7,7 +7,8 @@
       "projects": "Projects",
       "work": "Work"
     },
-    "cv": "Get Resume"
+    "cv": "Get Resume",
+    "cv_link": "google.com"
   },
 
   "button": {
