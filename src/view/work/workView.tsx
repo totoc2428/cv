@@ -11,7 +11,7 @@ import { LanguageContext } from "../../context/LanguageContext";
 import { ExprienceDetail } from "../../component/exp/exprienceDetail";
 import { Loader } from "../../component/loader/loaderComponent";
 import { CategoryNav } from "../../component/exp/categoryNav";
-import { useParams, useNavigate } from "react-router-dom";
+import { useLocation, useParams, useNavigate } from "react-router-dom";
 
 import "../../../public/style/view/work.css";
 import { ImageService } from "@/services/imageService";
@@ -309,5 +309,8 @@ export class WorkView extends React.Component<WorkViewProps, WorkViewState> {
 export default function WorkViewWrapper() {
   const params = useParams();
   const navigate = useNavigate();
-  return <WorkView params={params} navigate={navigate} />;
+  const location = useLocation();
+  return (
+    <WorkView key={location.pathname} params={params} navigate={navigate} />
+  );
 }

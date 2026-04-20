@@ -6,7 +6,7 @@
   padding: 0.5rem 1rem;
   background-color: var(--primary-bg);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  border-radius: 0.5rem 0.5rem 0rem 0rem;
+  border-radius: var(--menu-radius) var(--menu-radius) 0 0;
   transition: all 0.3s ease;
 }
 
@@ -34,6 +34,10 @@
   margin: 0.5rem;
 }
 
+.nav .button {
+  border-radius: var(--menu-radius);
+}
+
 /* Media Queries */
 @media screen and (max-width: 768px) {
   .nav {
@@ -58,7 +62,9 @@
 
   .nav.lang-nav {
     bottom: 5rem;
-    right: 0.5rem;
+    right: 0;
+    margin-right: 0;
+    border-radius: var(--menu-radius) 0 0 var(--menu-radius);
   }
 
   .nav .button {

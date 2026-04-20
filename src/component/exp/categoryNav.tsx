@@ -47,6 +47,15 @@ export class CategoryNav extends React.Component<
     }
   };
 
+  closeMenu = () => {
+    this.setState({ isOpen: false });
+  };
+
+  handleFilterSelect = (filter: string | null) => {
+    this.props.onFilterChange(filter);
+    this.closeMenu();
+  };
+
   getGroups(): Map<string, Category[]> {
     const groups = new Map<string, Category[]>();
     this.props.categories.forEach((cat) => {
@@ -57,7 +66,7 @@ export class CategoryNav extends React.Component<
   }
 
   render() {
-    const { selectedFilter, onFilterChange } = this.props;
+    const { selectedFilter } = this.props;
     const { language } = this.context;
     const { isOpen } = this.state;
     const groups = this.getGroups();
@@ -72,13 +81,28 @@ export class CategoryNav extends React.Component<
         </button>
 
         {isOpen && (
+          <div className="category-nav-mobile-header">
+            <span className="category-nav-mobile-title">
+              🌪️ {language === "fr" ? "Filtre" : "Filter"}
+            </span>
+            <button
+              className="button category-nav-close"
+              onClick={this.closeMenu}
+              aria-label={language === "fr" ? "Fermer" : "Close"}
+            >
+              ✕
+            </button>
+          </div>
+        )}
+
+        {isOpen && (
           <div className="category-nav-options">
             <label className="category-nav-item">
               <input
                 type="radio"
                 name="category-filter"
                 checked={selectedFilter === null}
-                onChange={() => onFilterChange(null)}
+                onChange={() => this.handleFilterSelect(null)}
               />
               <span>{language === "fr" ? "Tout" : "All"}</span>
             </label>
@@ -94,7 +118,7 @@ export class CategoryNav extends React.Component<
                       type="radio"
                       name="category-filter"
                       checked={selectedFilter === groupFilterId}
-                      onChange={() => onFilterChange(groupFilterId)}
+                      onChange={() => this.handleFilterSelect(groupFilterId)}
                     />
                     <span>{groupLabel ? groupLabel[language] : tag}</span>
                   </label>
@@ -108,7 +132,7 @@ export class CategoryNav extends React.Component<
                           type="radio"
                           name="category-filter"
                           checked={selectedFilter === cat.id}
-                          onChange={() => onFilterChange(cat.id)}
+                          onChange={() => this.handleFilterSelect(cat.id)}
                         />
                         <span>{cat.title[language]}</span>
                       </label>

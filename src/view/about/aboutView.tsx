@@ -44,7 +44,7 @@ export class AboutView extends React.Component<{}, AboutViewState> {
             <img
               src={profileImage}
               alt="about"
-              className="profile-image mx-auto w-24 sm:w-48 md:w-32 lg:w-24 rounded-3xl neumorphic-small"
+              className="profile-image mx-auto w-25 sm:w-48 md:w-42 lg:w-50 rounded-3xl neumorphic-small"
             />
             <h2 className="text-2xl font-bold text-center m-4">
               {about.firstName} {about.name}

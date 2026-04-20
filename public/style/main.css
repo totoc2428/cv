@@ -6,6 +6,7 @@
   --shadow-dark: #d1d1d1;
   --text-color: #333333;
   --border-color: #cccccc;
+  --menu-radius: 0.5rem;
   --sb-track-color: var(--primary-bg);
   --sb-thumb-color: var(--shadow-dark);
   --sb-size: 5px;
@@ -53,7 +54,8 @@ body::-webkit-scrollbar-thumb {
   margin-bottom: 3rem;
   border-radius: 0rem 0rem 1rem 1rem;
   background: var(--primary-bg);
-  box-shadow: 5px 5px 10px var(--shadow-dark),
+  box-shadow:
+    5px 5px 10px var(--shadow-dark),
     -5px -5px 10px var(--shadow-light);
 }
 
@@ -83,7 +85,8 @@ body::-webkit-scrollbar-thumb {
   background: var(--primary-bg);
   border-radius: 15px;
   padding: 2rem;
-  box-shadow: 5px 5px 10px var(--shadow-dark),
+  box-shadow:
+    5px 5px 10px var(--shadow-dark),
     -5px -5px 10px var(--shadow-light);
 }
 
