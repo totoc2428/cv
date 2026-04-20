@@ -5,7 +5,7 @@ import { LangNav } from "../../component/nav/langNav";
 import { LanguageContext } from "../../context/LanguageContext";
 import { getTranslation } from "../../languages/dic";
 
-import "/public/style/view/contact.css";
+import "../../../public/style/view/contact.css"; //ignore
 
 interface ContactLinks {
   link: {
@@ -14,6 +14,7 @@ interface ContactLinks {
     linkedin: string;
     github: string;
     codewars: string;
+    sketchup: string;
   };
 }
 
@@ -23,6 +24,7 @@ interface ContactViewState {
   linkedInClicked: boolean;
   gitHubClicked: boolean;
   codewarsClicked: boolean;
+  sketchupClicked: boolean;
   contactData: ContactLinks | null;
 }
 
@@ -37,6 +39,7 @@ export class ContactView extends React.Component<{}, ContactViewState> {
     linkedInClicked: false,
     gitHubClicked: false,
     codewarsClicked: false,
+    sketchupClicked: false,
     contactData: null,
   };
 
@@ -99,10 +102,16 @@ export class ContactView extends React.Component<{}, ContactViewState> {
     if (codewars) {
       window.open(codewars, "_blank");
       this.setState({ codewarsClicked: true });
-      setTimeout(
-        () => this.setState({ codewarsClicked: false }),
-        TIME_TO_WAIT
-      );
+      setTimeout(() => this.setState({ codewarsClicked: false }), TIME_TO_WAIT);
+    }
+  };
+
+  handleSketchupClick = () => {
+    const sketchup = this.state.contactData?.link.sketchup;
+    if (sketchup) {
+      window.open(sketchup, "_blank");
+      this.setState({ sketchupClicked: true });
+      setTimeout(() => this.setState({ sketchupClicked: false }), TIME_TO_WAIT);
     }
   };
 
@@ -141,6 +150,11 @@ export class ContactView extends React.Component<{}, ContactViewState> {
                 {this.state.codewarsClicked
                   ? getTranslation("button.copied", language)
                   : "⚔️ Codewars"}
+              </button>
+              <button onClick={this.handleSketchupClick} className="button">
+                {this.state.sketchupClicked
+                  ? getTranslation("button.copied", language)
+                  : "🏗️ Sketchup"}
               </button>
             </main>
             <MainNav />
