@@ -18,7 +18,7 @@ export class Header extends React.Component<HeaderProps> {
             </h1>
             <a
               className="button"
-              href="https://drive.google.com/file/d/1bBfqdGNat7DXiHFI7GWanhb0AA7OF2Ix/view?usp=sharing"
+              href={getTranslation("header.cv_link", language)}
             >
               {getTranslation("header.cv", language)}
             </a>
