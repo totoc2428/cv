@@ -19,7 +19,7 @@ export function MainNav() {
   }
 
   return (
-    <nav className="nav main-nav">
+    <nav className="nav main-nav fixed inset-x-0 bottom-0 w-full flex justify-center gap-4 py-2 bg-transparent z-[999]">
       <button
         className={(location.pathname === "/about" ? "focus" : "") + " button"}
         onClick={() => handleNavigation("/about")}

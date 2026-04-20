@@ -12,25 +12,31 @@ import { Header } from "../../component/header/headerComponent";
 
 interface AboutViewState {
   about: About | null;
+  mounted: boolean;
 }
 
 export class AboutView extends React.Component<{}, AboutViewState> {
   state: AboutViewState = {
     about: null,
+    mounted: false,
   };
 
   async componentDidMount() {
     try {
       const response = await fetch("/json/about/about.json");
       const aboutData = await response.json();
-      this.setState({ about: aboutData });
+      this.setState({ about: aboutData }, () => {
+        window.requestAnimationFrame(() => {
+          this.setState({ mounted: true });
+        });
+      });
     } catch (error) {
       console.error("Error loading about data:", error);
     }
   }
 
   renderContent(language: Language) {
-    const { about } = this.state;
+    const { about, mounted } = this.state;
 
     if (!about) {
       return <Loader />;
@@ -39,7 +45,7 @@ export class AboutView extends React.Component<{}, AboutViewState> {
     return (
       <section className="about-container">
         <Header title="about" />
-        <main className="main about-section">
+        <main className={`main about-section ${mounted ? "open" : ""}`}>
           <div className="about-title">
             <img
               src={profileImage}

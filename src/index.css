@@ -15,17 +15,21 @@
 /* Custom utilities pour maintenir la compatibilité avec le design neumorphique */
 .neumorphic {
   background: var(--primary-bg);
-  box-shadow: 5px 5px 10px var(--shadow-dark),
+  box-shadow:
+    5px 5px 10px var(--shadow-dark),
     -5px -5px 10px var(--shadow-light);
 }
 
 .neumorphic-inset {
-  box-shadow: inset 3px 3px 6px var(--shadow-dark),
+  box-shadow:
+    inset 3px 3px 6px var(--shadow-dark),
     inset -3px -3px 6px var(--shadow-light);
 }
 
 .neumorphic-small {
-  box-shadow: 3px 3px 6px var(--shadow-dark), -3px -3px 6px var(--shadow-light);
+  box-shadow:
+    3px 3px 6px var(--shadow-dark),
+    -3px -3px 6px var(--shadow-light);
 }
 
 /* Body reset avec TailwindCSS */
@@ -35,4 +39,34 @@ body {
   background-color: var(--primary-bg);
   color: var(--text-color);
   font-family: "Arial", sans-serif;
+}
+
+.route-transition {
+  opacity: 1;
+}
+
+.route-transition.route-fade-in {
+  animation: routeFadeIn 0.28s ease forwards;
+}
+
+.route-transition.route-fade-out {
+  animation: routeFadeOut 0.28s ease forwards;
+}
+
+@keyframes routeFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes routeFadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
 }

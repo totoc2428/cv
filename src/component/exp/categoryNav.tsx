@@ -11,6 +11,7 @@ interface CategoryNavProps {
 
 interface CategoryNavState {
   isOpen: boolean;
+  isRendered: boolean;
 }
 
 const GROUP_LABELS: Record<string, { fr: string; en: string }> = {
@@ -25,7 +26,9 @@ export class CategoryNav extends React.Component<
   static contextType = LanguageContext;
   declare context: React.ContextType<typeof LanguageContext>;
 
-  state: CategoryNavState = { isOpen: false };
+  private closeTimer: number | null = null;
+
+  state: CategoryNavState = { isOpen: false, isRendered: false };
 
   private navRef = React.createRef<HTMLElement>();
 
@@ -35,6 +38,10 @@ export class CategoryNav extends React.Component<
 
   componentWillUnmount() {
     document.removeEventListener("click", this.handleClickOutside);
+    if (this.closeTimer !== null) {
+      window.clearTimeout(this.closeTimer);
+      this.closeTimer = null;
+    }
   }
 
   handleClickOutside = (event: MouseEvent) => {
@@ -49,6 +56,28 @@ export class CategoryNav extends React.Component<
 
   closeMenu = () => {
     this.setState({ isOpen: false });
+
+    if (this.closeTimer !== null) {
+      window.clearTimeout(this.closeTimer);
+    }
+
+    this.closeTimer = window.setTimeout(() => {
+      this.setState({ isRendered: false });
+      this.closeTimer = null;
+    }, 300);
+  };
+
+  openMenu = () => {
+    if (this.closeTimer !== null) {
+      window.clearTimeout(this.closeTimer);
+      this.closeTimer = null;
+    }
+
+    this.setState({ isRendered: true }, () => {
+      window.requestAnimationFrame(() => {
+        this.setState({ isOpen: true });
+      });
+    });
   };
 
   handleFilterSelect = (filter: string | null) => {
@@ -68,19 +97,22 @@ export class CategoryNav extends React.Component<
   render() {
     const { selectedFilter } = this.props;
     const { language } = this.context;
-    const { isOpen } = this.state;
+    const { isOpen, isRendered } = this.state;
     const groups = this.getGroups();
 
     return (
-      <nav ref={this.navRef} className={`category-nav${isOpen ? " open" : ""}`}>
+      <nav
+        ref={this.navRef}
+        className={`category-nav${isOpen ? " open" : ""}${isRendered ? " rendered" : ""}`}
+      >
         <button
           className={`button category-nav-toggle${isOpen ? " focus" : ""}`}
-          onClick={() => this.setState({ isOpen: !isOpen })}
+          onClick={() => (isOpen ? this.closeMenu() : this.openMenu())}
         >
           🌪️ {language === "fr" ? "Filtre" : "Filter"}
         </button>
 
-        {isOpen && (
+        {isRendered && (
           <div className="category-nav-mobile-header">
             <span className="category-nav-mobile-title">
               🌪️ {language === "fr" ? "Filtre" : "Filter"}
@@ -95,7 +127,7 @@ export class CategoryNav extends React.Component<
           </div>
         )}
 
-        {isOpen && (
+        {isRendered && (
           <div className="category-nav-options">
             <label className="category-nav-item">
               <input
