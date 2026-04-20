@@ -2,10 +2,10 @@
 
 :root {
   --primary-bg: #f0f0f0;
-  --shadow-light: #ffffff;
+  --shadow-light: #ffffff2f;
   --shadow-dark: #d1d1d1;
   --text-color: #333333;
-  --border-color: #cccccc;
+  --border-color: #888888;
   --menu-radius: 0.5rem;
   --sb-track-color: var(--primary-bg);
   --sb-thumb-color: var(--shadow-dark);
