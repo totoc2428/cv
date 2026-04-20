@@ -374,9 +374,9 @@
   }
 
   .exp-detail {
-    max-height: 45vh;
+    max-height: calc(100dvh - 9rem);
     width: 100%;
-    overflow-y: scroll;
+    overflow: hidden;
   }
 
   .exp-detail .header-exp-detail .content h1 {
@@ -384,10 +384,19 @@
   }
 
   .exp-detail .main-exp-detail {
-    max-height: 100% !important;
-    margin-bottom: 10rem;
-    overflow-y: scroll !important;
+    height: auto !important;
+    max-height: calc(100dvh - 18rem) !important;
+    margin-bottom: 0;
+    padding-bottom: 8rem;
+    overflow-y: auto !important;
+    scrollbar-width: none;
     transition: all 0.3s ease;
+  }
+
+  .exp-detail .main-exp-detail::-webkit-scrollbar {
+    display: none;
+    width: 0;
+    height: 0;
   }
 
   .exp-detail .main-exp-detail .item.location,

@@ -181,6 +181,16 @@
   color: #831111;
 }
 
+.skill-detail[class*="univ-lille"] {
+  background-color: #32a68c;
+  color: #002d2d;
+}
+
+.skill-detail[class*="univ-lille"] {
+  background-color: #af2300;
+  color: #e9ad09;
+}
+
 /* Default color as fallback */
 .skill-detail {
   background-color: #f0f0f0;
